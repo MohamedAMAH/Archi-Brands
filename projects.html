@@ -1,0 +1,780 @@
+<!-- /*
+* Bootstrap 5
+* Template Name: Furni
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <!-- <link rel="shortcut icon" href="favicon.png"> -->
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+		<link rel="shortcut icon" href="images/ab-try-logo.png" type="image/png">
+    	<title>archi-brands</title>
+	</head>
+
+	<body>
+
+		<style>
+			/* Target only the second navbar-collapse that contains the icons */
+			#navbarsFurni:last-of-type .custom-navbar-nav .nav-item {
+			  margin: 0 !important;
+			  padding: 0 !important;
+			}
+		
+			#navbarsFurni:last-of-type .custom-navbar-nav .nav-link i {
+				color: #ffffff !important;
+				fill: #ffffff !important;
+				font-size: 20px;
+			}
+			/* MAXIMUM SPECIFICITY OVERRIDE FOR ICONS */
+			#navbarsFurni.navbar-collapse .custom-navbar-nav .nav-item .nav-link i.fas,
+			#navbarsFurni.navbar-collapse .custom-navbar-nav .nav-item .nav-link i.fa,
+			#navbarsFurni.navbar-collapse .custom-navbar-nav .nav-item a[href="javascript:void(0)"] i,
+			#navbarsFurni.navbar-collapse .custom-navbar-nav .nav-item a[href="cart.html"] i {
+				color: #ffffff !important;
+				fill: #ffffff !important;
+				stroke: #ffffff !important;
+			}
+		
+			/* Extra enforcement for good measure */
+			.fa-search,
+			.fa-shopping-cart {
+				color: #ffffff !important;
+				fill: #ffffff !important;
+				stroke: #ffffff !important;
+			}
+			
+			.custom-navbar .custom-navbar-nav li.search-icon-item,
+			.custom-navbar .custom-navbar-nav li.active:has(> a[href="cart.html"]) {
+				margin-left: 0px;
+				margin-right: 0px;
+			}
+		
+			/* Ensure the cart link itself is also white */
+			.nav-item .nav-link[href="cart.html"] {
+				color: #ffffff !important;
+			}
+			.cart-counter {
+				position: absolute;
+				top: -4px;
+				right: -4px;
+				background-color: #f5894b;
+				color: white;
+				border-radius: 50%;
+				width: 18px;
+				height: 18px;
+				font-size: 11px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-weight: bold;
+			}
+			.dropdown-container {
+		  position: relative;
+		}
+		
+		.dropdown-container .nav-link {
+		  display: flex;
+		  align-items: center;
+		}
+		
+		.dropdown-container .nav-link i {
+		  font-size: 12px;
+		  transition: transform 0.3s ease;
+		}
+		
+		.projects-dropdown {
+		  position: absolute;
+		  top: 110%;
+		  left: 50%;
+		  transform: translateX(-50%) translateY(10px);
+		  background: #ffffff;
+		  min-width: 100px;
+		  border-radius: 4px;
+		  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		  opacity: 0;
+		  visibility: hidden;
+		  transition: all 0.3s ease;
+		  z-index: 1000;
+		}
+		
+		.dropdown-container:hover .projects-dropdown {
+		  opacity: 1;
+		  visibility: visible;
+		  transform: translateX(-50%) translateY(0);
+		}
+		
+		.dropdown-container:hover .nav-link i {
+		  transform: rotate(-90deg);
+		}
+		
+		.dropdown-item {
+		  padding: 12px 20px;
+		  color: #333333;
+		  cursor: pointer;
+		  transition: all 0.3s ease;
+		  text-align: center;
+		}
+		
+		.dropdown-item:hover {
+		  background: #f8f9fa;
+		  color: #f5894b;
+		}
+		  </style>
+		  <!-- Start Header/Navigation -->
+		  <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Archi-Brands navigation bar">
+			<div class="container">
+			  <a class="navbar-archi d-flex align-items-center" href="index.html">
+				<img src="images/logo.png" alt="Logo" class="logo me-3" style="width: 40px; height: 40px;">
+				archi-brands
+			  </a>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+				  <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+				  <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+				  <!-- <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li> -->
+				  <li class="nav-item dropdown-container">
+					<a href="products.html" class="nav-link">
+					  Products <i class="fas fa-chevron-down ms-1"></i>
+					</a>
+					<div class="projects-dropdown">
+					  <button onclick="window.location.href='flooring.html'" class="dropdown-item font-archi">Flooring</button>
+					  <button onclick="window.location.href='ceiling.html'" class="dropdown-item font-archi">Ceiling</button>
+					  <button onclick="window.location.href='cladding.html'" class="dropdown-item font-archi">Cladding</button>
+					</div>
+				  </li>
+				  <!-- <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li> -->
+				  <li class="active dropdown-container">
+					<a href="projects.html" class="nav-link">
+					  Projects <i class="fas fa-chevron-down ms-1"></i>
+					</a>
+					<div class="projects-dropdown">
+					  <button onclick="window.location.href='projects.html?type=corporate'" class="dropdown-item font-archi">Corporate</button>
+					  <button onclick="window.location.href='projects.html?type=residential'" class="dropdown-item font-archi">Residential</button>
+					  <button onclick="window.location.href='projects.html?type=commercial'" class="dropdown-item font-archi">Commercial</button>
+					</div>
+				  </li>
+				  <li class="nav-item"><a class="nav-link" href="news-events.html">News & Events</a></li>
+				  <li class="nav-item"><a class="nav-link" href="career.html">Careers</a></li>
+				  <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+				</ul>
+			  </div>
+			  <div class="collapse navbar-collapse" id="navbarsFurni">
+				<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+				  <li class="nav-item search-icon-item">
+					<a class="nav-link search-toggle" href="javascript:void(0)"><i class="fas fa-search"></i></a>
+					<div class="search-bar-expand">
+					  <input type="text" class="form-control search-input-custom" placeholder="Search...">
+					</div>
+				  </li>
+				  <li class="active">
+					<a class="nav-link" href="#">
+						<i class="fas fa-shopping-cart"></i>
+						<span class="cart-counter">3</span>
+					</a>
+				</li>
+				</ul>
+			  </div>
+			</div>
+		  </nav>
+		  <!-- End Header/Navigation -->
+		<div class="hero-custom position-relative">
+			<div class="carousel slide" id="heroCarouselCustom" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="false">
+			   <div class="carousel-inner">
+				  <div class="carousel-item active">
+					 <div class="hero-slide-custom" style="background: url('images/20.jpg') no-repeat center center; background-size: cover;"></div>
+				  </div>
+				  <div class="carousel-item">
+					 <div class="hero-slide-custom" style="background: url('images/42.jpg') no-repeat center center; background-size: cover;"></div>
+				  </div>
+				  <div class="carousel-item">
+					 <div class="hero-slide-custom" style="background: url('images/35.jpg') no-repeat center center; background-size: cover;"></div>
+				  </div>
+				  <div class="carousel-item">
+					 <div class="hero-slide-custom" style="background: url('images/53.jpg') no-repeat center center; background-size: cover;"></div>
+				  </div>
+			   </div>
+			</div>
+			<!-- Fixed Hero Content (always in front of the images, aligned to the left) -->
+			<div class="fixed-hero-content-custom">
+			   <div class="container position-relative">
+				  <div class="intro-excerpt-custom">
+					 <h1 class="font-archi">architectural brilliance, <span class="d-block">supplied.</span></h1>
+					 <p><a href="projects.html" class="btn btn-secondary me-2 font-archi">Our Solutions</a></p>
+				  </div>
+			   </div>
+			</div>
+			<div class="career-banner d-flex justify-content-center align-items-center font-archi">
+			   <p class="font-archi">Projects</p>
+			</div>
+		</div>
+		<br><br><br>
+
+		<!-- <div class="container mb-5">
+			<div class="row justify-content-center">
+			  <div class="col-md-10 text-center">
+				<p>Our diverse range of projects showcases our passion for transforming spaces and bringing visions to life. From cutting-edge commercial designs to residential masterpieces, every project reflects our commitment to quality and creativity. Discover how we turn ideas into architectural brilliance.</p>
+			  </div>
+			</div>
+		</div> -->
+
+		<div class="container">
+			<div class="row justify-content-center mb-4">
+			  <div class="col-md-10 text-center">
+			  <h2 class="section-title">Transformed Spaces</h2>
+			  <p>Our diverse range of projects showcases our passion for transforming spaces and bringing visions to life. From cutting-edge commercial designs to residential masterpieces, every project reflects our commitment to quality and creativity. Discover how we turn ideas into architectural brilliance.</p>
+			</div>
+			</div>
+		</div>
+
+		<div class="container mb-5">
+			<style>
+				#projectsTab {
+				  justify-content: center;
+				  border-bottom: none;
+				  /* margin-top: 5rem; */
+				  /* margin-bottom: 2rem; */
+				}
+				#projectsTab .nav-link {
+				  border: none;
+				  color: #333;
+				  font-weight: 600;
+				  font-size: 1.1rem;
+				  padding: 1rem 2rem;
+				  transition: all 0.3s ease;
+				  border-radius: 0.5rem;
+				  margin: 0 0.5rem;
+				}
+				#projectsTab .nav-link:hover {
+				  background-color: #f0f0f0;
+				}
+				#projectsTab .nav-link.active {
+				  color: #fff;
+				  background-color: #0056b3;
+				  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				}
+				.project-item {
+				  margin-bottom: 2rem;
+				}
+				.project-item img {
+				  border-radius: 0.5rem;
+				  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				}
+				.project-item h3 {
+				  margin-top: 1rem;
+				  font-size: 1.2rem;
+				  font-weight: 600;
+				}
+				.fixed-width-btn {
+					width: 200px !important; /* Adjust this value according to the largest button */
+					text-align: center;
+				}
+
+				.fixed-width-btn.active {
+					background-color: #1a2750 !important;
+					color: #fff !important;
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+				}
+
+				/* Hover effect for buttons */
+				.fixed-width-btn:not(.active):hover {
+					background-color: rgba(128, 128, 128, 0.1) !important; /* Light grey with slight transparency */
+				}
+
+			</style>
+			
+			<ul class="nav nav-tabs d-flex" id="projectsTab" role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link active fixed-width-btn font-archi" id="corporate-tab" data-bs-toggle="tab" data-bs-target="#corporate" type="button" role="tab" aria-controls="corporate" aria-selected="true">
+						<i class="fas fa-building me-2"></i>Corporate
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link fixed-width-btn font-archi" id="residential-tab" data-bs-toggle="tab" data-bs-target="#residential" type="button" role="tab" aria-controls="residential" aria-selected="false">
+						<i class="fas fa-home me-2"></i>Residential
+					</button>
+				</li>
+				<li class="nav-item" role="presentation">
+					<button class="nav-link fixed-width-btn font-archi" id="commercial-tab" data-bs-toggle="tab" data-bs-target="#commercial" type="button" role="tab" aria-controls="commercial" aria-selected="false">
+						<i class="fas fa-store me-2"></i>Commercial
+					</button>
+				</li>
+			</ul>						
+			
+			
+			<div class="tab-content" id="projectsTabContent">
+			  <div class="tab-pane fade show active" id="corporate" role="tabpanel" aria-labelledby="corporate-tab">
+				<!-- Corporate projects will be listed here -->
+				<div class="row">
+				  <!-- Add your corporate project boxes here -->
+				</div>
+			  </div>
+			  <div class="tab-pane fade" id="residential" role="tabpanel" aria-labelledby="residential-tab">
+				<!-- Residential projects will be listed here -->
+				<div class="row">
+				  <!-- Add your residential project boxes here -->
+				</div>
+			  </div>
+			  <div class="tab-pane fade" id="commercial" role="tabpanel" aria-labelledby="commercial-tab">
+				<!-- Commercial projects will be listed here -->
+				<div class="row">
+				  <!-- Add your commercial project boxes here -->
+				</div>
+			  </div>
+			</div>
+		</div>
+		 
+		<!-- Start Blog Section -->
+		<div class="blog-section custom-blog-section">				
+			<div class="container">
+			<div class="row">
+
+				<!-- <a href="project.html?project=AmazonCA14" class="glightbox post-thumbnail" data-gallery="amazon-ca14-gallery">
+					<img src="images/AmazonCA14/0.jpg" alt="Amazon CA14" class="img-fluid">
+				</a> -->
+		
+				<!-- Amazon CA14 Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item corporate">
+				<div class="post-entry">
+					<a href="project.html?project=AmazonCA14" class="post-thumbnail" data-gallery="amazon-ca14-gallery">
+						<img src="images/AmazonCA14/0.jpg" alt="Amazon CA14" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+						<h3><a href="#">Amazon CA14</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/AmazonCA14/2.jpg" class="glightbox d-none" data-gallery="amazon-ca14-gallery"></a>
+				<a href="images/AmazonCA14/3.jpg" class="glightbox d-none" data-gallery="amazon-ca14-gallery"></a>
+				<a href="images/AmazonCA14/4.jpg" class="glightbox d-none" data-gallery="amazon-ca14-gallery"></a>
+				</div>
+		
+				<!-- Amazon RBS Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item corporate">
+				<div class="post-entry">
+					<a href="project.html?project=AmazonRBS" class="post-thumbnail" data-gallery="amazon-rbs-gallery">
+						<img src="images/AmazonRBS/0.jpg" alt="Amazon RBS" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">Amazon RBS</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/AmazonRBS/2.jpg" class="glightbox d-none" data-gallery="amazon-rbs-gallery"></a>
+				<a href="images/AmazonRBS/3.jpg" class="glightbox d-none" data-gallery="amazon-rbs-gallery"></a>
+				<a href="images/AmazonRBS/4.jpg" class="glightbox d-none" data-gallery="amazon-rbs-gallery"></a>
+				</div>
+		
+				<!-- Al Futtaim Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item corporate">
+				<div class="post-entry">
+					<a href="project.html?project=AlFuttaim" class="post-thumbnail" data-gallery="al-futtaim-gallery">
+						<img src="images/AlFuttaim/0.jpg" alt="Al Futtaim" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">Al Futtaim</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/AlFuttaim/2.jpg" class="glightbox d-none" data-gallery="al-futtaim-gallery"></a>
+				<a href="images/AlFuttaim/3.jpg" class="glightbox d-none" data-gallery="al-futtaim-gallery"></a>
+				<a href="images/AlFuttaim/4.jpg" class="glightbox d-none" data-gallery="al-futtaim-gallery"></a>
+				</div>
+		
+				<!-- Deloitte Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item corporate">
+				<div class="post-entry">
+					<a href="project.html?project=Deloitte" class="post-thumbnail" data-gallery="deloitte-gallery">
+						<img src="images/Deloitte/0.jpg" alt="Deloitte" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">Deloitte</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/Deloitte/2.jpg" class="glightbox d-none" data-gallery="deloitte-gallery"></a>
+				<a href="images/Deloitte/3.jpg" class="glightbox d-none" data-gallery="deloitte-gallery"></a>
+				<a href="images/Deloitte/4.jpg" class="glightbox d-none" data-gallery="deloitte-gallery"></a>
+				</div>
+		
+				<!-- Menacom Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item commercial">
+				<div class="post-entry">
+					<a href="project.html?project=Menacom" class="post-thumbnail" data-gallery="menacom-gallery">
+						<img src="images/Menacom/0.jpg" alt="Menacom" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">Menacom</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/Menacom/2.jpg" class="glightbox d-none" data-gallery="menacom-gallery"></a>
+				<a href="images/Menacom/3.jpg" class="glightbox d-none" data-gallery="menacom-gallery"></a>
+				<a href="images/Menacom/4.jpg" class="glightbox d-none" data-gallery="menacom-gallery"></a>
+				</div>
+		
+				<!-- MSD Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item commercial">
+				<div class="post-entry">
+					<a href="project.html?project=MSD" class="post-thumbnail" data-gallery="msd-gallery">
+						<img src="images/MSD/0.jpg" alt="MSD" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">MSD</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/MSD/2.jpg" class="glightbox d-none" data-gallery="msd-gallery"></a>
+				<a href="images/MSD/3.jpg" class="glightbox d-none" data-gallery="msd-gallery"></a>
+				<a href="images/MSD/4.jpg" class="glightbox d-none" data-gallery="msd-gallery"></a>
+				</div>
+		
+				<!-- Co 55 Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item commercial">
+				<div class="post-entry">
+					<a href="project.html?project=Co55" class="post-thumbnail" data-gallery="co55-gallery">
+						<img src="images/Co55/0.jpg" alt="Co 55" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">Co 55</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/Co55/2.jpg" class="glightbox d-none" data-gallery="co55-gallery"></a>
+				<a href="images/Co55/3.jpg" class="glightbox d-none" data-gallery="co55-gallery"></a>
+				<a href="images/Co55/4.jpg" class="glightbox d-none" data-gallery="co55-gallery"></a>
+				</div>
+		
+				<!-- AE7 Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item commercial">
+				<div class="post-entry">
+					<a href="project.html?project=AE7" class="post-thumbnail" data-gallery="ae7-gallery">
+						<img src="images/AE7/0.jpg" alt="AE7" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">AE7</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/AE7/2.jpg" class="glightbox d-none" data-gallery="ae7-gallery"></a>
+				<a href="images/AE7/3.jpg" class="glightbox d-none" data-gallery="ae7-gallery"></a>
+				<a href="images/AE7/4.jpg" class="glightbox d-none" data-gallery="ae7-gallery"></a>
+				</div>
+		
+				<!-- Skywalk Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item residential">
+				<div class="post-entry">
+					<a href="project.html?project=Skywalk" class="post-thumbnail" data-gallery="skywalk-gallery">
+						<img src="images/Skywalk/0.jpg" alt="Skywalk" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">Skywalk</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/Skywalk/2.jpg" class="glightbox d-none" data-gallery="skywalk-gallery"></a>
+				<a href="images/Skywalk/3.jpg" class="glightbox d-none" data-gallery="skywalk-gallery"></a>
+				<a href="images/Skywalk/4.jpg" class="glightbox d-none" data-gallery="skywalk-gallery"></a>
+				</div>
+		
+				<!-- Kredit Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item residential">
+				<div class="post-entry">
+					<a href="project.html?project=Kredit" class="post-thumbnail" data-gallery="kredit-gallery">
+						<img src="images/Kredit/0.jpg" alt="Kredit" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">Kredit</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/Kredit/2.jpg" class="glightbox d-none" data-gallery="kredit-gallery"></a>
+				<a href="images/Kredit/3.jpg" class="glightbox d-none" data-gallery="kredit-gallery"></a>
+				<a href="images/Kredit/4.jpg" class="glightbox d-none" data-gallery="kredit-gallery"></a>
+				</div>
+		
+				<!-- Capital Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item residential">
+				<div class="post-entry">
+					<a href="project.html?project=Capital" class="post-thumbnail" data-gallery="capital-gallery">
+						<img src="images/Capital/0.jpg" alt="Capital" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">Capital</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/Capital/2.jpg" class="glightbox d-none" data-gallery="capital-gallery"></a>
+				<a href="images/Capital/3.jpg" class="glightbox d-none" data-gallery="capital-gallery"></a>
+				<a href="images/Capital/4.jpg" class="glightbox d-none" data-gallery="capital-gallery"></a>
+				</div>
+		
+				<!-- KCG Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item residential">
+				<div class="post-entry">
+					<a href="project.html?project=KCG" class="post-thumbnail" data-gallery="kcg-gallery">
+						<img src="images/KCG/0.jpg" alt="KCG" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">KCG</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/KCG/2.jpg" class="glightbox d-none" data-gallery="kcg-gallery"></a>
+				<a href="images/KCG/3.jpg" class="glightbox d-none" data-gallery="kcg-gallery"></a>
+				<a href="images/KCG/4.jpg" class="glightbox d-none" data-gallery="kcg-gallery"></a>
+				</div>
+		
+				<!-- VXI Gallery -->
+				<div class="col-12 col-sm-6 col-md-4 mb-5 project-item residential">
+				<div class="post-entry">
+					<a href="project.html?project=VXI" class="post-thumbnail" data-gallery="vxi-gallery">
+						<img src="images/VXI/0.jpg" alt="VXI" class="img-fluid">
+					</a>
+					<div class="post-content-entry">
+					<h3><a href="#">VXI</a></h3>
+					</div>
+				</div>
+				<!-- Add additional images to the gallery -->
+				<a href="images/VXI/2.jpg" class="glightbox d-none" data-gallery="vxi-gallery"></a>
+				<a href="images/VXI/3.jpg" class="glightbox d-none" data-gallery="vxi-gallery"></a>
+				<a href="images/VXI/4.jpg" class="glightbox d-none" data-gallery="vxi-gallery"></a>
+				</div>
+		
+			</div>
+			</div>
+		</div>
+		<!-- End Blog Section -->
+
+		<br><br>
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="subscription-form">
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+							<form action="#" class="row g-3">
+								<div class="col-auto">
+									<input type="text" class="form-control" placeholder="Enter your name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" placeholder="Enter your email">
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-primary">
+										<span class="fa fa-paper-plane"></span>
+									</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-5 mb-5">
+					<div class="col-lg-4">
+						<div class="mb-4 footer-logo-wrap d-flex align-items-center">
+							<img src="images/ab-try-logo.png" alt="Logo" class="logo me-3" style="width: 40px; height: 40px;">
+							<a href="#" class="footer-logo font-archi">Archi-Brands</a>
+						</div>
+						<p class="mb-4">Archi-Brands is a leading supplier of innovative and sustainable architectural solutions. We specialize in high-quality flooring, ceiling, and cladding products designed for commercial, residential, and industrial spaces.</p>
+
+						<ul class="list-unstyled custom-social">
+							<li><a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<!-- <li><a href="#"><span class="fa fa-brands fa-twitter"></span></a></li> -->
+							<li><a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer"><span class="fa fa-brands fa-instagram"></span></a></li>
+							<li><a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer"><span class="fa fa-brands fa-linkedin"></span></a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-8">
+						<div class="row links-wrap">
+							<div class="col-6 col-sm-6 col-md-3">
+								<!-- <ul class="list-unstyled">
+									<li><a href="#">About us</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul> -->
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<!-- <ul class="list-unstyled">
+									<li><a href="#">Support</a></li>
+									<li><a href="#">Knowledge base</a></li>
+									<li><a href="#">Live chat</a></li>
+								</ul> -->
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="home.html">Home</a></li>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="products.html">Products</a></li>
+									<li><a href="projects.html">Projects</a></li>
+								</ul>
+							</div>
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="news-events.html">News & Events</a></li>
+									<li><a href="career.html">Careers</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright ArchiBrands &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.</p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+			  // Get URL parameters
+			  const urlParams = new URLSearchParams(window.location.search);
+			  const projectType = urlParams.get('type');
+		  
+			  // Select all tabs and projects
+			  const tabs = document.querySelectorAll('#projectsTab button');
+			  const projects = document.querySelectorAll('.project-item');
+		  
+			  if (projectType) {
+				tabs.forEach(tab => {
+				  const targetType = tab.getAttribute('data-bs-target').substring(1); // Get the target type of the tab
+				  if (targetType === projectType) {
+					// Set this tab as active
+					tab.classList.add('active');
+					tab.setAttribute('aria-selected', 'true');
+		  
+					// Set the corresponding tab pane to show
+					document.querySelector(`#${targetType}`).classList.add('show', 'active');
+				  } else {
+					// Remove active class from other tabs
+					tab.classList.remove('active');
+					tab.setAttribute('aria-selected', 'false');
+		  
+					// Hide other tab panes
+					document.querySelector(`#${targetType}`).classList.remove('show', 'active');
+				  }
+				});
+		  
+				// Filter projects based on the selected tab
+				projects.forEach(project => {
+				  if (project.classList.contains(projectType)) {
+					project.style.display = 'block'; // Show the project if it matches the selected category
+				  } else {
+					project.style.display = 'none'; // Hide others
+				  }
+				});
+			  }
+			});
+		</script>		  
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/cart-counter.js"></script>
+		<script src="js/disable.js"></script>
+		<!-- <script src="js/background.js"></script> -->
+		<script src="js/search-bar.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+		<script>
+			const lightbox = GLightbox({
+				touchNavigation: true,
+				loop: true, // Enables looping from last image to first
+				zoomable: true,
+				width: '100%',
+				height: '100%',
+				openEffect: 'fade',
+				closeEffect: 'fade',
+				slideEffect: 'fade', // Optional: ensures a smooth transition between images
+				plyr: {
+					css: 'https://cdn.plyr.io/3.6.2/plyr.css', // Optional for videos
+				},
+				onOpen: () => {
+				// Select all GLightbox buttons
+				const buttons = document.querySelectorAll('.gbtn');
+
+				// Apply initial styles and hover styles using event listeners
+				buttons.forEach(button => {
+						button.style.backgroundColor = '#1a2750';
+						// button.style.color = '#ffffff';
+						button.style.borderRadius = '20%';
+
+						// Add hover event listener
+						button.addEventListener('mouseenter', () => {
+							button.style.backgroundColor = '#f5894b'; // Hover background color
+							// button.style.color = '#ffffff';
+						});
+
+						// Add mouse leave event listener to revert back to original style
+						button.addEventListener('mouseleave', () => {
+							button.style.backgroundColor = '#1a2750';
+							// button.style.color = '#ffffff';
+						});
+					});
+				}
+			});
+		</script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+			  const tabs = document.querySelectorAll('#projectsTab button');
+			  const projects = document.querySelectorAll('.project-item');
+		  
+			  tabs.forEach(tab => {
+				tab.addEventListener('click', function() {
+				  const selectedTab = this.getAttribute('data-bs-target').substring(1); // Get the target tab (without the #)
+		  
+				  projects.forEach(project => {
+					if (project.classList.contains(selectedTab)) {
+					  project.style.display = 'block'; // Show the project if it matches the selected category
+					} else {
+					  project.style.display = 'none'; // Hide others
+					}
+				  });
+				});
+			  });
+			});
+		</script>
+			  
+	</body>
+
+</html>

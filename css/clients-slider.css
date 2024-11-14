@@ -1,0 +1,84 @@
+.clients-slider-section {
+    padding: 0rem 0 7rem 0;
+    background-color: #eff2f1; /* Keeping consistent with your page theme */
+}
+
+.clients-slider-wrap {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.clients-slider {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+.clients-slider .client-logo {
+    flex: 0 0 25%; /* Show 4 logos at once */
+    padding: 10px;
+    text-align: center;
+}
+
+.clients-slider .client-logo img {
+    max-width: 150px;
+    display: inline-block;
+}
+
+.clients-slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.clients-slider-nav button {
+    background-color: rgba(59, 93, 80, 0.1);
+    border: none;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.clients-slider-nav button:hover {
+    background-color: #3b5d50;
+    color: #ffffff;
+}
+
+.clients-slider-nav button .fa {
+    font-size: 20px;
+}
+
+.clients-slider-nav .prev {
+    position: absolute;
+    left: -30px;
+}
+
+.clients-slider-nav .next {
+    position: absolute;
+    right: -30px;
+}
+
+.client-logo img {
+    max-width: 150px;
+    width: 120px;
+    height: 80px;
+    display: inline-block;
+}
+
+.row {
+    margin-bottom: 60px; /* Space between rows */
+}
+
+/* Ensure that rows and content are centered */
+.clients-slider-section .row {
+    justify-content: center; /* Center the rows horizontally */
+}

@@ -1,0 +1,73 @@
+  .brand-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .brand-card-wrapper {
+    position: relative; /* Ensures dropdown appears under the card */
+  }
+  
+  .brand-card {
+    width: 200px; /* Increased width */
+    height: 70px; /* Adjust height accordingly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .brand-card img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+  }
+  
+  .brand-card:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Dropdown Styling */
+  .dropdown-content {
+    display: block; /* Always keep it block so we can animate it, hide it via opacity */
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%; /* Dropdown will match the card's width */
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    border-radius: 10px;
+    z-index: 1;
+    
+    /* Hidden state for the dropdown */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+  }
+  
+  /* Show the dropdown with animation */
+  .dropdown-content.show {
+    max-height: 200px; /* Adjust to the height of the dropdown content */
+    opacity: 1;
+  }
+  
+  .dropdown-content a {
+    color: #1a2750;
+    padding: 10px 16px;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
