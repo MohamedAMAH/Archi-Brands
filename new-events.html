@@ -13,104 +13,118 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link href="css/tiny-slider.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/ab-try-logo.png" type="image/png" />
     <title>archi-brands</title>
+    <style>
+      .wider-container {
+			  width: 88%;
+			  margin-right: auto;
+			  margin-left: auto;
+			  /* padding-right: 15px; */
+			  /* padding-left: 15px; */
+			}
+    </style>
   </head>
 
   <body>
     <!-- Bootstrap Navbar -->
 <nav class="navbar navbar-expand-lg bg-white fixed-top">
-    <div class="container d-flex align-items-center">
-      <!-- Logo on the left -->
-      <a class="navbar-brand d-flex align-items-center" href="new-home.html">
-        <img src="images/ab-final-logo.jpg" alt="Logo" style="width: 120px; height: 95px;">
-      </a>
-      <!-- Vertical Line -->
-      <div class="vertical-line"></div>
-      <!-- Second Logo with text -->
-      <div class="platinum-partner d-flex flex-column align-items-center">
-        <img src="images/SteelcaseLogo_R0_c80fed77-5056-a36a-06b5a2c23def0933.jpg" alt="Partner Logo" style="width: 210px;"> <!-- Adjust size as needed -->
-        <span class="partner-text font-archi" style="font-weight: 3000;">
-            <script>
-                document.write(new Date().getFullYear() + " Platinum Partner");
-            </script>
-        </span>
-      </div>    
-  
-      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link font-archi" href="new-home.html">Home</a>
-          </li>
-          <li class="nav-item separator">|</li>
-          <li class="nav-item">
-            <a class="nav-link font-archi" href="new-products.html">Products</a>
-          </li>
-          <li class="nav-item separator">|</li>
-          <li class="nav-item">
-            <a class="nav-link font-archi" href="new-projects.html">Projects</a>
-          </li>
-          <li class="nav-item separator">|</li>
-          <li class="nav-item">
-            <a class="nav-link font-archi active" href="new-events.html">Events</a>
-          </li>
-          <li class="nav-item separator">|</li>
-          <li class="nav-item">
-            <a class="nav-link font-archi" href="new-career.html">Careers</a>
-          </li>
-        </ul>
-      </div>
+  <div class="wider-container d-flex align-items-center">
+    <!-- Logo on the left -->
+    <a class="navbar-brand d-flex align-items-center" href="new-home.html">
+      <img src="images/archi-main-logo.png" alt="Logo" style="height: 50px;">
+    </a>
+
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-home.html">HOME</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-products.html">PRODUCTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-projects.html">PROJECTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi active" href="new-events.html">INSIGHTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-careers.html">CAREERS</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-  
-  <style>
-    .navbar {
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
-    }
-  
-    .vertical-line {
-      width: 2px;
-      height: 100px; /* Match the height of the first logo */
-      background-color: #7a7a7a; /* Adjust color as needed */
-      margin-right: 15px;
-    }
-  
-    .platinum-partner img {
-      margin-bottom: 5px; /* Space between image and text */
-    }
-  
-    .partner-text {
-      font-size: 1.2rem; /* Adjust as needed */
-      color: #7a7a7a; /* Match color with other nav items */
-      text-align: center;
-    }
-  
-    .navbar-nav .nav-link {
-      color: #7a7a7a !important;
-      font-weight: 500; /* Optional for better visibility */
-      font-size: 1rem; /* Adjust this value to change the font size */
-      margin-left: 10px; /* Space between items */
-      margin-right: 10px; /* Space between items */
-    }
-  
-    .navbar-nav .nav-link.active,
-    .navbar-nav .nav-link:hover {
-      color: #f5894b !important;
-    }
-  
-    .navbar-nav .separator {
-      color: #7a7a7a;
-      font-size: 1.25rem; /* Adjust this value to match the nav-link size */
-      display: flex;
-      align-items: center;
-      padding: 0 5px; /* Adjust spacing around separators */
-    }
-  </style>  
+  </div>
+</nav>
+
+<style>
+  .navbar {
+z-index: 1000;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
+height: 120px; /* Set the fixed height for the navbar */
+padding: 0 15px; /* Add padding if needed */
+}
+
+.navbar-brand img {
+height: 100%; /* Make sure the logo height doesn't exceed the navbar height */
+max-height: 60px; /* Set a max height for the logo for better control */
+}
+
+.navbar-toggler {
+height: 60px; /* Adjust this to align with the navbar height */
+}
+
+  .vertical-line {
+    width: 0.5px;
+    height: 100px; /* Match the height of the first logo */
+    background-color: #7a7a7a; /* Adjust color as needed */
+    margin-right: 15px;
+  }
+
+  .platinum-partner img {
+    margin-bottom: 5px; /* Space between image and text */
+  }
+
+  .partner-text {
+    font-size: 1.2rem; /* Adjust as needed */
+    color: #7a7a7a; /* Match color with other nav items */
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    color: #7a7a7a !important;
+    font-weight: 400; /* Optional for better visibility */
+    font-size: 0.9rem; /* Adjust this value to change the font size */
+    margin-left: 30px; /* Space between items */
+    margin-right: 30px; /* Space between items */
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
+    color: #c19c81 !important;
+  }
+
+  .navbar-nav .separator {
+    color: #7a7a7a;
+    font-size: 1rem; /* Adjust this value to match the nav-link size */
+    display: flex;
+    align-items: center;
+    padding: 0 5px; /* Adjust spacing around separators */
+  }
+</style>  
+
+<br><br><br><br>
 
     <!-- Custom Carousel Structure -->
     <!-- <div class="custom-carousel">
@@ -174,9 +188,8 @@
         setInterval(showNextSlide, 5000);
       });
     </script> -->
-    <br><br><br><br>
 
-<div class="events-hero">
+<!-- <div class="events-hero">
   <div class="container">
       <div class="hero-content text-center">
           <h1 class="display-3 fw-bold mb-4">Discover Amazing Events</h1>
@@ -192,7 +205,6 @@
 
 <div class="events-main" style="padding-bottom: 5rem;">
   <div class="container">
-      <!-- Filters Bar -->
       <div class="filters-bar">
           <div class="active-filters">
               <button class="filter-pill active">All</button>
@@ -210,7 +222,6 @@
           </div>
       </div>
 
-      <!-- Featured Event -->
       <div class="featured-event">
           <div class="event-card featured">
               <div class="event-image">
@@ -236,9 +247,7 @@
           </div>
       </div>
 
-      <!-- Regular Events Grid -->
       <div class="events-grid">
-          <!-- Event Card 1 -->
           <div class="event-card">
               <div class="event-image">
                   <img src="/images/events/des.jpeg" alt="Workshop">
@@ -256,7 +265,6 @@
               </div>
           </div>
 
-          <!-- Event Card 2 -->
           <div class="event-card">
               <div class="event-image">
                   <img src="/images/events/festival.jpg" alt="Concert">
@@ -274,7 +282,6 @@
               </div>
           </div>
 
-          <!-- Event Card 3 -->
           <div class="event-card">
               <div class="event-image">
                   <img src="/images/events/webinar.jpg" alt="Webinar">
@@ -293,10 +300,6 @@
           </div>
       </div>
 
-      <!-- Load More Button -->
-      <!-- <div class="text-center mt-5">
-          <button class="btn btn-outline-primary btn-lg">Load More Events</button>
-      </div> -->
   </div>
 </div>
 
@@ -518,7 +521,6 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Filter pills interaction
   const filterPills = document.querySelectorAll('.filter-pill');
   filterPills.forEach(pill => {
       pill.addEventListener('click', () => {
@@ -527,7 +529,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-  // View buttons interaction
   const viewBtns = document.querySelectorAll('.view-btn');
   viewBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -536,90 +537,321 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 });
-</script>
+</script> -->
 
-    <footer style="background-color: #ffffff; padding: 30px 0 5px;">
-      <div class="container text-center">
-        <!-- Newsletter Subscription Form -->
-        <div class="subscription-form mb-4">
-          <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a;">
-            <span class="me-1">
-              <img src="images/envelope-outline.svg" alt="Newsletter Icon" class="img-fluid" />
-            </span>
-            <span>Subscribe to Newsletter</span>
-          </h3>
+<style>
+  .projects-container {
+      width: 70%;
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+  }
 
-          <form action="#" class="row g-3 justify-content-center">
-            <div class="col-auto">
-              <input type="text" class="form-control" placeholder="Enter your name" />
-            </div>
-            <div class="col-auto">
-              <input type="email" class="form-control" placeholder="Enter your email" />
-            </div>
-            <div class="col-auto">
-              <button class="btn btn-primary" style="border-radius: 10px;">
-                <span class="fa fa-paper-plane"></span>
-              </button>
-            </div>
-          </form>
-        </div>
+  .projects-section {
+      padding: 50px 0;
+      background: #f8f9fa;
+  }
 
-        <!-- Social Media Links -->
-        <ul class="list-unstyled custom-social-new d-flex justify-content-center mb-4">
-          <li class="mx-2">
-            <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer">
-              <span class="fa fa-brands fa-facebook-f"></span>
-            </a>
-          </li>
-          <li class="mx-2">
-            <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer">
-              <span class="fa fa-brands fa-instagram"></span>
-            </a>
-          </li>
-          <li class="mx-2">
-            <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer">
-              <span class="fa fa-brands fa-linkedin"></span>
-            </a>
-          </li>
-        </ul>
+  /* .projects-heading {
+      margin-bottom: 40px;
+      color: #5f5e61;
+      font-weight: lighter;
+  } */
+
+  .slick-slider {
+      margin: 0 auto;
+  }
+
+  .slick-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .projects-slider {
+      overflow: visible; /* Make sure overflowing content is visible */
+  }
+
+  .circle {
+position: relative;
+width: 200px;
+height: 370px;
+border-radius: 50%;
+overflow: hidden;
+margin: 0 10px;
+flex-shrink: 0;
+}
+
+.circle-content {
+position: relative;
+width: 100%;
+height: 100%;
+}
+
+.circle a {
+display: block;
+width: 100%;
+height: 100%;
+position: relative;
+text-decoration: none;
+}
+
+.circle img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s;
+}
+
+.circle-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.5);
+opacity: 0;
+transition: opacity 0.3s;
+}
+
+.circle:hover .circle-overlay {
+opacity: 1;
+}
+
+.circle-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: #ffffff;
+font-size: 1.5rem;
+font-weight: bold;
+text-align: center;
+margin: 0;
+text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+width: 100%;
+padding: 0 10px;
+z-index: 10;
+}
+
+  .slick-arrow {
+      background: none; /* Remove background */
+      z-index: 10; /* Ensure arrows are on top */
+      color: black; /* Font Awesome arrow color */
+      width: 40px; /* Clickable area width */
+      height: 40px; /* Clickable area height */
+      display: flex !important; /* Flexbox for centering */
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; /* Pointer cursor for interactivity */
+      border-radius: 50%; /* Make the clickable area circular */
+      transition: transform 0.3s ease; /* Smooth effect for potential interactions */
+  }
+
+  /* Position the arrows */
+  .slick-prev {
+      left: -50px; /* Adjust as needed */
+  }
+
+  .slick-next {
+      right: -50px; /* Adjust as needed */
+  }
+
+  /* Remove default Slick arrows */
+  .slick-prev::before,
+  .slick-next::before {
+      display: none;
+  }
+
+  /* Add Font Awesome icons for arrows */
+  .slick-prev::after {
+      font-family: "Font Awesome 6 Free"; /* Font Awesome font family */
+      font-weight: 900; /* For solid icons */
+      content: "\f104"; /* Unicode for "chevron-left" */
+      font-size: 24px; /* Adjust icon size */
+      color: #7a7a7a; /* Arrow color */
+  }
+
+  .slick-next::after {
+      font-family: "Font Awesome 6 Free"; /* Font Awesome font family */
+      font-weight: 900; /* For solid icons */
+      content: "\f105"; /* Unicode for "chevron-right" */
+      font-size: 24px; /* Adjust icon size */
+      color: #7a7a7a; /* Arrow color */
+  }
+
+  .projects-heading {
+      color: rgb(113, 114, 113);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-size: 2rem;
+  }
+</style>
+
+<div class="projects-section">
+  <div class="projects-container">
+      <!-- <h1 class="projects-heading text-center font-archi">TRANSFORMED WORKSPACES</h1> -->
+      <div class="text-center mb-5 projects-heading">
+        <span style="margin: 0 15px;">EXPLORE</span>
+        |
+        <span style="margin: 0 15px;">READ</span>
+        |
+        <span style="margin: 0 15px;">WATCH</span>
+        |
+        <span style="margin: 0 15px;">LISTEN</span>
       </div>
-
-      <!-- Centered Copyright Section -->
-      <div class="mt-4" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
-        <div class="container pt-3 text-center">
-          <p class="mb-2 font-archi">
-            Copyright archi-brands &copy;
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            . All Rights Reserved.
-          </p>
-        </div>
+      <div class="projects-slider">
+          <div class="circle">
+              <div class="circle-content">
+                  <a href="new-project.html?category=corporate">
+                      <img src="images/news.png" alt="Project 1">
+                      <div class="circle-overlay"></div>
+                      <h3 class="circle-text">NEWS</h3>
+                  </a>
+              </div>
+          </div>
+          <div class="circle">
+            <div class="circle-content">
+                <a href="new-project.html?category=education">
+                    <img src="images/events-1.png" alt="Project 1">
+                    <div class="circle-overlay"></div>
+                    <h3 class="circle-text">EVENTS</h3>
+                </a>
+            </div>
+          </div>
+          <div class="circle">
+            <div class="circle-content">
+                <a href="new-project.html?category=healthcare">
+                    <img src="images/videos.jpg" alt="Project 1">
+                    <div class="circle-overlay"></div>
+                    <h3 class="circle-text">VIDEOS</h3>
+                </a>
+            </div>
+          </div>
+          <div class="circle">
+            <div class="circle-content">
+                <a href="new-project.html?category=hospitality">
+                    <img src="images/blogs.png" alt="Project 1">
+                    <div class="circle-overlay"></div>
+                    <h3 class="circle-text">BLOGS</h3>
+                </a>
+            </div>
+          </div>
       </div>
-    </footer>
+  </div>
+</div>
 
-    <style>
-      .custom-social-new li {
-        margin: 2px;
-        display: inline-block;
-      }
-      .custom-social-new li a {
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        line-height: 40px;
-        display: inline-block;
-        background: #dce5e4;
-        background: #e2e6e9;
-        color: #7a7a7a;
-        border-radius: 50%;
-        transition: background 0.3s, color 0.3s;
-      }
-      .custom-social-new li a:hover {
-        background: #f5894b;
-        color: #ffffff;
-      }
-    </style>
+<footer style="background-color: #ffffff; padding: 30px 0 5px;">
+  <div class="container text-center">
+    <!-- Newsletter Subscription Form -->
+    <div class="subscription-form mb-4">
+      <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a;">
+        <span class="me-1">
+          <img src="images/envelope-outline.svg" alt="Newsletter Icon" class="img-fluid" />
+        </span>
+        <span style="font-family: 'Montserrat', sans-serif; font-weight: 500;">Subscribe to Our Newsletter</span>
+      </h3>
+
+      <form action="#" class="row g-3 justify-content-center align-items-center">
+        <div class="col-auto">
+          <input type="text" class="new-form-control" placeholder="Enter your name" />
+        </div>
+        <div class="col-auto">
+          <input type="email" class="new-form-control" placeholder="Enter your email" />
+        </div>
+        <div class="col-auto">
+          <button class="custom-submit-btn">
+            <span class="fa fa-paper-plane"></span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Updated Social Media Links -->
+    <div class="social-media-links mb-4" style="line-height: 0;">
+      <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+        <span class="fa fa-brands fa-facebook-f"></span>
+      </a>
+      <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+        <span class="fa fa-brands fa-instagram"></span>
+      </a>
+      <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
+        <span class="fa fa-brands fa-linkedin"></span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Centered Copyright Section -->
+  <div class="mt-4" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+    <div class="container pt-3 text-center">
+      <p class="mb-2 font-archi">
+        Copyright Archibrands &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        . All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* New Form Control Styling */
+  .new-form-control {
+    width: 250px; /* Adjust width as per design */
+    height: 45px; /* Set consistent height */
+    padding: 10px 15px; /* Padding for better text alignment */
+    border: 1px solid #dcdcdc; /* Subtle border */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+    color: #333333; /* Text color */
+    background-color: #f9f9f9; /* Light background */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .new-form-control:focus {
+    border-color: #c19c81; /* Border color on focus */
+  }
+
+  /* Button Styling */
+  .custom-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px; /* Match input field height */
+    min-width: 50px; /* Ensures enough width for the icon */
+    padding: 0 15px; /* Horizontal padding */
+    border: none;
+    border-radius: 15px; /* Matches input field corners */
+    background-color: #7a7a7a; /* Default button color */
+    color: #ffffff;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .custom-submit-btn:hover {
+    background-color: #c19c81; /* Smooth hover effect */
+  }
+
+  /* Social Media Links */
+  .social-media-links .social-icon {
+    font-size: 24px; /* Adjust size of social icons */
+    color: #7a7a7a; /* Default color */
+    transition: color 0.3s ease;
+  }
+
+  .social-media-links .social-icon:hover {
+    color: #c19c81; /* Hover color */
+  }
+
+  /* Parent container fix for dashes */
+  .social-media-links {
+    line-height: 0; /* Prevents unwanted inline spacing */
+  }
+</style>
+
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -641,6 +873,76 @@ document.addEventListener('DOMContentLoaded', function() {
     <script src="js/cart-counter.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/search-bar.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+          const $slider = $('.projects-slider').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              speed: 0, // Instantaneous slide movement (manual scrolling)
+              arrows: true,
+              dots: false,
+              infinite: true, // Enable infinite scrolling
+              autoplay: false, // Disable autoplay
+              pauseOnHover: false // Avoid interference
+          });
+
+          $('.slick-prev, .slick-next').off('click').on('click', function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+          });
+
+          $slider.on('beforeChange', function (event) {
+              event.stopImmediatePropagation();
+          });
+  
+          let animationFrame; // To track the scrolling animation
+          const slideWidth = $slider.find('.slick-slide').outerWidth(true); // Width of each slide
+  
+          function scroll(direction) {
+              const $track = $slider.find('.slick-track');
+              const currentTransform = $track.css('transform');
+              const matrix = currentTransform.match(/matrix\((.+)\)/);
+              const translateX = matrix ? parseFloat(matrix[1].split(',')[4]) : 0;
+  
+              // Move left or right based on the direction
+              const newTranslateX = direction === 'right' ? translateX - 1 : translateX + 1;
+              $track.css('transform', `translateX(${newTranslateX}px)`);
+  
+              // Handle infinite scrolling
+              const trackWidth = $track.width();
+              const containerWidth = $slider.width();
+  
+              if (Math.abs(translateX) >= trackWidth - containerWidth && direction === 'right') {
+                  $track.css('transform', `translateX(0px)`); // Reset to start
+              } else if (translateX >= 0 && direction === 'left') {
+                  $track.css('transform', `translateX(-${trackWidth - containerWidth}px)`); // Reset to end
+              }
+  
+              animationFrame = requestAnimationFrame(() => scroll(direction));
+          }
+  
+          // Hover handlers for arrows
+          $('.slick-next').hover(
+              function () {
+                  scroll('right'); // Start scrolling right
+              },
+              function () {
+                  cancelAnimationFrame(animationFrame); // Stop scrolling
+              }
+          );
+  
+          $('.slick-prev').hover(
+              function () {
+                  scroll('left'); // Start scrolling left
+              },
+              function () {
+                  cancelAnimationFrame(animationFrame); // Stop scrolling
+              }
+          );
+      });
+  </script>
     <!-- <script src="js/background.js"></script> -->
     <script src="js/disable.js"></script>
   </body>

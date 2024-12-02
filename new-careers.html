@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Archi-Brands" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="css/tiny-slider.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="shortcut icon" href="images/ab-try-logo.png" type="image/png" />
+    <title>archi-brands</title>
+    <style>
+      .wider-container {
+			  width: 88%;
+			  margin-right: auto;
+			  margin-left: auto;
+			  /* padding-right: 15px; */
+			  /* padding-left: 15px; */
+			}
+    </style>
+  </head>
+
+  <body>
+    <!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top">
+  <div class="wider-container d-flex align-items-center">
+    <!-- Logo on the left -->
+    <a class="navbar-brand d-flex align-items-center" href="new-home.html">
+      <img src="images/archi-main-logo.png" alt="Logo" style="height: 50px;">
+    </a>
+
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-home.html">HOME</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-products.html">PRODUCTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-projects.html">PROJECTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-events.html">INSIGHTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi active" href="new-careers.html">CAREERS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+z-index: 1000;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
+height: 120px; /* Set the fixed height for the navbar */
+padding: 0 15px; /* Add padding if needed */
+}
+
+.navbar-brand img {
+height: 100%; /* Make sure the logo height doesn't exceed the navbar height */
+max-height: 60px; /* Set a max height for the logo for better control */
+}
+
+.navbar-toggler {
+height: 60px; /* Adjust this to align with the navbar height */
+}
+
+  .vertical-line {
+    width: 0.5px;
+    height: 100px; /* Match the height of the first logo */
+    background-color: #7a7a7a; /* Adjust color as needed */
+    margin-right: 15px;
+  }
+
+  .platinum-partner img {
+    margin-bottom: 5px; /* Space between image and text */
+  }
+
+  .partner-text {
+    font-size: 1.2rem; /* Adjust as needed */
+    color: #7a7a7a; /* Match color with other nav items */
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    color: #7a7a7a !important;
+    font-weight: 500; /* Optional for better visibility */
+    font-size: 0.9rem; /* Adjust this value to change the font size */
+    margin-left: 30px; /* Space between items */
+    margin-right: 30px; /* Space between items */
+  }
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
+    color: #c19c81 !important;
+  }
+
+  .navbar-nav .separator {
+    color: #7a7a7a;
+    font-size: 1rem; /* Adjust this value to match the nav-link size */
+    display: flex;
+    align-items: center;
+    padding: 0 5px; /* Adjust spacing around separators */
+  }
+</style>  
+
+  <!-- Custom Carousel Structure -->
+  <div class="custom-carousel">
+    <div class="carousel-slide active">
+      <img src="images/8.jpg" alt="Slide 1">
+    </div>
+    <div class="carousel-slide">
+      <img src="images/Capital/1.jpg" alt="Slide 2">
+    </div>
+    <div class="carousel-slide">
+      <img src="images/KCG/2.jpg" alt="Slide 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="images/Kredit/1.jpg" alt="Slide 4">
+    </div>
+    <div class="carousel-slide">
+      <img src="images/35.jpg" alt="Slide 3">
+    </div>
+  </div>
+
+  <style>
+    /* .custom-carousel {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    } */
+
+    .custom-carousel {
+      position: relative;
+      width: 97%;
+      height: 100vh;
+      overflow: hidden;
+      margin-left: auto;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 3s ease-in-out;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const slides = document.querySelectorAll('.carousel-slide');
+      let currentIndex = 0;
+
+      function showNextSlide() {
+        // Hide the current slide
+        slides[currentIndex].classList.remove('active');
+
+        // Increment the index and loop back to the first slide if necessary
+        currentIndex = (currentIndex + 1) % slides.length;
+
+        // Show the next slide
+        slides[currentIndex].classList.add('active');
+      }
+
+      // Change slides every 5 seconds (5000 ms)
+      setInterval(showNextSlide, 6000);
+    });
+  </script>
+
+
+  <br><br>
+
+  <footer style="background-color: #ffffff; padding: 30px 0 5px;">
+    <div class="container text-center">
+      <!-- Newsletter Subscription Form -->
+      <div class="subscription-form mb-4">
+        <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a;">
+          <span class="me-1">
+            <img src="images/envelope-outline.svg" alt="Newsletter Icon" class="img-fluid" />
+          </span>
+          <span style="font-family: 'Montserrat', sans-serif; font-weight: 500;">Subscribe to Our Newsletter</span>
+        </h3>
+  
+        <form action="#" class="row g-3 justify-content-center align-items-center">
+          <div class="col-auto">
+            <input type="text" class="new-form-control" placeholder="Enter your name" />
+          </div>
+          <div class="col-auto">
+            <input type="email" class="new-form-control" placeholder="Enter your email" />
+          </div>
+          <div class="col-auto">
+            <button class="custom-submit-btn">
+              <span class="fa fa-paper-plane"></span>
+            </button>
+          </div>
+        </form>
+      </div>
+  
+      <!-- Updated Social Media Links -->
+      <div class="social-media-links mb-4" style="line-height: 0;">
+        <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+          <span class="fa fa-brands fa-facebook-f"></span>
+        </a>
+        <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+          <span class="fa fa-brands fa-instagram"></span>
+        </a>
+        <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <span class="fa fa-brands fa-linkedin"></span>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Centered Copyright Section -->
+    <div class="mt-4" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+      <div class="container pt-3 text-center">
+        <p class="mb-2 font-archi">
+          Copyright Archibrands &copy;
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          . All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <style>
+    /* New Form Control Styling */
+    .new-form-control {
+      width: 250px; /* Adjust width as per design */
+      height: 45px; /* Set consistent height */
+      padding: 10px 15px; /* Padding for better text alignment */
+      border: 1px solid #dcdcdc; /* Subtle border */
+      border-radius: 15px; /* Rounded corners */
+      font-size: 14px; /* Text size */
+      color: #333333; /* Text color */
+      background-color: #f9f9f9; /* Light background */
+      outline: none; /* Remove default outline */
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .new-form-control:focus {
+      border-color: #c19c81; /* Border color on focus */
+    }
+  
+    /* Button Styling */
+    .custom-submit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45px; /* Match input field height */
+      min-width: 50px; /* Ensures enough width for the icon */
+      padding: 0 15px; /* Horizontal padding */
+      border: none;
+      border-radius: 15px; /* Matches input field corners */
+      background-color: #7a7a7a; /* Default button color */
+      color: #ffffff;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .custom-submit-btn:hover {
+      background-color: #c19c81; /* Smooth hover effect */
+    }
+  
+    /* Social Media Links */
+    .social-media-links .social-icon {
+      font-size: 24px; /* Adjust size of social icons */
+      color: #7a7a7a; /* Default color */
+      transition: color 0.3s ease;
+    }
+  
+    .social-media-links .social-icon:hover {
+      color: #c19c81; /* Hover color */
+    }
+  
+    /* Parent container fix for dashes */
+    .social-media-links {
+      line-height: 0; /* Prevents unwanted inline spacing */
+    }
+  </style>
+  
+  
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        effect: "fade",
+        speed: 900,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        navigation: false, // Removes arrows
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/job-field.js"></script>
+    <script src="js/jobs.js"></script>
+    <script src="js/cart-counter.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/search-bar.js"></script>
+    <!-- <script src="js/background.js"></script> -->
+    <script src="js/disable.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+          const $slider = $('.projects-slider').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              speed: 0, // Instantaneous slide movement (manual scrolling)
+              arrows: true,
+              dots: false,
+              infinite: true, // Enable infinite scrolling
+              autoplay: false, // Disable autoplay
+              pauseOnHover: false // Avoid interference
+          });
+
+          $('.slick-prev, .slick-next').off('click').on('click', function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+          });
+
+          $slider.on('beforeChange', function (event) {
+              event.stopImmediatePropagation();
+          });
+  
+          let animationFrame; // To track the scrolling animation
+          const slideWidth = $slider.find('.slick-slide').outerWidth(true); // Width of each slide
+  
+          function scroll(direction) {
+              const $track = $slider.find('.slick-track');
+              const currentTransform = $track.css('transform');
+              const matrix = currentTransform.match(/matrix\((.+)\)/);
+              const translateX = matrix ? parseFloat(matrix[1].split(',')[4]) : 0;
+  
+              // Move left or right based on the direction
+              const newTranslateX = direction === 'right' ? translateX - 1 : translateX + 1;
+              $track.css('transform', `translateX(${newTranslateX}px)`);
+  
+              // Handle infinite scrolling
+              const trackWidth = $track.width();
+              const containerWidth = $slider.width();
+  
+              if (Math.abs(translateX) >= trackWidth - containerWidth && direction === 'right') {
+                  $track.css('transform', `translateX(0px)`); // Reset to start
+              } else if (translateX >= 0 && direction === 'left') {
+                  $track.css('transform', `translateX(-${trackWidth - containerWidth}px)`); // Reset to end
+              }
+  
+              animationFrame = requestAnimationFrame(() => scroll(direction));
+          }
+  
+          // Hover handlers for arrows
+          $('.slick-next').hover(
+              function () {
+                  scroll('right'); // Start scrolling right
+              },
+              function () {
+                  cancelAnimationFrame(animationFrame); // Stop scrolling
+              }
+          );
+  
+          $('.slick-prev').hover(
+              function () {
+                  scroll('left'); // Start scrolling left
+              },
+              function () {
+                  cancelAnimationFrame(animationFrame); // Stop scrolling
+              }
+          );
+      });
+  </script>
+  </body>
+</html>

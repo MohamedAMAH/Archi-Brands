@@ -13,30 +13,30 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link href="css/tiny-slider.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/ab-try-logo.png" type="image/png" />
     <title>archi-brands</title>
+    <style>
+      .wider-container {
+			  width: 88%;
+			  margin-right: auto;
+			  margin-left: auto;
+			  /* padding-right: 15px; */
+			  /* padding-left: 15px; */
+			}
+    </style>
   </head>
 
   <body>
     <!-- Bootstrap Navbar -->
 <nav class="navbar navbar-expand-lg bg-white fixed-top">
-    <div class="container d-flex align-items-center">
+    <div class="wider-container d-flex align-items-center">
       <!-- Logo on the left -->
       <a class="navbar-brand d-flex align-items-center" href="new-home.html">
-        <img src="images/ab-final-logo.jpg" alt="Logo" style="width: 120px; height: 95px;">
+        <img src="images/archi-main-logo.png" alt="Logo" style="height: 50px;">
       </a>
-      <!-- Vertical Line -->
-      <div class="vertical-line"></div>
-      <!-- Second Logo with text -->
-      <div class="platinum-partner d-flex flex-column align-items-center">
-        <img src="images/SteelcaseLogo_R0_c80fed77-5056-a36a-06b5a2c23def0933.jpg" alt="Partner Logo" style="width: 210px;"> <!-- Adjust size as needed -->
-        <span class="partner-text font-archi" style="font-weight: 3000;">
-            <script>
-                document.write(new Date().getFullYear() + " Platinum Partner");
-            </script>
-        </span>
-      </div>    
   
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -44,23 +44,23 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link font-archi active" href="new-home.html">Home</a>
+            <a class="nav-link font-archi active" href="new-home.html">HOME</a>
           </li>
           <li class="nav-item separator">|</li>
           <li class="nav-item">
-            <a class="nav-link font-archi" href="new-products.html">Products</a>
+            <a class="nav-link font-archi" href="new-products.html">PRODUCTS</a>
           </li>
           <li class="nav-item separator">|</li>
           <li class="nav-item">
-            <a class="nav-link font-archi" href="new-projects.html">Projects</a>
+            <a class="nav-link font-archi" href="new-projects.html">PROJECTS</a>
           </li>
           <li class="nav-item separator">|</li>
           <li class="nav-item">
-            <a class="nav-link font-archi" href="new-events.html">Events</a>
+            <a class="nav-link font-archi" href="new-events.html">INSIGHTS</a>
           </li>
           <li class="nav-item separator">|</li>
           <li class="nav-item">
-            <a class="nav-link font-archi" href="new-career.html">Careers</a>
+            <a class="nav-link font-archi" href="new-careers.html">CAREERS</a>
           </li>
         </ul>
       </div>
@@ -69,12 +69,23 @@
   
   <style>
     .navbar {
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
-    }
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
+  height: 120px; /* Set the fixed height for the navbar */
+  padding: 0 15px; /* Add padding if needed */
+}
+
+.navbar-brand img {
+  height: 100%; /* Make sure the logo height doesn't exceed the navbar height */
+  max-height: 60px; /* Set a max height for the logo for better control */
+}
+
+.navbar-toggler {
+  height: 60px; /* Adjust this to align with the navbar height */
+}
   
     .vertical-line {
-      width: 2px;
+      width: 0.5px;
       height: 100px; /* Match the height of the first logo */
       background-color: #7a7a7a; /* Adjust color as needed */
       margin-right: 15px;
@@ -93,19 +104,19 @@
     .navbar-nav .nav-link {
       color: #7a7a7a !important;
       font-weight: 500; /* Optional for better visibility */
-      font-size: 1rem; /* Adjust this value to change the font size */
-      margin-left: 10px; /* Space between items */
-      margin-right: 10px; /* Space between items */
+      font-size: 0.9rem; /* Adjust this value to change the font size */
+      margin-left: 30px; /* Space between items */
+      margin-right: 30px; /* Space between items */
     }
   
     .navbar-nav .nav-link.active,
     .navbar-nav .nav-link:hover {
-      color: #f5894b !important;
+      color: #c19c81 !important;
     }
   
     .navbar-nav .separator {
       color: #7a7a7a;
-      font-size: 1.25rem; /* Adjust this value to match the nav-link size */
+      font-size: 1rem; /* Adjust this value to match the nav-link size */
       display: flex;
       align-items: center;
       padding: 0 5px; /* Adjust spacing around separators */
@@ -132,11 +143,19 @@
     </div>
 
     <style>
-      .custom-carousel {
+      /* .custom-carousel {
         position: relative;
         width: 100%;
-        height: 100vh; /* Adjust this value as needed */
+        height: 100vh;
         overflow: hidden;
+      } */
+
+      .custom-carousel {
+        position: relative;
+        width: 97%;
+        height: 100vh;
+        overflow: hidden;
+        margin-left: auto;
       }
 
       .carousel-slide {
@@ -146,7 +165,7 @@
         width: 100%;
         height: 100%;
         opacity: 0;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 3s ease-in-out;
       }
 
       .carousel-slide.active {
@@ -178,472 +197,352 @@
         }
 
         // Change slides every 5 seconds (5000 ms)
-        setInterval(showNextSlide, 5000);
+        setInterval(showNextSlide, 6000);
       });
     </script>
 
-
-    <!-- HTML Structure -->
-    <!-- <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="images/20.jpg" alt="Slide 1" /></div>
-        <div class="swiper-slide"><img src="images/42.jpg" alt="Slide 2" /></div>
-        <div class="swiper-slide"><img src="images/35.jpg" alt="Slide 3" /></div>
-        <div class="swiper-slide"><img src="images/53.jpg" alt="Slide 4" /></div>
-      </div>
-    </div>
-
-    <style>
-      .swiper-container {
-        width: 100%;
-        height: 100vh;
-      }
-
-      .swiper-slide {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-      }
-
-      .swiper-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style> -->
-
-    <div class="what-we-do-section" style="padding: 5rem 0; background-color: #f8f9fa;">
-      <div class="container">
-          <h2 class="section-title text-center mb-4 font-archi">WHAT WE DO</h2>
+    <div class="what-we-do-section" style="padding: 50px 0; background-color: #f8f9fa;">
+      <style>
+        .what-we-do-container {
+          width: 60%;
+          margin-right: auto;
+          margin-left: auto;
+			  }
+        .what-we-do-heading {
+          color: rgb(113, 114, 113);
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+        }
+        .what-we-do-container p {
+          color: #7a7a7a;
+          font-size: 1rem;
+          line-height: 1.6;
+        }
+        .what-we-do-container li {
+          color: #7a7a7a !important;
+          /* font-size: 1rem;
+          line-height: 1.6; */
+        }
+        .what-we-do-container li a {
+          color: #7a7a7a;
+        }
+      </style>
+      <div class="what-we-do-container">
+          <h1 class="what-we-do-heading text-center mb-4">WHAT WE DO?</h1>
           <div class="row">
               <div class="col-md-6">
-                  <p style="color: #7a7a7a;">
-                      <strong>Archi-brands</strong> is Egypt's premier supplier of architectural solutions, delivering <strong>aesthetic, functional,</strong> and <strong>durable solutions</strong> that redefine spaces with <strong>premium quality</strong> and <strong>innovation</strong>.
+                  <p>
+                      Archi-brands is Egypt's premier supplier of architectural solutions, delivering <strong>aesthetic, functional,</strong> and <strong>durable solutions</strong> that redefine spaces with <strong>premium quality</strong> and <strong>innovation</strong>.
                       Our extensive range of products includes acoustic comfort options, carpet tiles, vinyl/LVT, engineered wood, and more.
                   </p>
-                  <p style="color: #7a7a7a;">
+                  <!-- <p>
                       We excel in providing <strong>tailored solutions</strong> for multi-purpose buildings, whether for corporate, retail, educational, leisure, or residential comfort.
                       Our solutions prioritize <strong>environmental sustainability</strong> and align with the highest standards of service, ensuring that every project reflects both innovation and practicality.
-                  </p>
-                  <p style="color: #7a7a7a;">
+                  </p> -->
+                  <p>
                       Our commitment to being <strong>environmentally friendly</strong> is central to our mission. As the sole agents of leading manufacturers like Shaw Contract, Impact Acoustic, SAS International, and Gerflor, we provide solutions that not only meet your needs but also contribute to a sustainable future.
                   </p>
               </div>
               <div class="col-md-6">
-                  <p style="color: #7a7a7a;">
+                  <!-- <p>
                       At Archi-brands, we believe in going beyond just delivering products. We build relationships founded on trust, quality, and a deep understanding of our clients’ needs.
                       Our commitment to exceptional service ensures that every project benefits from our industry expertise and our dedication to sustainable, innovative practices.
-                  </p>
-                  <h4 class="font-archi" style="color: #000000;">Why Us?</h4>
-                  <p style="color: #7a7a7a;">
+                  </p> -->
+                  <p>We offer a full range of services from interior design and space planning to procurement and installation of:</p>
+                  <ul>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Flooring</a></li>
+                    <li><a href="#">Ceiling</a></li>
+                    <li><a href="#">Cladding</a></li>
+                  </ul>
+                  <!-- <p>
                       Choosing Archi-brands means partnering with a team that combines extensive industry experience, a passion for innovation, and a commitment to sustainability.
                       Our client-centric approach and collaboration with globally recognized manufacturers set us apart. We create long-lasting partnerships built on trust, quality, and mutual success.
-                  </p>
-                  <p style="color: #7a7a7a;">
+                  </p> -->
+                  <p>
                       We uphold <strong>passion, integrity, teamwork,</strong> and <strong>accountability</strong> as the core values driving our work, ensuring each project is executed with excellence and reliability.
                   </p>
               </div>
           </div>
       </div>
     </div>  
+    
       
 
-<style>
-    .service-image {
-      width: 350px;
-      height: 350px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
+    <style>
+      .service-subheading {
+        color: #212322;
+        font-weight: bold;
+        font-size: 20px;
+      }
   
-    .service-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .fonty {
-      color: #000000;
-    }
-  </style>
+      .service-image {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 40px;
+      }
+    
+      .service-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
   
-  <div class="services-section" style="background-color: #ffffff; padding: 50px 0;">
-    <div class="container">
-      <h2 class="section-title text-center" style="margin-bottom: 50px;">OUR SERVICES</h2>
-      <div class="row text-center">
-        <!-- Top Row of Services -->
-        <div class="col-md-4 mb-4">
-          <div class="service-image mx-auto">
-            <img src="images/services/design.jpg" alt="Design + 3D Visualization">
-          </div>
-          <h4 class="mt-3 font-archi fonty">Design + 3D Visualization</h4>
-          <p>We provide comprehensive design solutions that bring your concepts to life through advanced 3D modeling and visualization techniques. Our expert team ensures that every detail is refined, enabling you to envision the final result before the actual build.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="service-image mx-auto">
-            <img src="images/services/procurement.jpg" alt="Procurement + Specification">
-          </div>
-          <h4 class="mt-3 font-archi fonty">Procurement + Specification</h4>
-          <p>Our procurement service is designed to source the highest quality materials and products that match your project specifications. We handle the research, purchasing, and specification process to ensure you receive the best value and quality.</p>
-        </div>
-        <div class="col-md-4 mb-4">
-          <div class="service-image mx-auto">
-            <img src="images/services/management.jpg" alt="Project Management">
-          </div>
-          <h4 class="mt-3 font-archi fonty">Project Management</h4>
-          <p>We provide comprehensive project management services that oversee your project from conception to completion. Our experienced team coordinates all aspects, ensuring timelines are met, budgets are adhered to, and quality standards are maintained.</p>
-        </div>
-      </div>
+      .services-heading {
+        margin-bottom: 40px;
+        color: #212322;
+        font-size: 85px;
+        font-weight: bold;
+        line-height: 1;
+        margin-left: 160px;
+      }
   
-      <div class="row text-center">
-        <!-- Bottom Row of Services -->
-        <div class="col-md-4">
-          <div class="service-image mx-auto">
-            <img src="images/services/delivery.jpg" alt="Delivery + Installation">
+      .services-container {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+  
+      .custom-column {
+        padding: auto 0;
+        margin: auto 0;
+      }
+  
+      .service-text {
+        margin-bottom: 15px;
+        line-height: 1.6;
+        font-size: 14px;
+        color: #7a7a7a;
+        padding-top: 10px;
+      }
+  
+      .service-list {
+        text-align: left;
+        list-style-position: inside;
+        margin: 0 10px;
+        font-size: 14px;
+      }
+    </style>
+    
+    <div class="services-section" style="background-color: #ffffff; padding: 50px 0;">
+      <div class="services-container">
+        <h1 class="services-heading">
+          <span style="display: block;">OUR</span>
+          <span style="display: block;">SERVICES</span>
+        </h1>      
+        <div class="row text-center">
+          <!-- Top Row of Services -->
+          <div class="col-md-3">
+            <div class="service-image mx-auto">
+              <img src="images/services/design.jpg" alt="Design + 3D Visualization">
+            </div>
+            <h4 class="mt-3 service-subheading font-archi">Design & 3D Visualization</h4>
+            <p class="service-text">We bring your ideas to life with advanced 3D modeling.</p>
+            <ul class="service-list">
+              <li>Comprehensive design solutions</li>
+              <li>Detailed 3D visualization</li>
+              <li>Refined concepts before actual build</li>
+            </ul>
           </div>
-          <h4 class="mt-3 font-archi fonty">Delivery + Installation</h4>
-          <p>Our delivery and installation services guarantee a seamless and timely setup of your project. We manage all logistics to ensure products are delivered safely and installed by our team of skilled professionals for a perfect finish.</p>
-        </div>
-        <div class="col-md-4">
-          <div class="service-image mx-auto">
-            <img src="images/services/stock.jpg" alt="In Stock Availability">
+          <div class="col-md-3">
+            <div class="service-image mx-auto">
+              <img src="images/services/procurement.jpg" alt="Procurement + Specification">
+            </div>
+            <h4 class="mt-3 service-subheading font-archi">Procurement & Specification</h4>
+            <p class="service-text">We source high-quality materials tailored to your needs.</p>
+            <ul class="service-list">
+              <li>Research and sourcing</li>
+              <li>Product quality assurance</li>
+              <li>Best value for your project</li>
+            </ul>
           </div>
-          <h4 class="mt-3 font-archi fonty">In Stock Availability</h4>
-          <p>We maintain a robust inventory to ensure that high-demand items are readily available. This service allows for faster project execution, minimizing delays and keeping your plans on schedule.</p>
-        </div>
-        <div class="col-md-4">
-          <div class="service-image mx-auto">
-            <img src="images/services/sus.jpg" alt="Sustainability Solutions">
+          <div class="col-md-3">
+            <div class="service-image mx-auto">
+              <img src="images/services/delivery.jpg" alt="Delivery + Installation">
+            </div>
+            <h4 class="mt-3 service-subheading font-archi">Delivery & Installation</h4>
+            <p class="service-text">Seamless delivery and installation for a perfect finish.</p>
+            <ul class="service-list">
+              <li>Safe logistics management</li>
+              <li>Timely setup</li>
+              <li>Skilled professional installation</li>
+            </ul>
           </div>
-          <h4 class="mt-3 font-archi fonty">Sustainability Solutions</h4>
-          <p>Our sustainability solutions are focused on reducing environmental impact while maintaining top performance and quality. We help you integrate eco-friendly practices and materials into your projects, contributing to a greener future.</p>
+          <div class="col-md-3">
+            <div class="service-image mx-auto">
+              <img src="images/services/job.png" alt="Post Occupation">
+            </div>
+            <h4 class="mt-3 service-subheading font-archi">Post Occupation</h4>
+            <p class="service-text">Ongoing support to keep your space optimized.</p>
+            <ul class="service-list">
+              <li>Regular inspections</li>
+              <li>Maintenance coordination</li>
+              <li>Comfort and efficiency adjustments</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   
-
-<div class="inspiration-section py-5" style="background-color: #f8f9fa; padding: 5rem 0;">
-    <div class="container">
-      <h2 class="section-title text-center mb-4">NEED SOME INSPIRATION?</h2>
-      <div class="text-center mb-5" style="color: #7a7a7a; font-size: 1rem;">
-        <span class="font-archi"> <i class="fas fa-lightbulb"></i> Explore Our Projects </span>
-        |
-        <span class="font-archi"> <i class="fas fa-star"></i> Get Inspired </span>
-        |
-        <span class="font-archi"> <i class="fas fa-magic"></i> Transform Your Space </span>
-      </div>
-  
-      <div class="circular-slider-container">
-        <button class="slider-arrow prev-arrow">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        
-        <div class="circular-slider">
-          <div class="slider-track">
-            <!-- Original 4 circles -->
-            <div class="slider-item">
-              <div class="circle-wrapper">
-                <img src="images/8.jpg" alt="Corporate Space" class="sector-image" />
-                <div class="sector-overlay">
-                  <h3 class="font-archi">CORPORATE</h3>
-                </div>
-              </div>
-            </div>
-  
-            <div class="slider-item">
-              <div class="circle-wrapper">
-                <img src="images/25.jpg" alt="Education Space" class="sector-image" />
-                <div class="sector-overlay">
-                  <h3 class="font-archi">EDUCATION</h3>
-                </div>
-              </div>
-            </div>
-  
-            <div class="slider-item">
-              <div class="circle-wrapper">
-                <img src="images/249.jpg" alt="Healthcare Space" class="sector-image" />
-                <div class="sector-overlay">
-                  <h3 class="font-archi">HEALTHCARE</h3>
-                </div>
-              </div>
-            </div>
-  
-            <div class="slider-item">
-              <div class="circle-wrapper">
-                <img src="images/263.jpg" alt="Hospitality Space" class="sector-image" />
-                <div class="sector-overlay">
-                  <h3 class="font-archi">HOSPITALITY</h3>
-                </div>
-              </div>
-            </div>
-  
-            <!-- Additional 4 circles -->
-            <div class="slider-item">
-              <div class="circle-wrapper">
-                <img src="images/8.jpg" alt="Modern Office" class="sector-image" />
-                <div class="sector-overlay">
-                  <h3 class="font-archi">MODERN OFFICE</h3>
-                </div>
-              </div>
-            </div>
-  
-            <div class="slider-item">
-              <div class="circle-wrapper">
-                <img src="images/25.jpg" alt="Collaborative Space" class="sector-image" />
-                <div class="sector-overlay">
-                  <h3 class="font-archi">COLLABORATIVE</h3>
-                </div>
-              </div>
-            </div>
-  
-            <div class="slider-item">
-              <div class="circle-wrapper">
-                <img src="images/249.jpg" alt="Innovation Hub" class="sector-image" />
-                <div class="sector-overlay">
-                  <h3 class="font-archi">INNOVATION</h3>
-                </div>
-              </div>
-            </div>
-  
-            <div class="slider-item">
-              <div class="circle-wrapper">
-                <img src="images/263.jpg" alt="Creative Space" class="sector-image" />
-                <div class="sector-overlay">
-                  <h3 class="font-archi">CREATIVE</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <button class="slider-arrow next-arrow">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-  
-      <!-- Navigation dots -->
-      <div class="slider-dots"></div>
-    </div>
-  </div>
   
   <style>
-  .inspiration-section {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .circular-slider-container {
-    position: relative;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-  
-  .circular-slider {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slider-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .slider-item {
-    flex: 0 0 calc(25% - 30px); /* Show 4 items at once */
-    margin: 0 15px;
-    min-width: 300px;
-  }
-  
-  .circle-wrapper {
-    position: relative;
-    width: 300px;
-    height: 300px;
+      .projects-container {
+			  width: 70%;
+			  max-width: 1200px;
+			  margin-right: auto;
+			  margin-left: auto;
+			}
+
+    .projects-section {
+        padding: 50px 0;
+        /* background: #ffffff; */
+        background: #f5f5f5;
+    }
+
+    .projects-heading {
+      color: rgb(113, 114, 113);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      /* margin-bottom: 40px;
+      color: #5f5e61;
+      font-weight: lighter; */
+    }
+
+    .slick-slider {
+        margin: 0 auto;
+    }
+
+    .slick-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects-slider {
+      overflow: visible; /* Make sure overflowing content is visible */
+    }
+
+    .circle {
+    position: relative; /* Set the position to relative to contain the overlay */
+    width: 200px;
+    height: 370px;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .circle-wrapper:hover {
-    transform: scale(1.05);
-  }
-  
-  .sector-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px; /* Adjust this value to change spacing */
+    transition: filter 0.3s;
+    flex-shrink: 0; /* Prevents circles from resizing */
+}
+
+.circle img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
-  
-  .sector-overlay {
+    object-fit: cover; /* This will maintain the aspect ratio and fill the circle */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.circle::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    background: rgba(255, 255, 255, 0.5); /* White overlay with 50% opacity */
+    transition: opacity 0.3s;
+    opacity: 0;
+    pointer-events: none; /* Allow clicks to pass through the overlay */
+}
+
+.circle:hover::after {
+    opacity: 1; /* Show overlay on hover */
+}
+
+    .slick-arrow {
+    background: none; /* Remove background */
+    z-index: 10; /* Ensure arrows are on top */
+    color: black; /* Font Awesome arrow color */
+    width: 40px; /* Clickable area width */
+    height: 40px; /* Clickable area height */
+    display: flex !important; /* Flexbox for centering */
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease;
-  }
-  
-  .sector-overlay:hover {
-    background: rgba(0, 0, 0, 0.4);
-  }
-  
-  .sector-overlay h3 {
-    color: white;
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: white;
-    border: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    z-index: 2;
-    transition: all 0.3s ease;
-  }
-  
-  .slider-arrow:hover {
-    background: #1a2750;
-    color: white;
-  }
-  
-  .prev-arrow {
-    left: 0;
-  }
-  
-  .next-arrow {
-    right: 0;
-  }
-  
-  .slider-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    gap: 8px;
-  }
-  
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ddd;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .dot.active {
-    background: #1a2750;
-    transform: scale(1.2);
-  }
-  
-  @media (max-width: 1200px) {
-    .slider-item {
-      flex: 0 0 calc(33.333% - 30px);
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .slider-item {
-      flex: 0 0 calc(50% - 30px);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .slider-item {
-      flex: 0 0 calc(100% - 30px);
-    }
-    
-    .circle-wrapper {
-      width: 250px;
-      height: 250px;
-      margin: 0 auto;
-    }
-  }
-  </style>
-  
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const track = document.querySelector('.slider-track');
-    const slides = document.querySelectorAll('.slider-item');
-    const prevButton = document.querySelector('.prev-arrow');
-    const nextButton = document.querySelector('.next-arrow');
-    const dotsContainer = document.querySelector('.slider-dots');
-    
-    let currentIndex = 0;
-    const slidesToShow = 4;
-    const totalSlides = slides.length;
-    
-    // Create dots
-    for (let i = 0; i < Math.ceil(totalSlides / slidesToShow); i++) {
-      const dot = document.createElement('div');
-      dot.classList.add('dot');
-      if (i === 0) dot.classList.add('active');
-      dot.addEventListener('click', () => goToSlide(i * slidesToShow));
-      dotsContainer.appendChild(dot);
-    }
-    
-    function updateDots() {
-      const dots = document.querySelectorAll('.dot');
-      dots.forEach((dot, index) => {
-        dot.classList.toggle('active', Math.floor(currentIndex / slidesToShow) === index);
-      });
-    }
-    
-    function updateSlidePosition() {
-      const slideWidth = slides[0].offsetWidth + 30; // Include margin
-      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-      updateDots();
-    }
-    
-    function goToSlide(index) {
-      currentIndex = index;
-      updateSlidePosition();
-    }
-    
-    prevButton.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateSlidePosition();
-      }
-    });
-    
-    nextButton.addEventListener('click', () => {
-      if (currentIndex < totalSlides - slidesToShow) {
-        currentIndex++;
-        updateSlidePosition();
-      }
-    });
-    
-    // Handle window resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(updateSlidePosition, 100);
-    });
-    
-    // Initial position
-    updateSlidePosition();
-  });
-  </script>
+    cursor: pointer; /* Pointer cursor for interactivity */
+    /* border: 2px solid rgba(122, 122, 122, 0.8); */
+    border-radius: 50%; /* Make the clickable area circular */
+    /* box-shadow: 0 0 15px rgba(122, 122, 122, 0.8); */
+    transition: transform 0.3s ease; /* Smooth effect for potential interactions */
+}
+
+/* Position the arrows */
+.slick-prev {
+    left: -50px; /* Adjust as needed */
+}
+
+.slick-next {
+    right: -50px; /* Adjust as needed */
+}
+
+/* Remove default Slick arrows */
+.slick-prev::before,
+.slick-next::before {
+    display: none;
+}
+
+/* Add Font Awesome icons for arrows */
+.slick-prev::after {
+    font-family: "Font Awesome 6 Free"; /* Font Awesome font family */
+    font-weight: 900; /* For solid icons */
+    content: "\f104"; /* Unicode for "chevron-left" */
+    font-size: 24px; /* Adjust icon size */
+    color: #7a7a7a; /* Arrow color */
+}
+
+.slick-next::after {
+    font-family: "Font Awesome 6 Free"; /* Font Awesome font family */
+    font-weight: 900; /* For solid icons */
+    content: "\f105"; /* Unicode for "chevron-right" */
+    font-size: 24px; /* Adjust icon size */
+    color: #7a7a7a; /* Arrow color */
+}
+
+</style>
+
+<div class="projects-section">
+    <div class="projects-container">
+        <h1 class="projects-heading text-center font-archi mb-4">NEED SOME INSPIRATION?</h1>
+        <p class="text-center mb-5" style="color: #7a7a7a; font-size: 1rem;">Explore our recent projects, where creativity meets functionality</p>
+        <div class="projects-slider">
+            <div class="circle">
+                <a href="#project1"><img src="images/Insights/0.jpg" alt="Project 1"></a>
+            </div>
+            <div class="circle">
+                <a href="#project2"><img src="images/Insights/1.jpg" alt="Project 2"></a>
+            </div>
+            <div class="circle">
+                <a href="#project4"><img src="images/MSD/0.jpg" alt="Project 4"></a>
+            </div>
+            <div class="circle">
+              <a href="#project3"><img src="images/Insights/2.jpg" alt="Project 3"></a>
+          </div>
+        </div>
+    </div>
+</div>
 
 <div class="clients-section" style="background-color: #ffffff; padding: 50px 0;">
+  <style>
+    .clients-heading {
+      color: #212322;
+      /* font-size: 40px; */
+      font-weight: bold;
+    }
+  </style>
   <div class="container">
-    <h2 class="section-title text-center mb-4">OUR CLIENTS</h2>
+    <h1 class="clients-heading text-center mb-4">OUR CLIENTS</h1>
     <div class="client-subtitle text-center mb-4">
       <span class="font-archi">Trusted by Industry Leaders</span>
     </div>
@@ -688,19 +587,16 @@
           <img src="images/trial/image (23).png" alt="Client 13 Logo" style="transform: scale(1);" />
         </div>
         <div class="logo-slide">
-          <img src="images/trial/image (24).png" alt="Client 14 Logo" style="transform: scale(1.4);" />
+          <img src="images/trial/image (24).png" alt="Client 14 Logo" style="transform: scale(1.6);" />
         </div>
         <div class="logo-slide">
-          <img src="images/trial/image (25).png" alt="Client 15 Logo" style="transform: scale(0.6);" />
+          <img src="images/trial/image (26).png" alt="Client 16 Logo" style="transform: scale(0.8);" />
         </div>
         <div class="logo-slide">
-          <img src="images/trial/image (26).png" alt="Client 16 Logo" style="transform: scale(1);" />
+          <img src="images/trial/image (27).png" alt="Client 17 Logo" style="transform: scale(0.6);" />
         </div>
         <div class="logo-slide">
-          <img src="images/trial/image (27).png" alt="Client 17 Logo" style="transform: scale(1);" />
-        </div>
-        <div class="logo-slide">
-          <img src="images/trial/image (28).png" alt="Client 18 Logo" style="transform: scale(1);" />
+          <img src="images/trial/image (28).png" alt="Client 18 Logo" style="transform: scale(0.9);" />
         </div>
         <div class="logo-slide">
           <img src="images/trial/image (29).png" alt="Client 19 Logo" style="transform: scale(1);" />
@@ -749,19 +645,16 @@
           <img src="images/trial/image (23).png" alt="Client 13 Logo" style="transform: scale(1);" />
         </div>
         <div class="logo-slide">
-          <img src="images/trial/image (24).png" alt="Client 14 Logo" style="transform: scale(1.4);" />
+          <img src="images/trial/image (24).png" alt="Client 14 Logo" style="transform: scale(1.6);" />
         </div>
         <div class="logo-slide">
-          <img src="images/trial/image (25).png" alt="Client 15 Logo" style="transform: scale(0.6);" />
+          <img src="images/trial/image (26).png" alt="Client 16 Logo" style="transform: scale(0.8);" />
         </div>
         <div class="logo-slide">
-          <img src="images/trial/image (26).png" alt="Client 16 Logo" style="transform: scale(1);" />
+          <img src="images/trial/image (27).png" alt="Client 17 Logo" style="transform: scale(0.6);" />
         </div>
         <div class="logo-slide">
-          <img src="images/trial/image (27).png" alt="Client 17 Logo" style="transform: scale(1);" />
-        </div>
-        <div class="logo-slide">
-          <img src="images/trial/image (28).png" alt="Client 18 Logo" style="transform: scale(1);" />
+          <img src="images/trial/image (28).png" alt="Client 18 Logo" style="transform: scale(0.9);" />
         </div>
         <div class="logo-slide">
           <img src="images/trial/image (29).png" alt="Client 19 Logo" style="transform: scale(1);" />
@@ -786,6 +679,12 @@
   overflow: hidden;
 }
 
+.help-heading {
+  margin-bottom: 40px;
+  color: #5f5e61;
+  font-weight: lighter;
+}
+
 .client-subtitle {
   color: #7a7a7a;
   font-size: 1.1rem;
@@ -801,7 +700,7 @@
 
 .logo-slide-track {
   display: flex;
-  animation: scroll 50s linear infinite;
+  animation: scroll 60s linear infinite;
   width: calc(200px * 42); /* Total width of all slides */
   height: 50px;
 }
@@ -826,8 +725,8 @@
 }
 
 .logo-slide:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
+  /* filter: grayscale(0%); */
+  /* opacity: 1; */
 }
 
 @keyframes scroll {
@@ -886,143 +785,205 @@
 }
 </style>
 
-    <div style="background-color: #f8f9fa; padding: 50px 0;">
-        <div class="container" style="max-width: 800px;">
-          <h2 class="section-title text-center mb-4">HOW CAN WE HELP?</h2>
-          <!-- Contact Information -->
-          <div class="text-center mb-4" style="color: #7a7a7a; font-size: 1rem;">
-            <span class="font-archi">
+<style>
+  /* Sharp edges for form and button */
+  .help-heading {
+    /* color: #5f5e61; */
+    color: rgb(113, 114, 113);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  .custom-form {
+      border-radius: 0;
+      outline: none;
+  }
+  .custom-form-control {
+      padding: 5px !important;
+      border: none !important;
+      border-radius: 0 !important;
+      outline: none;
+  }
+  .custom-form-control:focus {
+    outline: none;
+    box-shadow: none; /* Removes any shadow effect some browsers add */
+    border-radius: 0 !important;
+    border: none !important;
+  }
+  .custom-btn {
+    color: #ffffff;
+    border-radius: 5px;
+    background: #7a7a7a;
+    background: #a09fa0;
+    font-size: 16px;
+    border: none;
+    width: 100%; /* Makes the button take up the full width of its parent */
+    max-width: 130px; /* Optional: Sets a maximum width to limit its size */
+    padding: 5px 5px; /* Adds extra padding for better appearance */
+}
+.custom-btn:hover {
+    background: #606060; /* Slightly darker background on hover */
+}
+</style>
+
+<div style="background-color: #f5f5f5; padding: 50px 0;">
+  <div class="container" style="max-width: 700px;">
+      <h1 class="help-heading text-center mb-3">HOW CAN WE HELP?</h1>
+      
+      <!-- Contact Information -->
+      <div class="text-center mb-4" style="color: #7a7a7a; font-size: 1rem; font-weight: 400;">
+          <span class="contact-info">
               <a href="mailto:info@archibrands.com" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-envelope"></i> info@archibrands.com
+                  <i class="fas fa-envelope"></i> info@archibrands.com
               </a>
-            </span> 
-            | 
-            <span class="font-archi">
+          </span> 
+          | 
+          <span class="contact-info">
               <a href="tel:+201057854317" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-phone-alt" style="transform: scaleX(-1);"></i> +20 1057854317
+                  <i class="fas fa-phone-alt" style="transform: scaleX(-1);"></i> +20 10 5785 4317
               </a>
-            </span> 
-            | 
-            <span class="font-archi">
+          </span> 
+          | 
+          <span class="contact-info">
               <a href="https://www.google.com/maps?q=Cairo,+Egypt" target="_blank" style="text-decoration: none; color: inherit;">
-                <i class="fas fa-map-marker-alt"></i> Cairo, Egypt
+                  <i class="fas fa-map-marker-alt"></i> Cairo, Egypt
               </a>
-            </span>
+          </span>
+      </div>
+
+      <form class="custom-form">
+          <div class="form-group">
+              <input type="text" class="form-control custom-form-control" id="contact-name" placeholder="Name *" required>
           </div>
-          <form>
-            <div class="row">
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label class="text-black font-archi" for="name">Name</label>
-                  <input type="text" class="form-control" id="name" required>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="form-group">
-                  <label class="text-black font-archi" for="phone">Phone</label>
-                  <input type="tel" class="form-control" id="phone">
-                </div>
-              </div>
-            </div>
-            <div class="form-group mt-3">
-              <label class="text-black font-archi" for="email">Email address</label>
-              <input type="email" class="form-control" id="email" required>
-            </div>
-      
-            <div class="form-group mt-3 mb-4">
-              <label class="text-black font-archi" for="message">Message</label>
-              <textarea class="form-control" id="message" cols="30" rows="5" required style="resize: none; padding-top: 10px !important;"></textarea>
-            </div>
-      
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary font-archi">Send</button>
-            </div>
-          </form>
+          <div class="form-group mt-2">
+              <input type="email" class="form-control custom-form-control" id="contact-email" placeholder="Email *" required>
+          </div>
+          <div class="form-group mt-2">
+              <input type="tel" class="form-control custom-form-control" id="contact-phone" placeholder="Phone">
+          </div>
+          <div class="form-group mt-2 mb-4">
+              <textarea class="form-control custom-form-control" id="contact-message" placeholder="Message *" cols="30" rows="5" required style="resize: none; padding-top: 10px !important;"></textarea>
+          </div>
+  
+          <div class="text-center">
+              <button type="submit" class="custom-btn">SEND</button>
+          </div>
+      </form>
+  </div>
+</div>
+
+
+<footer style="background-color: #ffffff; padding: 30px 0 5px;">
+  <div class="container text-center">
+    <!-- Newsletter Subscription Form -->
+    <div class="subscription-form mb-4">
+      <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a;">
+        <span class="me-1">
+          <img src="images/envelope-outline.svg" alt="Newsletter Icon" class="img-fluid" />
+        </span>
+        <span style="font-family: 'Montserrat', sans-serif; font-weight: 500;">Subscribe to Our Newsletter</span>
+      </h3>
+
+      <form action="#" class="row g-3 justify-content-center align-items-center">
+        <div class="col-auto">
+          <input type="text" class="new-form-control" placeholder="Enter your name" />
         </div>
+        <div class="col-auto">
+          <input type="email" class="new-form-control" placeholder="Enter your email" />
+        </div>
+        <div class="col-auto">
+          <button class="custom-submit-btn">
+            <span class="fa fa-paper-plane"></span>
+          </button>
+        </div>
+      </form>
     </div>
 
-    <footer style="background-color: #ffffff; padding: 30px 0 5px;">
-      <div class="container text-center">
-        <!-- Newsletter Subscription Form -->
-        <div class="subscription-form mb-4">
-          <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a;">
-            <span class="me-1">
-              <img src="images/envelope-outline.svg" alt="Newsletter Icon" class="img-fluid" />
-            </span>
-            <span>Subscribe to Newsletter</span>
-          </h3>
+    <!-- Updated Social Media Links -->
+    <div class="social-media-links mb-4" style="line-height: 0;">
+      <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+        <span class="fa fa-brands fa-facebook-f"></span>
+      </a>
+      <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+        <span class="fa fa-brands fa-instagram"></span>
+      </a>
+      <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
+        <span class="fa fa-brands fa-linkedin"></span>
+      </a>
+    </div>
+  </div>
 
-          <form action="#" class="row g-3 justify-content-center">
-            <div class="col-auto">
-              <input type="text" class="form-control" placeholder="Enter your name" />
-            </div>
-            <div class="col-auto">
-              <input type="email" class="form-control" placeholder="Enter your email" />
-            </div>
-            <div class="col-auto">
-              <button class="btn btn-primary" style="border-radius: 10px;">
-                <span class="fa fa-paper-plane"></span>
-              </button>
-            </div>
-          </form>
-        </div>
+  <!-- Centered Copyright Section -->
+  <div class="mt-4" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+    <div class="container pt-3 text-center">
+      <p class="mb-2 font-archi">
+        Copyright Archibrands &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        . All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
 
-        <!-- Social Media Links -->
-        <ul class="list-unstyled custom-social-new d-flex justify-content-center mb-4">
-          <li class="mx-2">
-            <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer">
-              <span class="fa fa-brands fa-facebook-f"></span>
-            </a>
-          </li>
-          <li class="mx-2">
-            <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer">
-              <span class="fa fa-brands fa-instagram"></span>
-            </a>
-          </li>
-          <li class="mx-2">
-            <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer">
-              <span class="fa fa-brands fa-linkedin"></span>
-            </a>
-          </li>
-        </ul>
-      </div>
+<style>
+  /* New Form Control Styling */
+  .new-form-control {
+    width: 250px; /* Adjust width as per design */
+    height: 45px; /* Set consistent height */
+    padding: 10px 15px; /* Padding for better text alignment */
+    border: 1px solid #dcdcdc; /* Subtle border */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 14px; /* Text size */
+    color: #333333; /* Text color */
+    background-color: #f9f9f9; /* Light background */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
 
-      <!-- Centered Copyright Section -->
-      <div class="mt-4" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
-        <div class="container pt-3 text-center">
-          <p class="mb-2 font-archi">
-            Copyright archi-brands &copy;
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            . All Rights Reserved.
-          </p>
-        </div>
-      </div>
-    </footer>
+  .new-form-control:focus {
+    border-color: #c19c81; /* Border color on focus */
+  }
 
-    <style>
-      .custom-social-new li {
-        margin: 2px;
-        display: inline-block;
-      }
-      .custom-social-new li a {
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        line-height: 40px;
-        display: inline-block;
-        background: #dce5e4;
-        background: #e2e6e9;
-        color: #7a7a7a;
-        border-radius: 50%;
-        transition: background 0.3s, color 0.3s;
-      }
-      .custom-social-new li a:hover {
-        background: #f5894b;
-        color: #ffffff;
-      }
-    </style>
+  /* Button Styling */
+  .custom-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px; /* Match input field height */
+    min-width: 50px; /* Ensures enough width for the icon */
+    padding: 0 15px; /* Horizontal padding */
+    border: none;
+    border-radius: 15px; /* Matches input field corners */
+    background-color: #7a7a7a; /* Default button color */
+    color: #ffffff;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .custom-submit-btn:hover {
+    background-color: #c19c81; /* Smooth hover effect */
+  }
+
+  /* Social Media Links */
+  .social-media-links .social-icon {
+    font-size: 24px; /* Adjust size of social icons */
+    color: #7a7a7a; /* Default color */
+    transition: color 0.3s ease;
+  }
+
+  .social-media-links .social-icon:hover {
+    color: #c19c81; /* Hover color */
+  }
+
+  /* Parent container fix for dashes */
+  .social-media-links {
+    line-height: 0; /* Prevents unwanted inline spacing */
+  }
+</style>
+
+
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -1038,6 +999,76 @@
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+          const $slider = $('.projects-slider').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              speed: 0, // Instantaneous slide movement (manual scrolling)
+              arrows: true,
+              dots: false,
+              infinite: true, // Enable infinite scrolling
+              autoplay: false, // Disable autoplay
+              pauseOnHover: false // Avoid interference
+          });
+
+          $('.slick-prev, .slick-next').off('click').on('click', function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+          });
+
+          $slider.on('beforeChange', function (event) {
+              event.stopImmediatePropagation();
+          });
+  
+          let animationFrame; // To track the scrolling animation
+          const slideWidth = $slider.find('.slick-slide').outerWidth(true); // Width of each slide
+  
+          function scroll(direction) {
+              const $track = $slider.find('.slick-track');
+              const currentTransform = $track.css('transform');
+              const matrix = currentTransform.match(/matrix\((.+)\)/);
+              const translateX = matrix ? parseFloat(matrix[1].split(',')[4]) : 0;
+  
+              // Move left or right based on the direction
+              const newTranslateX = direction === 'right' ? translateX - 1 : translateX + 1;
+              $track.css('transform', `translateX(${newTranslateX}px)`);
+  
+              // Handle infinite scrolling
+              const trackWidth = $track.width();
+              const containerWidth = $slider.width();
+  
+              if (Math.abs(translateX) >= trackWidth - containerWidth && direction === 'right') {
+                  $track.css('transform', `translateX(0px)`); // Reset to start
+              } else if (translateX >= 0 && direction === 'left') {
+                  $track.css('transform', `translateX(-${trackWidth - containerWidth}px)`); // Reset to end
+              }
+  
+              animationFrame = requestAnimationFrame(() => scroll(direction));
+          }
+  
+          // Hover handlers for arrows
+          $('.slick-next').hover(
+              function () {
+                  scroll('right'); // Start scrolling right
+              },
+              function () {
+                  cancelAnimationFrame(animationFrame); // Stop scrolling
+              }
+          );
+  
+          $('.slick-prev').hover(
+              function () {
+                  scroll('left'); // Start scrolling left
+              },
+              function () {
+                  cancelAnimationFrame(animationFrame); // Stop scrolling
+              }
+          );
+      });
+  </script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/job-field.js"></script>
     <script src="js/jobs.js"></script>

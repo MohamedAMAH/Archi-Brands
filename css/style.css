@@ -16,7 +16,17 @@ body {
   color: #6a6a6a;
   font-size: 14px;
   background-color: #eff2f1 !important;
+  background-color: #ffffff !important;
 /* background-color: #F4F5F4;  */
+}
+
+@font-face {
+  font-family: "Avenir LT W01 35 Light";
+  src: url("/fonts/AvenirLTW01-35Light.woff2") format("woff2"),
+       url("/fonts/AvenirLTW01-35Light.woff") format("woff"),
+       url("/fonts/AvenirLTW01-35Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 a {
@@ -230,8 +240,8 @@ a {
 
 .section-title {
   color: #2f2f2f;
-  font-weight: bold;
-  font-family: 'Archi';
+  /* font-weight: bold; */
+  /* font-family: 'Archi'; */
   /* font-weight: 600; */
 }
 
@@ -750,7 +760,7 @@ a {
 .untree_co-section {
   padding: 1rem 0; }
 
-.form-control {
+/* .form-control {
   height: 50px;
   border-radius: 10px;
   font-family: "Inter", sans-serif; }
@@ -768,7 +778,7 @@ a {
   .form-control:-ms-input-placeholder {
     font-size: 14px; }
   .form-control:-moz-placeholder {
-    font-size: 14px; }
+    font-size: 14px; } */
 
 .service {
   line-height: 1.5; }
@@ -1369,9 +1379,9 @@ border-radius: 50%;
 /* Section Title and Subtitle Styling */
 .section-title {
   font-size: 2.5em;
-  font-weight: bold;
+  /* font-weight: bold; */
   margin-bottom: 10px;
-  color: #000000;
+  color: #212322;
 }
 
 .section-subtitle {
@@ -1580,7 +1590,8 @@ border-radius: 50%;
 }
 
 .font-archi {
-  font-family: 'Archi';
+  /* font-family: 'Archi'; */
+  font-family: sans-serif;
 }
 
 .font-archi2 {
