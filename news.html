@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Archi-Brands" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="css/tiny-slider.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/ab-try-logo.png" type="image/png" />
+    <title>archi-brands</title>
+    <style>
+      .wider-container {
+			  width: 88%;
+			  margin-right: auto;
+			  margin-left: auto;
+			  /* padding-right: 15px; */
+			  /* padding-left: 15px; */
+			}
+    </style>
+  </head>
+
+  <body>
+    <!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top">
+  <div class="wider-container d-flex align-items-center">
+    <!-- Logo on the left -->
+    <a class="navbar-brand d-flex align-items-center" href="new-home.html">
+      <img src="images/archi-main-logo.png" alt="Logo" style="height: 50px;">
+    </a>
+
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-home.html">HOME</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-products.html">PRODUCTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-projects.html">PROJECTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-events.html">INSIGHTS</a>
+        </li>
+        <li class="nav-item separator">|</li>
+        <li class="nav-item">
+          <a class="nav-link font-archi" href="new-careers.html">CAREERS</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+z-index: 1000;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
+height: 120px; /* Set the fixed height for the navbar */
+padding: 0 15px; /* Add padding if needed */
+}
+
+.navbar-brand img {
+height: 100%; /* Make sure the logo height doesn't exceed the navbar height */
+max-height: 60px; /* Set a max height for the logo for better control */
+}
+
+.navbar-toggler {
+height: 60px; /* Adjust this to align with the navbar height */
+}
+
+  .vertical-line {
+    width: 0.4px;
+    height: 100px; /* Match the height of the first logo */
+    background-color: #7a7a7a; /* Adjust color as needed */
+    margin-right: 15px;
+  }
+
+  .platinum-partner img {
+    margin-bottom: 5px; /* Space between image and text */
+  }
+
+  .partner-text {
+    font-size: 1.2rem; /* Adjust as needed */
+    color: #7a7a7a; /* Match color with other nav items */
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    color: #666 !important;
+    font-weight: 500; /* Optional for better visibility */
+    font-size: 0.9rem; /* Adjust this value to change the font size */
+    margin-left: 30px; /* Space between items */
+    margin-right: 30px; /* Space between items */
+    font-family: 'Archi';
+  }
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .nav-link:hover {
+    color: #212322 !important;
+  }
+
+  .navbar-nav .separator {
+    color: #666;
+    font-size: 1rem; /* Adjust this value to match the nav-link size */
+    display: flex;
+    align-items: center;
+    padding: 0 5px; /* Adjust spacing around separators */
+  }
+</style>  
+
+<br><br><br><br>
+
+<div class="news-section py-5">
+    <div class="wider-container">
+      <h2 class="text-center mb-4 font-archi" style="color: rgb(113, 114, 113);">LATEST NEWS</h2>
+      <p class="text-center mb-5" style="color: #7a7a7a; font-size: 1rem;">Stay updated with our latest developments and industry insights</p>
+      
+      <div class="row g-4">
+        <!-- News Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="news-card">
+            <div class="news-image">
+              <img src="https://images.pexels.com/photos/3824771/pexels-photo-3824771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sustainable Office Space">
+              <div class="news-date">
+                <span class="day">15</span>
+                <span class="month">DEC</span>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category">Sustainability</div>
+              <h3 class="news-title">Introducing Our New Line of Eco-Friendly Acoustic Solutions</h3>
+              <p class="news-excerpt">Archibrands launches innovative acoustic panels made from recycled materials, combining superior sound absorption with environmental responsibility.</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- News Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="news-card">
+            <div class="news-image">
+              <img src="https://images.pexels.com/photos/1094767/pexels-photo-1094767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Modern Interior">
+              <div class="news-date">
+                <span class="day">12</span>
+                <span class="month">DEC</span>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category">Projects</div>
+              <h3 class="news-title">Major Project Completion: Cairo Business Hub</h3>
+              <p class="news-excerpt">Successfully delivered comprehensive interior solutions for a new 50,000 sqft business center, featuring our latest flooring and acoustic systems.</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- News Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="news-card">
+            <div class="news-image">
+              <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Meeting">
+              <div class="news-date">
+                <span class="day">10</span>
+                <span class="month">DEC</span>
+              </div>
+            </div>
+            <div class="news-content">
+              <div class="news-category">Events</div>
+              <h3 class="news-title">Archibrands Hosts Design Innovation Workshop</h3>
+              <p class="news-excerpt">Industry leaders gathered at our annual workshop to explore emerging trends in architectural solutions and sustainable design practices.</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- View All News Button -->
+      <div class="text-center mt-5">
+        <a href="#" class="view-all-btn">View All News</a>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+  .news-section {
+    background-color: #f8f9fa;
+  }
+  
+  .news-card {
+    background: white;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .news-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+  }
+  
+  .news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .news-card:hover .news-image img {
+    transform: scale(1.05);
+  }
+  
+  .news-date {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    text-align: center;
+    min-width: 60px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .news-date .day {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7a7a7a;
+    line-height: 1;
+  }
+  
+  .news-date .month {
+    display: block;
+    font-size: 0.8rem;
+    color: #7a7a7a;
+    text-transform: uppercase;
+  }
+  
+  .news-content {
+    padding: 25px;
+    position: relative;
+  }
+  
+  .news-category {
+    display: inline-block;
+    color: #7a7a7a;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  
+  .news-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #212322;
+    font-family: 'Archi', sans-serif;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  
+  .news-excerpt {
+    color: #7a7a7a;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .read-more {
+    color: #7a7a7a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .read-more:hover {
+    color: #212322;
+  }
+  
+  .read-more i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .read-more:hover i {
+    transform: translateX(5px);
+  }
+  
+  .view-all-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 2px solid #7a7a7a;
+    color: #7a7a7a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .view-all-btn:hover {
+    background-color: #7a7a7a;
+    color: white;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .news-card {
+      margin-bottom: 30px;
+    }
+    
+    .news-image {
+      height: 200px;
+    }
+  }
+  </style>
+
+  <footer style="background-color: #ffffff; padding: 30px 0 5px;">
+    <div class="container text-center">
+      <!-- Newsletter Subscription Form -->
+      <div class="subscription-form">
+        <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a; margin-bottom: 15px;">
+          <span class="me-1">
+            <i class="fas fa-envelope me-2"></i>
+          </span>
+          <span style="font-family: 'Archi', sans-serif; font-weight: bold;">Subscribe to Our Newsletter</span>
+        </h3>
+  
+        <form action="#" class="row g-3 justify-content-center align-items-center">
+          <div class="col-auto">
+            <input type="text" class="new-form-control" placeholder="Enter your name" />
+          </div>
+          <div class="col-auto">
+            <input type="email" class="new-form-control" placeholder="Enter your email" />
+          </div>
+          <div class="col-auto">
+            <button class="custom-submit-btn">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+  
+      <!-- Updated Social Media Links -->
+      <div class="social-media-links">
+        <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  
+    <div class="mt-3" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+      <div class="container pt-3 text-center">
+        <p class="mb-2 font-archi">
+          Copyright Archibrands &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <style>
+    .new-form-control {
+      width: 250px;
+      height: 35px;
+      padding: 8px 15px;
+      border: 1px solid #dcdcdc;
+      /* border-radius: 15px; */
+      font-size: 14px;
+      color: #333333;
+      background-color: #f9f9f9;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .new-form-control:focus {
+      border-color: #999;
+    }
+  
+    .custom-submit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      min-width: 45px;
+      padding: 0 15px;
+      border: none;
+      /* border-radius: 15px; */
+      background-color: #666;
+      color: #ffffff;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+  
+    .custom-submit-btn:hover {
+      background-color: #555;
+    }
+  
+    .social-media-links .social-icon {
+      color: #666;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+  
+    .social-media-links .social-icon:hover {
+      color: #555;
+    }
+  
+    .fas, .fab {
+      width: 20px;
+    }
+  
+    .subscription-form {
+      margin-bottom: 15px;
+    }
+  
+    .social-media-links {
+      margin: 15px 0;
+    }
+  
+    footer .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+  </style>
+
+
+  </body>
+</html>

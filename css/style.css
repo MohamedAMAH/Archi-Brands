@@ -1569,12 +1569,12 @@ border-radius: 50%;
 
 @font-face {
   font-family: 'Archi'; /* Name your font */
-  src: url('../fonts/RedHatDisplay-ExtraBold.ttf') format('truetype'); /* Adjust the path as needed */
+  src: url('../fonts/HelveticaNeueLTStd-Th.otf') format('truetype'); /* Adjust the path as needed */
 }
 
 @font-face {
   font-family: 'Archi2'; /* Name your font */
-  src: url('../fonts/RedHatDisplay-Black.ttf') format('truetype'); /* Adjust the path as needed */
+  src: url('../fonts/HelveticaNeueLTStd-Bd.otf') format('truetype'); /* Adjust the path as needed */
 }
 
 .navbar-archi {

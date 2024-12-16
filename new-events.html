@@ -11,7 +11,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-    <link href="css/tiny-slider.css" rel="stylesheet" />
+    <link href="css/navbar-carousel.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
@@ -46,712 +47,291 @@
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-home.html">HOME</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-products.html">PRODUCTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-projects.html">PROJECTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi active" href="new-events.html">INSIGHTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-careers.html">CAREERS</a>
+        </li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="new-cart.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<style>
-  .navbar {
-z-index: 1000;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
-height: 120px; /* Set the fixed height for the navbar */
-padding: 0 15px; /* Add padding if needed */
-}
-
-.navbar-brand img {
-height: 100%; /* Make sure the logo height doesn't exceed the navbar height */
-max-height: 60px; /* Set a max height for the logo for better control */
-}
-
-.navbar-toggler {
-height: 60px; /* Adjust this to align with the navbar height */
-}
-
-  .vertical-line {
-    width: 0.5px;
-    height: 100px; /* Match the height of the first logo */
-    background-color: #7a7a7a; /* Adjust color as needed */
-    margin-right: 15px;
-  }
-
-  .platinum-partner img {
-    margin-bottom: 5px; /* Space between image and text */
-  }
-
-  .partner-text {
-    font-size: 1.2rem; /* Adjust as needed */
-    color: #7a7a7a; /* Match color with other nav items */
-    text-align: center;
-  }
-
-  .navbar-nav .nav-link {
-    color: #7a7a7a !important;
-    font-weight: 400; /* Optional for better visibility */
-    font-size: 0.9rem; /* Adjust this value to change the font size */
-    margin-left: 30px; /* Space between items */
-    margin-right: 30px; /* Space between items */
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .navbar-nav .nav-link.active,
-  .navbar-nav .nav-link:hover {
-    color: #c19c81 !important;
-  }
-
-  .navbar-nav .separator {
-    color: #7a7a7a;
-    font-size: 1rem; /* Adjust this value to match the nav-link size */
-    display: flex;
-    align-items: center;
-    padding: 0 5px; /* Adjust spacing around separators */
-  }
-</style>  
-
 <br><br><br><br>
 
-    <!-- Custom Carousel Structure -->
-    <!-- <div class="custom-carousel">
-      <div class="carousel-slide active">
-        <img src="images/8.jpg" alt="Slide 1">
+<div class="projects-section">
+  <div class="projects-container">
+    <div class="text-center mb-5 projects-heading">
+      <span style="margin: 0 15px;">EXPLORE</span>
+      |
+      <span style="margin: 0 15px;">READ</span>
+      |
+      <span style="margin: 0 15px;">WATCH</span>
+      |
+      <span style="margin: 0 15px;">LISTEN</span>
+    </div>
+    
+    <div class="circles-grid">
+      <div class="circle-container">
+        <div class="circle">
+          <div class="circle-content">
+            <a href="news.html">
+              <img src="images/news.png" alt="Project 1">
+              <div class="circle-overlay"></div>
+            </a>
+          </div>
+        </div>
+        <div class="circle-label">
+          <div class="line"></div>
+          <h3>NEWS</h3>
+        </div>
       </div>
-      <div class="carousel-slide">
-        <img src="images/Capital/1.jpg" alt="Slide 2">
+      
+      <div class="circle-container">
+        <div class="circle">
+          <div class="circle-content">
+            <a href="#">
+              <img src="images/events-1.png" alt="Project 2">
+              <div class="circle-overlay"></div>
+            </a>
+          </div>
+        </div>
+        <div class="circle-label">
+          <div class="line"></div>
+          <h3>EVENTS</h3>
+        </div>
       </div>
-      <div class="carousel-slide">
-        <img src="images/KCG/2.jpg" alt="Slide 4">
+      
+      <div class="circle-container">
+        <div class="circle">
+          <div class="circle-content">
+            <a href="videos.html">
+              <img src="images/videos.jpg" alt="Project 3">
+              <div class="circle-overlay"></div>
+            </a>
+          </div>
+        </div>
+        <div class="circle-label">
+          <div class="line"></div>
+          <h3>VIDEOS</h3>
+        </div>
       </div>
-      <div class="carousel-slide">
-        <img src="images/Kredit/1.jpg" alt="Slide 4">
-      </div>
-      <div class="carousel-slide">
-        <img src="images/35.jpg" alt="Slide 3">
+      
+      <div class="circle-container">
+        <div class="circle">
+          <div class="circle-content">
+            <a href="blogs.html">
+              <img src="images/blogs.png" alt="Project 4">
+              <div class="circle-overlay"></div>
+            </a>
+          </div>
+        </div>
+        <div class="circle-label">
+          <div class="line"></div>
+          <h3>BLOGS</h3>
+        </div>
       </div>
     </div>
-
-    <style>
-      .custom-carousel {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      .carousel-slide {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-      }
-
-      .carousel-slide.active {
-        opacity: 1;
-        z-index: 1;
-      }
-
-      .carousel-slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const slides = document.querySelectorAll('.carousel-slide');
-        let currentIndex = 0;
-
-        function showNextSlide() {
-          slides[currentIndex].classList.remove('active');
-          currentIndex = (currentIndex + 1) % slides.length;
-          slides[currentIndex].classList.add('active');
-        }
-        setInterval(showNextSlide, 5000);
-      });
-    </script> -->
-
-<!-- <div class="events-hero">
-  <div class="container">
-      <div class="hero-content text-center">
-          <h1 class="display-3 fw-bold mb-4">Discover Amazing Events</h1>
-          <div class="search-container">
-              <div class="search-wrapper">
-                  <i class="fas fa-search search-icon"></i>
-                  <input type="text" class="search-input" placeholder="Search events, speakers, or venues...">
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-<div class="events-main" style="padding-bottom: 5rem;">
-  <div class="container">
-      <div class="filters-bar">
-          <div class="active-filters">
-              <button class="filter-pill active">All</button>
-              <button class="filter-pill">Today</button>
-              <button class="filter-pill">This Week</button>
-              <button class="filter-pill">This Month</button>
-          </div>
-          <div class="view-options">
-              <button class="view-btn active">
-                  <i class="fas fa-th-large"></i>
-              </button>
-              <button class="view-btn">
-                  <i class="fas fa-list"></i>
-              </button>
-          </div>
-      </div>
-
-      <div class="featured-event">
-          <div class="event-card featured">
-              <div class="event-image">
-                  <img src="/images/events/tech.jpg" alt="Tech Conference 2024">
-                  <div class="event-badge">Featured</div>
-              </div>
-              <div class="event-details">
-                  <div class="event-meta">
-                      <span class="event-date">APR 15</span>
-                      <span class="event-time">09:00 - 17:00</span>
-                      <span class="event-category">Conference</span>
-                  </div>
-                  <h2 class="event-title">Tech Conference 2024</h2>
-                  <p class="event-description">Join us for the biggest tech conference of the year, featuring industry leaders and innovative workshops.</p>
-                  <div class="event-footer">
-                      <div class="event-location">
-                          <i class="fas fa-map-marker-alt"></i>
-                          Convention Center, New York
-                      </div>
-                      <button class="btn btn-primary">Get Tickets</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="events-grid">
-          <div class="event-card">
-              <div class="event-image">
-                  <img src="/images/events/des.jpeg" alt="Workshop">
-              </div>
-              <div class="event-details">
-                  <div class="event-meta">
-                      <span class="event-date">APR 20</span>
-                      <span class="event-category">Workshop</span>
-                  </div>
-                  <h3 class="event-title">UX Design Workshop</h3>
-                  <div class="event-footer">
-                      <div class="event-price">$99</div>
-                      <button class="btn btn-primary">Details</button>
-                  </div>
-              </div>
-          </div>
-
-          <div class="event-card">
-              <div class="event-image">
-                  <img src="/images/events/festival.jpg" alt="Concert">
-              </div>
-              <div class="event-details">
-                  <div class="event-meta">
-                      <span class="event-date">APR 22</span>
-                      <span class="event-category">Music</span>
-                  </div>
-                  <h3 class="event-title">Summer Music Festival</h3>
-                  <div class="event-footer">
-                      <div class="event-price">$149</div>
-                      <button class="btn btn-primary">Details</button>
-                  </div>
-              </div>
-          </div>
-
-          <div class="event-card">
-              <div class="event-image">
-                  <img src="/images/events/webinar.jpg" alt="Webinar">
-              </div>
-              <div class="event-details">
-                  <div class="event-meta">
-                      <span class="event-date">APR 25</span>
-                      <span class="event-category">Webinar</span>
-                  </div>
-                  <h3 class="event-title">Digital Marketing Trends</h3>
-                  <div class="event-footer">
-                      <div class="event-price">Free</div>
-                      <button class="btn btn-primary">Register</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
   </div>
 </div>
 
 <style>
-:root {
-  --primary-grey: #7a7a7a;
-  --primary-orange: #f5894b;
-  --light-grey: #f5f5f5;
-  --medium-grey: #e0e0e0;
-  --dark-grey: #4a4a4a;
+.projects-container {
+  width: 70%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.events-hero {
-  background: linear-gradient(135deg, var(--primary-grey) 0%, var(--dark-grey) 100%);
-  padding: 100px 0;
-  color: white;
-  margin-bottom: 50px;
+.projects-section {
+  padding-top: 50px;
+  padding-bottom: 102px;
+  background: #f8f9fa;
 }
 
-.search-container {
-  max-width: 600px;
-  margin: 0 auto;
+.projects-heading {
+  color: rgb(113, 114, 113);
+  font-family: 'Archi';
+  font-weight: 500;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
-.search-wrapper {
-  position: relative;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 50px;
-  padding: 8px 20px;
-}
-
-.search-input {
-  width: 100%;
-  background: transparent;
-  border: none;
-  padding: 12px 40px;
-  color: white;
-  font-size: 1.1rem;
-}
-
-.search-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.search-icon {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.filters-bar {
+.circles-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
+  gap: 1rem;
 }
 
-.filter-pill {
-  background: none;
-  border: 1px solid var(--medium-grey);
-  padding: 8px 20px;
-  border-radius: 50px;
-  margin-right: 10px;
-  transition: all 0.3s ease;
-  color: var(--primary-grey);
-}
-
-.filter-pill.active {
-  background: var(--primary-orange);
-  color: white;
-  border-color: var(--primary-orange);
-}
-
-.filter-pill:hover:not(.active) {
-  background: var(--light-grey);
-}
-
-.view-btn {
-  background: none;
-  border: 1px solid var(--medium-grey);
-  padding: 8px 12px;
-  margin-left: 10px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  color: var(--primary-grey);
-}
-
-.view-btn.active {
-  background: var(--primary-orange);
-  color: white;
-  border-color: var(--primary-orange);
-}
-
-.event-card {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.event-card:hover {
-  transform: translateY(-5px);
-}
-
-.event-card.featured {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 40px;
-}
-
-.event-image {
+.circle {
   position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 0.2rem;
 }
 
-.event-image img {
+.circle-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circle a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-decoration: none;
+}
+
+.circle img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.event-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: var(--primary-orange);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-}
-
-.event-details {
-  padding: 24px;
-}
-
-.event-meta {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
-  font-size: 0.9rem;
-  color: var(--primary-grey);
-}
-
-.event-title {
-  margin-bottom: 16px;
-  font-weight: 600;
-  color: var(--dark-grey);
-}
-
-.event-description {
-  color: var(--primary-grey);
-}
-
-.event-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-}
-
-.event-location {
-  color: var(--primary-grey);
-}
-
-.event-price {
-  color: var(--primary-orange);
-  font-weight: 600;
-}
-
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.btn-primary {
-  background-color: var(--primary-orange);
-  border-color: var(--primary-orange);
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #e07339;
-  border-color: #e07339;
-}
-
-.btn-outline-primary {
-  color: var(--primary-orange);
-  border-color: var(--primary-orange);
-}
-
-.btn-outline-primary:hover {
-  background-color: var(--primary-orange);
-  border-color: var(--primary-orange);
-  color: white;
-}
-
-@media (max-width: 768px) {
-  .event-card.featured {
-      grid-template-columns: 1fr;
-  }
-  
-  .events-hero {
-      padding: 60px 0;
-  }
-  
-  .filter-pill {
-      padding: 6px 16px;
-      font-size: 0.9rem;
-  }
-}
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const filterPills = document.querySelectorAll('.filter-pill');
-  filterPills.forEach(pill => {
-      pill.addEventListener('click', () => {
-          filterPills.forEach(p => p.classList.remove('active'));
-          pill.classList.add('active');
-      });
-  });
-
-  const viewBtns = document.querySelectorAll('.view-btn');
-  viewBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-          viewBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-      });
-  });
-});
-</script> -->
-
-<style>
-  .projects-container {
-      width: 70%;
-      max-width: 1200px;
-      margin-right: auto;
-      margin-left: auto;
-  }
-
-  .projects-section {
-      padding: 50px 0;
-      background: #f8f9fa;
-  }
-
-  /* .projects-heading {
-      margin-bottom: 40px;
-      color: #5f5e61;
-      font-weight: lighter;
-  } */
-
-  .slick-slider {
-      margin: 0 auto;
-  }
-
-  .slick-slide {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .projects-slider {
-      overflow: visible; /* Make sure overflowing content is visible */
-  }
-
-  .circle {
-position: relative;
-width: 200px;
-height: 370px;
-border-radius: 50%;
-overflow: hidden;
-margin: 0 10px;
-flex-shrink: 0;
-}
-
-.circle-content {
-position: relative;
-width: 100%;
-height: 100%;
-}
-
-.circle a {
-display: block;
-width: 100%;
-height: 100%;
-position: relative;
-text-decoration: none;
-}
-
-.circle img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.3s;
-}
-
 .circle-overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(255, 255, 255, 0.5);
-opacity: 0;
-transition: opacity 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .circle:hover .circle-overlay {
-opacity: 1;
+  opacity: 1;
 }
 
-.circle-text {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-color: #ffffff;
-font-size: 1.5rem;
-font-weight: bold;
-text-align: center;
-margin: 0;
-text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-width: 100%;
-padding: 0 10px;
-z-index: 10;
+.circle-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-  .slick-arrow {
-      background: none; /* Remove background */
-      z-index: 10; /* Ensure arrows are on top */
-      color: black; /* Font Awesome arrow color */
-      width: 40px; /* Clickable area width */
-      height: 40px; /* Clickable area height */
-      display: flex !important; /* Flexbox for centering */
-      justify-content: center;
-      align-items: center;
-      cursor: pointer; /* Pointer cursor for interactivity */
-      border-radius: 50%; /* Make the clickable area circular */
-      transition: transform 0.3s ease; /* Smooth effect for potential interactions */
-  }
+.line {
+  width: 40px;
+  height: 1px;
+  background-color: #666;
+  margin-bottom: 0.2rem;
+}
 
-  /* Position the arrows */
-  .slick-prev {
-      left: -50px; /* Adjust as needed */
-  }
+.circle-label h3 {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: 'Archi';
+}
 
-  .slick-next {
-      right: -50px; /* Adjust as needed */
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .circles-grid {
+    gap: 1.5rem;
   }
-
-  /* Remove default Slick arrows */
-  .slick-prev::before,
-  .slick-next::before {
-      display: none;
+  
+  .circle {
+    width: 180px;
+    height: 180px;
   }
+}
 
-  /* Add Font Awesome icons for arrows */
-  .slick-prev::after {
-      font-family: "Font Awesome 6 Free"; /* Font Awesome font family */
-      font-weight: 900; /* For solid icons */
-      content: "\f104"; /* Unicode for "chevron-left" */
-      font-size: 24px; /* Adjust icon size */
-      color: #7a7a7a; /* Arrow color */
+@media (max-width: 768px) {
+  .projects-container {
+    width: 90%;
   }
-
-  .slick-next::after {
-      font-family: "Font Awesome 6 Free"; /* Font Awesome font family */
-      font-weight: 900; /* For solid icons */
-      content: "\f105"; /* Unicode for "chevron-right" */
-      font-size: 24px; /* Adjust icon size */
-      color: #7a7a7a; /* Arrow color */
+  
+  .circles-grid {
+    gap: 1rem;
   }
-
+  
+  .circle {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .circle-container {
+    margin-bottom: 2rem;
+  }
+  
   .projects-heading {
-      color: rgb(113, 114, 113);
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 600;
-      font-size: 2rem;
+    font-size: 1.5rem;
   }
+}
+
+@media (max-width: 576px) {
+  .circles-grid {
+    gap: 2rem;
+  }
+  
+  .circle {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .projects-heading span {
+    display: inline-block;
+    margin: 0 8px !important;
+  }
+}
 </style>
 
-<div class="projects-section">
-  <div class="projects-container">
-      <!-- <h1 class="projects-heading text-center font-archi">TRANSFORMED WORKSPACES</h1> -->
-      <div class="text-center mb-5 projects-heading">
-        <span style="margin: 0 15px;">EXPLORE</span>
-        |
-        <span style="margin: 0 15px;">READ</span>
-        |
-        <span style="margin: 0 15px;">WATCH</span>
-        |
-        <span style="margin: 0 15px;">LISTEN</span>
-      </div>
-      <div class="projects-slider">
-          <div class="circle">
-              <div class="circle-content">
-                  <a href="new-project.html?category=corporate">
-                      <img src="images/news.png" alt="Project 1">
-                      <div class="circle-overlay"></div>
-                      <h3 class="circle-text">NEWS</h3>
-                  </a>
-              </div>
-          </div>
-          <div class="circle">
-            <div class="circle-content">
-                <a href="new-project.html?category=education">
-                    <img src="images/events-1.png" alt="Project 1">
-                    <div class="circle-overlay"></div>
-                    <h3 class="circle-text">EVENTS</h3>
-                </a>
-            </div>
-          </div>
-          <div class="circle">
-            <div class="circle-content">
-                <a href="new-project.html?category=healthcare">
-                    <img src="images/videos.jpg" alt="Project 1">
-                    <div class="circle-overlay"></div>
-                    <h3 class="circle-text">VIDEOS</h3>
-                </a>
-            </div>
-          </div>
-          <div class="circle">
-            <div class="circle-content">
-                <a href="new-project.html?category=hospitality">
-                    <img src="images/blogs.png" alt="Project 1">
-                    <div class="circle-overlay"></div>
-                    <h3 class="circle-text">BLOGS</h3>
-                </a>
-            </div>
-          </div>
-      </div>
-  </div>
-</div>
 
 <footer style="background-color: #ffffff; padding: 30px 0 5px;">
   <div class="container text-center">
-    <!-- Newsletter Subscription Form -->
-    <div class="subscription-form mb-4">
-      <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a;">
+    <div class="subscription-form">
+      <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a; margin-bottom: 15px;">
         <span class="me-1">
-          <img src="images/envelope-outline.svg" alt="Newsletter Icon" class="img-fluid" />
+          <i class="fas fa-envelope me-2"></i>
         </span>
-        <span style="font-family: 'Montserrat', sans-serif; font-weight: 500;">Subscribe to Our Newsletter</span>
+        <span style="font-family: 'Archi'; font-weight: 600;">Subscribe to Our Newsletter</span>
       </h3>
-
       <form action="#" class="row g-3 justify-content-center align-items-center">
         <div class="col-auto">
           <input type="text" class="new-form-control" placeholder="Enter your name" />
@@ -761,28 +341,24 @@ z-index: 10;
         </div>
         <div class="col-auto">
           <button class="custom-submit-btn">
-            <span class="fa fa-paper-plane"></span>
+            <i class="fas fa-paper-plane"></i>
           </button>
         </div>
       </form>
     </div>
-
-    <!-- Updated Social Media Links -->
-    <div class="social-media-links mb-4" style="line-height: 0;">
+    <div class="social-media-links">
       <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
-        <span class="fa fa-brands fa-facebook-f"></span>
+        <i class="fab fa-facebook-f"></i>
       </a>
       <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
-        <span class="fa fa-brands fa-instagram"></span>
+        <i class="fab fa-instagram"></i>
       </a>
       <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <span class="fa fa-brands fa-linkedin"></span>
+        <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
   </div>
-
-  <!-- Centered Copyright Section -->
-  <div class="mt-4" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+  <div class="mt-3" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
     <div class="container pt-3 text-center">
       <p class="mb-2 font-archi">
         Copyright Archibrands &copy;
@@ -795,77 +371,6 @@ z-index: 10;
   </div>
 </footer>
 
-<style>
-  /* New Form Control Styling */
-  .new-form-control {
-    width: 250px; /* Adjust width as per design */
-    height: 45px; /* Set consistent height */
-    padding: 10px 15px; /* Padding for better text alignment */
-    border: 1px solid #dcdcdc; /* Subtle border */
-    border-radius: 15px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-    color: #333333; /* Text color */
-    background-color: #f9f9f9; /* Light background */
-    outline: none; /* Remove default outline */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .new-form-control:focus {
-    border-color: #c19c81; /* Border color on focus */
-  }
-
-  /* Button Styling */
-  .custom-submit-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px; /* Match input field height */
-    min-width: 50px; /* Ensures enough width for the icon */
-    padding: 0 15px; /* Horizontal padding */
-    border: none;
-    border-radius: 15px; /* Matches input field corners */
-    background-color: #7a7a7a; /* Default button color */
-    color: #ffffff;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-
-  .custom-submit-btn:hover {
-    background-color: #c19c81; /* Smooth hover effect */
-  }
-
-  /* Social Media Links */
-  .social-media-links .social-icon {
-    font-size: 24px; /* Adjust size of social icons */
-    color: #7a7a7a; /* Default color */
-    transition: color 0.3s ease;
-  }
-
-  .social-media-links .social-icon:hover {
-    color: #c19c81; /* Hover color */
-  }
-
-  /* Parent container fix for dashes */
-  .social-media-links {
-    line-height: 0; /* Prevents unwanted inline spacing */
-  }
-</style>
-
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        effect: "fade",
-        speed: 900,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        loop: true,
-        navigation: false, // Removes arrows
-      });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/job-field.js"></script>
@@ -874,76 +379,6 @@ z-index: 10;
     <script src="js/custom.js"></script>
     <script src="js/search-bar.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-      $(document).ready(function () {
-          const $slider = $('.projects-slider').slick({
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              speed: 0, // Instantaneous slide movement (manual scrolling)
-              arrows: true,
-              dots: false,
-              infinite: true, // Enable infinite scrolling
-              autoplay: false, // Disable autoplay
-              pauseOnHover: false // Avoid interference
-          });
-
-          $('.slick-prev, .slick-next').off('click').on('click', function (e) {
-              e.preventDefault();
-              e.stopPropagation();
-          });
-
-          $slider.on('beforeChange', function (event) {
-              event.stopImmediatePropagation();
-          });
-  
-          let animationFrame; // To track the scrolling animation
-          const slideWidth = $slider.find('.slick-slide').outerWidth(true); // Width of each slide
-  
-          function scroll(direction) {
-              const $track = $slider.find('.slick-track');
-              const currentTransform = $track.css('transform');
-              const matrix = currentTransform.match(/matrix\((.+)\)/);
-              const translateX = matrix ? parseFloat(matrix[1].split(',')[4]) : 0;
-  
-              // Move left or right based on the direction
-              const newTranslateX = direction === 'right' ? translateX - 1 : translateX + 1;
-              $track.css('transform', `translateX(${newTranslateX}px)`);
-  
-              // Handle infinite scrolling
-              const trackWidth = $track.width();
-              const containerWidth = $slider.width();
-  
-              if (Math.abs(translateX) >= trackWidth - containerWidth && direction === 'right') {
-                  $track.css('transform', `translateX(0px)`); // Reset to start
-              } else if (translateX >= 0 && direction === 'left') {
-                  $track.css('transform', `translateX(-${trackWidth - containerWidth}px)`); // Reset to end
-              }
-  
-              animationFrame = requestAnimationFrame(() => scroll(direction));
-          }
-  
-          // Hover handlers for arrows
-          $('.slick-next').hover(
-              function () {
-                  scroll('right'); // Start scrolling right
-              },
-              function () {
-                  cancelAnimationFrame(animationFrame); // Stop scrolling
-              }
-          );
-  
-          $('.slick-prev').hover(
-              function () {
-                  scroll('left'); // Start scrolling left
-              },
-              function () {
-                  cancelAnimationFrame(animationFrame); // Stop scrolling
-              }
-          );
-      });
-  </script>
-    <!-- <script src="js/background.js"></script> -->
     <script src="js/disable.js"></script>
   </body>
 </html>

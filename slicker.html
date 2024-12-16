@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase Slider</title>
+    
+    <!-- CSS Dependencies -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <style>
+        .my-container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 10px auto;
+        }
+
+        .projects-container {
+            width: 40%;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .projects-heading {
+            color: rgb(113, 114, 113);
+            font-family: Arial, sans-serif;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .features-text {
+            text-align: center;
+            color: #7a7a7a;
+            font-size: 1rem;
+            margin-bottom: 40px;
+        }
+
+        .features-text span {
+            font-weight: bold;
+            margin: 0 15px;
+        }
+
+        .projects-slider {
+            overflow: visible;
+        }
+
+        .circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 10px;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .circle-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s;
+        }
+
+        .circle:hover img {
+            filter: brightness(1.2);
+        }
+
+        .circle-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            z-index: 10;
+        }
+
+        /* Custom Slick Arrow Styles */
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: none !important;
+            z-index: 10;
+            cursor: pointer;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slick-prev {
+            left: -50px;
+        }
+
+        .slick-next {
+            right: -50px;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            display: none;
+        }
+
+        .slick-prev:after {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f104";
+            font-size: 24px;
+            color: #7a7a7a;
+        }
+
+        .slick-next:after {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f105";
+            font-size: 24px;
+            color: #7a7a7a;
+        }
+
+        @media (max-width: 1024px) {
+            .projects-container {
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .projects-container {
+                width: 90%;
+            }
+            .features-text span {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="my-container">
+        <h1 class="projects-heading">TRANSFORMED WORKSPACES</h1>
+        <div class="features-text">
+            <span><i class="fas fa-building"></i> Modern Designs</span>
+            |
+            <span><i class="fas fa-hands-helping"></i> Collaborative Environments</span>
+            |
+            <span><i class="fas fa-mountain"></i> Elevated Experiences</span>
+            |
+            <span><i class="fas fa-globe"></i> Global Standards</span>
+        </div>
+    </div>
+
+    <div class="projects-container">
+        <div class="projects-slider">
+            <div class="circle">
+                <div class="circle-content">
+                    <img src="images/KCG/0.jpg" alt="Corporate">
+                    <h3 class="circle-text">CORPORATE</h3>
+                </div>
+            </div>
+            <div class="circle">
+                <div class="circle-content">
+                    <img src="images/KCG/1.jpg" alt="Education">
+                    <h3 class="circle-text">EDUCATION</h3>
+                </div>
+            </div>
+            <div class="circle">
+                <div class="circle-content">
+                    <img src="images/KCG/2.jpg" alt="Healthcare">
+                    <h3 class="circle-text">HEALTHCARE</h3>
+                </div>
+            </div>
+            <div class="circle">
+                <div class="circle-content">
+                    <img src="images/KCG/3.jpg" alt="Hospitality">
+                    <h3 class="circle-text">HOSPITALITY</h3>
+                </div>
+            </div>
+            <div class="circle">
+                <div class="circle-content">
+                    <img src="images/KCG/4.jpg" alt="Residential">
+                    <h3 class="circle-text">RESIDENTIAL</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const $slider = $('.projects-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                speed: 0,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                autoplay: false,
+                pauseOnHover: false,
+                cssEase: 'linear',
+                useTransform: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            let animationFrame;
+            const slideWidth = $slider.find('.slick-slide').outerWidth(true);
+
+            function scroll(direction) {
+                const $track = $slider.find('.slick-track');
+                const currentTransform = $track.css('transform');
+                const matrix = currentTransform.match(/matrix\((.+)\)/);
+                const translateX = matrix ? parseFloat(matrix[1].split(',')[4]) : 0;
+
+                const newTranslateX = direction === 'right' ? translateX - 1 : translateX + 1;
+                $track.css('transform', `translateX(${newTranslateX}px)`);
+
+                const trackWidth = $track.width();
+                const containerWidth = $slider.width();
+
+                if (Math.abs(translateX) >= trackWidth - containerWidth && direction === 'right') {
+                    $track.css('transform', 'translateX(0px)');
+                } else if (translateX >= 0 && direction === 'left') {
+                    $track.css('transform', `translateX(-${trackWidth - containerWidth}px)`);
+                }
+
+                animationFrame = requestAnimationFrame(() => scroll(direction));
+            }
+
+            // Hover handlers for arrows
+            $('.slick-next').hover(
+                function() { scroll('right'); },
+                function() { cancelAnimationFrame(animationFrame); }
+            );
+
+            $('.slick-prev').hover(
+                function() { scroll('left'); },
+                function() { cancelAnimationFrame(animationFrame); }
+            );
+
+            // Add timeout to scroll half a slide after slider loads
+            setTimeout(() => {
+                const slideWidth = $slider.find('.slick-slide').outerWidth(true);
+                const $track = $slider.find('.slick-track');
+                $track.css('transform', `translateX(-${slideWidth / 2}px)`);
+            }, 200);
+        });
+    </script>
+</body>
+</html>

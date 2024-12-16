@@ -1,0 +1,77 @@
+.new-form-control {
+    width: 250px;
+    height: 25px;
+    padding: 8px 8px;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+    color: #333333;
+    background-color: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .new-form-control:focus {
+    border-color: #999;
+  }
+  
+  .custom-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 30px;
+    padding: 0 0;
+    border: none;
+    background-color: #a09fa0;
+    color: #ffffff;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .custom-submit-btn:hover {
+    background-color: #606060;
+  }
+
+  /* Adjust icon size specifically */
+.custom-submit-btn .fas {
+  font-size: 10px;      /* Make icon smaller */
+  width: auto;          /* Override the default width */
+}
+  
+  .social-media-links .social-icon {
+    color: #a09fa0;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .social-media-links .social-icon:hover {
+    color: #606060;
+  }
+  
+  .fas, .fab {
+    width: 20px;
+  }
+  
+  .subscription-form {
+    margin-bottom: 15px;
+  }
+
+  .subscription-form h3 {
+    letter-spacing: 1px;
+  }
+  
+  .social-media-links {
+    margin: 15px 0;
+  }
+  
+  footer .container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .subscription-form h3 .fas {
+    color: #a09fa0;  /* Same color as the submit button */
+  }
+  

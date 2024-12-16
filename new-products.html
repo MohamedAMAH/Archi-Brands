@@ -11,7 +11,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-    <link href="css/tiny-slider.css" rel="stylesheet" />
+    <link href="css/navbar-carousel.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
@@ -47,272 +48,75 @@
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-home.html">HOME</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi active" href="new-products.html">PRODUCTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-projects.html">PROJECTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-events.html">INSIGHTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-careers.html">CAREERS</a>
+        </li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="new-cart.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<style>
-  .navbar {
-z-index: 1000;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
-height: 120px; /* Set the fixed height for the navbar */
-padding: 0 15px; /* Add padding if needed */
-}
-
-.navbar-brand img {
-height: 100%; /* Make sure the logo height doesn't exceed the navbar height */
-max-height: 60px; /* Set a max height for the logo for better control */
-}
-
-.navbar-toggler {
-height: 60px; /* Adjust this to align with the navbar height */
-}
-
-  .vertical-line {
-    width: 0.5px;
-    height: 100px; /* Match the height of the first logo */
-    background-color: #7a7a7a; /* Adjust color as needed */
-    margin-right: 15px;
-  }
-
-  .platinum-partner img {
-    margin-bottom: 5px; /* Space between image and text */
-  }
-
-  .partner-text {
-    font-size: 1.2rem; /* Adjust as needed */
-    color: #7a7a7a; /* Match color with other nav items */
-    text-align: center;
-  }
-
-  .navbar-nav .nav-link {
-    color: #7a7a7a !important;
-    font-weight: 400; /* Optional for better visibility */
-    font-size: 0.9rem; /* Adjust this value to change the font size */
-    margin-left: 30px; /* Space between items */
-    margin-right: 30px; /* Space between items */
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  .navbar-nav .nav-link.active,
-  .navbar-nav .nav-link:hover {
-    color: #c19c81 !important;
-  }
-
-  .navbar-nav .separator {
-    color: #7a7a7a;
-    font-size: 1rem; /* Adjust this value to match the nav-link size */
-    display: flex;
-    align-items: center;
-    padding: 0 5px; /* Adjust spacing around separators */
-  }
-</style>  
-
-  <!-- Custom Carousel Structure -->
-  <div class="custom-carousel">
-    <div class="carousel-slide active">
-      <img src="images/8.jpg" alt="Slide 1">
-    </div>
-    <div class="carousel-slide">
-      <img src="images/Capital/1.jpg" alt="Slide 2">
-    </div>
-    <div class="carousel-slide">
-      <img src="images/KCG/2.jpg" alt="Slide 4">
-    </div>
-    <div class="carousel-slide">
-      <img src="images/Kredit/1.jpg" alt="Slide 4">
-    </div>
-    <div class="carousel-slide">
-      <img src="images/35.jpg" alt="Slide 3">
-    </div>
-  </div>
-
-  <style>
-    /* .custom-carousel {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    } */
-
-    .custom-carousel {
-      position: relative;
-      width: 97%;
-      height: 100vh;
-      overflow: hidden;
-      margin-left: auto;
-    }
-
-    .carousel-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 3s ease-in-out;
-    }
-
-    .carousel-slide.active {
-      opacity: 1;
-      z-index: 1;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const slides = document.querySelectorAll('.carousel-slide');
-      let currentIndex = 0;
-
-      function showNextSlide() {
-        // Hide the current slide
-        slides[currentIndex].classList.remove('active');
-
-        // Increment the index and loop back to the first slide if necessary
-        currentIndex = (currentIndex + 1) % slides.length;
-
-        // Show the next slide
-        slides[currentIndex].classList.add('active');
-      }
-
-      // Change slides every 5 seconds (5000 ms)
-      setInterval(showNextSlide, 6000);
-    });
-  </script>
-
-
-    
-<!-- <div class="products-section py-5" style="background-color: #f1f3f5; padding: 50px 0;">
-  <div class="products-container">
-    <h1 class="text-center mb-4 font-archi" style="padding: 0 !important;">ENHANCE YOUR SPACE</h1>
-    <div class="text-center mb-5" style="color: #7a7a7a; font-size: 1rem;">
-      <span class="font-archi"> <i class="fas fa-brush"></i> Elegant Finishes </span>
-      |
-      <span class="font-archi"> <i class="fas fa-ruler-combined"></i> Superior Craftsmanship </span>
-      |
-      <span class="font-archi"> <i class="fas fa-cubes"></i> Versatile Solutions </span>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <div class="d-flex flex-wrap justify-content-center custom-gap">
-          <a href="new-flooring.html" class="product-circle">
-            <div class="circle-wrapper">
-              <img src="images/yoflor.png" alt="Flooring" class="product-image" />
-              <div class="product-overlay">
-                <h3 class="font-archi">FLOORING</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="#ceiling" class="product-circle">
-            <div class="circle-wrapper">
-              <img src="images/1 (1).jpg" alt="Ceiling" class="product-image" />
-              <div class="product-overlay">
-                <h3 class="font-archi">CEILING</h3>
-              </div>
-            </div>
-          </a>
-
-          <a href="#cladding" class="product-circle">
-            <div class="circle-wrapper">
-              <img src="images/5 (1).jpg" alt="Cladding" class="product-image" />
-              <div class="product-overlay">
-                <h3 class="font-archi">CLADDING</h3>
-              </div>
-            </div>
-          </a>
-        </div>
+    <div class="custom-carousel">
+      <div class="carousel-slide active">
+        <img src="images/hero/1.jpg" alt="Slide 1" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/2.jpg" alt="Slide 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/3.jpg" alt="Slide 4" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/4.jpg" alt="Slide 4" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/5.jpg" alt="Slide 3" />
       </div>
     </div>
-  </div>
-
-  <style>
-    .products-section {
-      padding: 5rem 0;
-    }
-
-    .products-container {
-      max-width: 2000px;
-      margin: 0 auto;
-    }
-
-    .product-circle {
-      width: 350px;
-      height: 350px;
-    }
-
-    .circle-wrapper {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .product-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .product-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-    }
-
-    .product-overlay:hover {
-      background: rgba(0, 0, 0, 0.2);
-    }
-
-    .product-overlay h3 {
-      color: white;
-      font-size: 2.2rem;
-      font-weight: bold;
-      margin: 0;
-      text-align: center;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .custom-gap {
-      gap: 3rem;
-    }
-  </style>
-</div>      -->
 
 <style>
+  .my-container {
+      width: 60%;
+      max-width: 1200px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+  
   .projects-container {
-      width: 70%;
+      width: 40%;
       max-width: 1200px;
       margin-right: auto;
       margin-left: auto;
@@ -327,6 +131,7 @@ height: 60px; /* Adjust this to align with the navbar height */
       margin-bottom: 40px;
       color: #5f5e61;
       font-weight: lighter;
+      letter-spacing: 1px;
   }
 
   .slick-slider {
@@ -346,7 +151,7 @@ height: 60px; /* Adjust this to align with the navbar height */
   .circle {
 position: relative;
 width: 200px;
-height: 370px;
+height: 200px;
 border-radius: 50%;
 overflow: hidden;
 margin: 0 10px;
@@ -395,8 +200,9 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 color: #ffffff;
-font-size: 1.5rem;
-font-weight: bold;
+font-size: 1.7rem;
+/* font-weight: bold; */
+font-family: 'Archi2';
 text-align: center;
 margin: 0;
 text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
@@ -453,22 +259,23 @@ z-index: 10;
 
   .projects-heading {
       color: rgb(113, 114, 113);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Archi', sans-serif;
       font-weight: 500;
     }
 </style>
 
 <div class="projects-section">
+  <div class="my-container">
+    <h1 class="text-center mb-2 projects-heading">ENHANCE YOUR SPACE</h1>
+    <div class="text-center mb-5" style="color: #7a7a7a; font-size: 1rem;">
+      <span style="font-family: 'Archi'; font-weight: bold;"> <i class="fas fa-brush"></i> Elegant Finishes </span>
+      |
+      <span style="font-family: 'Archi'; font-weight: bold;"> <i class="fas fa-ruler-combined"></i> Superior Craftsmanship </span>
+      |
+      <span style="font-family: 'Archi'; font-weight: bold;"> <i class="fas fa-cubes"></i> Versatile Solutions </span>
+    </div>
+  </div>
   <div class="projects-container">
-      <!-- <h1 class="projects-heading text-center font-archi">TRANSFORMED WORKSPACES</h1> -->
-      <h1 class="text-center mb-4 projects-heading">ENHANCE YOUR SPACE</h1>
-      <div class="text-center mb-5" style="color: #7a7a7a; font-size: 1rem;">
-        <span class="font-archi"> <i class="fas fa-brush"></i> Elegant Finishes </span>
-        |
-        <span class="font-archi"> <i class="fas fa-ruler-combined"></i> Superior Craftsmanship </span>
-        |
-        <span class="font-archi"> <i class="fas fa-cubes"></i> Versatile Solutions </span>
-      </div>
       <div class="projects-slider">
           <div class="circle">
               <div class="circle-content">
@@ -513,15 +320,13 @@ z-index: 10;
 
 <footer style="background-color: #ffffff; padding: 30px 0 5px;">
   <div class="container text-center">
-    <!-- Newsletter Subscription Form -->
-    <div class="subscription-form mb-4">
-      <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a;">
+    <div class="subscription-form">
+      <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a; margin-bottom: 15px;">
         <span class="me-1">
-          <img src="images/envelope-outline.svg" alt="Newsletter Icon" class="img-fluid" />
+          <i class="fas fa-envelope me-2"></i>
         </span>
-        <span style="font-family: 'Montserrat', sans-serif; font-weight: 500;">Subscribe to Our Newsletter</span>
+        <span style="font-family: 'Archi'; font-weight: 600;">Subscribe to Our Newsletter</span>
       </h3>
-
       <form action="#" class="row g-3 justify-content-center align-items-center">
         <div class="col-auto">
           <input type="text" class="new-form-control" placeholder="Enter your name" />
@@ -531,28 +336,24 @@ z-index: 10;
         </div>
         <div class="col-auto">
           <button class="custom-submit-btn">
-            <span class="fa fa-paper-plane"></span>
+            <i class="fas fa-paper-plane"></i>
           </button>
         </div>
       </form>
     </div>
-
-    <!-- Updated Social Media Links -->
-    <div class="social-media-links mb-4" style="line-height: 0;">
+    <div class="social-media-links">
       <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
-        <span class="fa fa-brands fa-facebook-f"></span>
+        <i class="fab fa-facebook-f"></i>
       </a>
       <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
-        <span class="fa fa-brands fa-instagram"></span>
+        <i class="fab fa-instagram"></i>
       </a>
       <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
-        <span class="fa fa-brands fa-linkedin"></span>
+        <i class="fab fa-linkedin-in"></i>
       </a>
     </div>
   </div>
-
-  <!-- Centered Copyright Section -->
-  <div class="mt-4" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+  <div class="mt-3" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
     <div class="container pt-3 text-center">
       <p class="mb-2 font-archi">
         Copyright Archibrands &copy;
@@ -564,63 +365,6 @@ z-index: 10;
     </div>
   </div>
 </footer>
-
-<style>
-  /* New Form Control Styling */
-  .new-form-control {
-    width: 250px; /* Adjust width as per design */
-    height: 45px; /* Set consistent height */
-    padding: 10px 15px; /* Padding for better text alignment */
-    border: 1px solid #dcdcdc; /* Subtle border */
-    border-radius: 15px; /* Rounded corners */
-    font-size: 14px; /* Text size */
-    color: #333333; /* Text color */
-    background-color: #f9f9f9; /* Light background */
-    outline: none; /* Remove default outline */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .new-form-control:focus {
-    border-color: #c19c81; /* Border color on focus */
-  }
-
-  /* Button Styling */
-  .custom-submit-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px; /* Match input field height */
-    min-width: 50px; /* Ensures enough width for the icon */
-    padding: 0 15px; /* Horizontal padding */
-    border: none;
-    border-radius: 15px; /* Matches input field corners */
-    background-color: #7a7a7a; /* Default button color */
-    color: #ffffff;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-  }
-
-  .custom-submit-btn:hover {
-    background-color: #c19c81; /* Smooth hover effect */
-  }
-
-  /* Social Media Links */
-  .social-media-links .social-icon {
-    font-size: 24px; /* Adjust size of social icons */
-    color: #7a7a7a; /* Default color */
-    transition: color 0.3s ease;
-  }
-
-  .social-media-links .social-icon:hover {
-    color: #c19c81; /* Hover color */
-  }
-
-  /* Parent container fix for dashes */
-  .social-media-links {
-    line-height: 0; /* Prevents unwanted inline spacing */
-  }
-</style>
 
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -641,6 +385,7 @@ z-index: 10;
     <script src="js/job-field.js"></script>
     <script src="js/jobs.js"></script>
     <script src="js/cart-counter.js"></script>
+    <script src="js/navbar-carousel.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/search-bar.js"></script>
     <!-- <script src="js/background.js"></script> -->
@@ -713,6 +458,13 @@ z-index: 10;
                   cancelAnimationFrame(animationFrame); // Stop scrolling
               }
           );
+
+          // Add timeout to scroll half a slide after slider loads
+          setTimeout(() => {
+              const slideWidth = $slider.find('.slick-slide').outerWidth(true);
+              const $track = $slider.find('.slick-track');
+              $track.css('transform', `translateX(-${slideWidth / 2}px)`);
+          }, 500);
       });
   </script>
   </body>

@@ -11,7 +11,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-    <link href="css/tiny-slider.css" rel="stylesheet" />
+    <link href="css/navbar-carousel.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
@@ -46,368 +47,362 @@
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-home.html">HOME</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-products.html">PRODUCTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-projects.html">PROJECTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi" href="new-events.html">INSIGHTS</a>
         </li>
-        <li class="nav-item separator">|</li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
         <li class="nav-item">
           <a class="nav-link font-archi active" href="new-careers.html">CAREERS</a>
+        </li>
+        <li class="nav-item separator">
+          <div class="vertical-separator"></div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="new-cart.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
+    <div class="custom-carousel">
+      <div class="carousel-slide active">
+        <img src="images/hero/1.jpg" alt="Slide 1" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/2.jpg" alt="Slide 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/3.jpg" alt="Slide 4" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/4.jpg" alt="Slide 4" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/5.jpg" alt="Slide 3" />
+      </div>
+    </div>
+
+<section class="inquiry-section">
+  <div class="container">
+      <div class="inquiry-row">
+          <div class="col-md-4">
+              <h1 class="inquiry-title">Join Our Team</h1>
+              <div class="contact-details mt-3">
+                  <a href="#" class="location-link d-flex align-items-center mb-3">
+                      <i class="fas fa-map-marker-alt me-2"></i>
+                      <span>Egypt</span>
+                  </a>
+                  <div class="d-flex align-items-center mb-3">
+                      <i class="fas fa-phone me-2"></i>
+                      <span>+971 (0)4 369 7844</span>
+                  </div>
+                  <div class="d-flex align-items-center mb-4">
+                      <i class="fas fa-envelope me-2"></i>
+                      <span>info@archibrands.com</span>
+                  </div>
+                  
+                  <div class="social-links">
+                      <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="me-3"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col-md-5">
+              <form class="inquiry-form">
+                  <div class="row mb-1">
+                      <div class="col-md-6">
+                          <label class="inquiry-label">First Name</label>
+                          <input type="text" class="inquiry-input">
+                      </div>
+                      <div class="col-md-6">
+                          <label class="inquiry-label">Last Name</label>
+                          <input type="text" class="inquiry-input">
+                      </div>
+                  </div>
+                  
+                  <div class="mb-1">
+                      <label class="inquiry-label">Email *</label>
+                      <input type="email" class="inquiry-input">
+                  </div>
+                  
+                  <div class="mb-1">
+                      <label class="inquiry-label">Message</label>
+                      <textarea class="inquiry-textarea" rows="4"></textarea>
+                  </div>
+                  
+                  <div class="row mb-1">
+                      <div class="col-md-4">
+                          <label class="inquiry-label">Country Code</label>
+                          <select class="inquiry-select" id="country-code">
+                              <option value="+971">UAE (+971)</option>
+                              <option value="+966">KSA (+966)</option>
+                              <option value="+973">Bahrain (+973)</option>
+                              <option value="+974">Qatar (+974)</option>
+                              <option value="+965">Kuwait (+965)</option>
+                              <option value="+968">Oman (+968)</option>
+                          </select>
+                      </div>
+                      <div class="col-md-8">
+                          <label class="inquiry-label">Phone</label>
+                          <input type="tel" class="inquiry-input">
+                      </div>
+                  </div>
+
+                  <div class="mb-4">
+                      <label class="inquiry-label">Resume</label>
+                      <div class="file-upload">
+                          <input type="file" class="inquiry-file" id="resume" accept=".pdf,.doc,.docx">
+                          <label for="resume" class="file-upload-label">
+                              <i class="fas fa-cloud-upload-alt me-2"></i>
+                              <span class="file-name">Upload Resume</span>
+                          </label>
+                      </div>
+                  </div>
+                  
+                  <div class="text-end">
+                      <button type="submit" class="inquiry-submit">Send</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+
 <style>
-  .navbar {
-z-index: 1000;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional for subtle shadow effect */
-height: 120px; /* Set the fixed height for the navbar */
-padding: 0 15px; /* Add padding if needed */
+.inquiry-section {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+  width: 100%;
 }
 
-.navbar-brand img {
-height: 100%; /* Make sure the logo height doesn't exceed the navbar height */
-max-height: 60px; /* Set a max height for the logo for better control */
+.inquiry-section .container {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-.navbar-toggler {
-height: 60px; /* Adjust this to align with the navbar height */
+.inquiry-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
 }
 
-  .vertical-line {
-    width: 0.5px;
-    height: 100px; /* Match the height of the first logo */
-    background-color: #7a7a7a; /* Adjust color as needed */
-    margin-right: 15px;
-  }
+.inquiry-title {
+  color: #666;
+  font-size: 2.5rem;
+  font-family: 'Archi';
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 
-  .platinum-partner img {
-    margin-bottom: 5px; /* Space between image and text */
-  }
+.contact-details {
+  color: #666;
+  font-size: 0.9rem;
+}
 
-  .partner-text {
-    font-size: 1.2rem; /* Adjust as needed */
-    color: #7a7a7a; /* Match color with other nav items */
-    text-align: center;
-  }
+.location-link {
+  text-decoration: none;
+  color: #666;
+}
 
-  .navbar-nav .nav-link {
-    color: #7a7a7a !important;
-    font-weight: 400; /* Optional for better visibility */
-    font-size: 0.9rem; /* Adjust this value to change the font size */
-    margin-left: 30px; /* Space between items */
-    margin-right: 30px; /* Space between items */
-    font-family: 'Montserrat', sans-serif;
-  }
+.location-link:hover {
+  color: #555;
+}
 
-  .navbar-nav .nav-link.active,
-  .navbar-nav .nav-link:hover {
-    color: #c19c81 !important;
-  }
+.social-links a {
+  color: #666;
+  font-size: 1.1rem;
+}
 
-  .navbar-nav .separator {
-    color: #7a7a7a;
-    font-size: 1rem; /* Adjust this value to match the nav-link size */
-    display: flex;
-    align-items: center;
-    padding: 0 5px; /* Adjust spacing around separators */
-  }
-</style>  
+.inquiry-label {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+}
 
-  <!-- Custom Carousel Structure -->
-  <div class="custom-carousel">
-    <div class="carousel-slide active">
-      <img src="images/8.jpg" alt="Slide 1">
+.inquiry-input, 
+.inquiry-select, 
+.inquiry-textarea {
+  width: 100%;
+  height: 30px !important;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+  font-size: 13px;
+  background-color: #fff;
+  line-height: 30px;
+}
+
+.inquiry-textarea {
+  resize: none;
+  min-height: 90px;
+  line-height: normal;
+  padding: 6px 10px;
+}
+
+.inquiry-input:focus, 
+.inquiry-select:focus, 
+.inquiry-textarea:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.inquiry-submit {
+  background-color: #666;
+  color: white;
+  border: none;
+  padding: 6px 20px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s;
+}
+
+.inquiry-submit:hover {
+  background-color: #555;
+}
+
+.fas, .fab {
+  width: 20px;
+}
+
+.inquiry-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 1em;
+}
+
+.file-upload {
+  position: relative;
+}
+
+.inquiry-file {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.file-upload-label {
+  display: block;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  height: 30px;
+  line-height: 28px;
+}
+
+.file-upload-label:hover {
+  border-color: #999;
+}
+
+.file-name {
+  margin-left: 5px;
+}
+
+.file-upload-label i {
+  line-height: 28px;
+}
+</style>
+
+<script>
+document.getElementById('resume').addEventListener('change', function(e) {
+  const fileName = e.target.files[0]?.name || 'Upload Resume';
+  e.target.nextElementSibling.querySelector('.file-name').textContent = fileName;
+});
+</script>
+
+<footer style="background-color: #ffffff; padding: 30px 0 5px;">
+  <div class="container text-center">
+    <div class="subscription-form">
+      <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a; margin-bottom: 15px;">
+        <span class="me-1">
+          <i class="fas fa-envelope me-2"></i>
+        </span>
+        <span style="font-family: 'Archi'; font-weight: 600;">Subscribe to Our Newsletter</span>
+      </h3>
+      <form action="#" class="row g-3 justify-content-center align-items-center">
+        <div class="col-auto">
+          <input type="text" class="new-form-control" placeholder="Enter your name" />
+        </div>
+        <div class="col-auto">
+          <input type="email" class="new-form-control" placeholder="Enter your email" />
+        </div>
+        <div class="col-auto">
+          <button class="custom-submit-btn">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </form>
     </div>
-    <div class="carousel-slide">
-      <img src="images/Capital/1.jpg" alt="Slide 2">
-    </div>
-    <div class="carousel-slide">
-      <img src="images/KCG/2.jpg" alt="Slide 4">
-    </div>
-    <div class="carousel-slide">
-      <img src="images/Kredit/1.jpg" alt="Slide 4">
-    </div>
-    <div class="carousel-slide">
-      <img src="images/35.jpg" alt="Slide 3">
+    <div class="social-media-links">
+      <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
     </div>
   </div>
-
-  <style>
-    /* .custom-carousel {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-    } */
-
-    .custom-carousel {
-      position: relative;
-      width: 97%;
-      height: 100vh;
-      overflow: hidden;
-      margin-left: auto;
-    }
-
-    .carousel-slide {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      transition: opacity 3s ease-in-out;
-    }
-
-    .carousel-slide.active {
-      opacity: 1;
-      z-index: 1;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const slides = document.querySelectorAll('.carousel-slide');
-      let currentIndex = 0;
-
-      function showNextSlide() {
-        // Hide the current slide
-        slides[currentIndex].classList.remove('active');
-
-        // Increment the index and loop back to the first slide if necessary
-        currentIndex = (currentIndex + 1) % slides.length;
-
-        // Show the next slide
-        slides[currentIndex].classList.add('active');
-      }
-
-      // Change slides every 5 seconds (5000 ms)
-      setInterval(showNextSlide, 6000);
-    });
-  </script>
-
-
-  <br><br>
-
-  <footer style="background-color: #ffffff; padding: 30px 0 5px;">
-    <div class="container text-center">
-      <!-- Newsletter Subscription Form -->
-      <div class="subscription-form mb-4">
-        <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a;">
-          <span class="me-1">
-            <img src="images/envelope-outline.svg" alt="Newsletter Icon" class="img-fluid" />
-          </span>
-          <span style="font-family: 'Montserrat', sans-serif; font-weight: 500;">Subscribe to Our Newsletter</span>
-        </h3>
-  
-        <form action="#" class="row g-3 justify-content-center align-items-center">
-          <div class="col-auto">
-            <input type="text" class="new-form-control" placeholder="Enter your name" />
-          </div>
-          <div class="col-auto">
-            <input type="email" class="new-form-control" placeholder="Enter your email" />
-          </div>
-          <div class="col-auto">
-            <button class="custom-submit-btn">
-              <span class="fa fa-paper-plane"></span>
-            </button>
-          </div>
-        </form>
-      </div>
-  
-      <!-- Updated Social Media Links -->
-      <div class="social-media-links mb-4" style="line-height: 0;">
-        <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
-          <span class="fa fa-brands fa-facebook-f"></span>
-        </a>
-        <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
-          <span class="fa fa-brands fa-instagram"></span>
-        </a>
-        <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
-          <span class="fa fa-brands fa-linkedin"></span>
-        </a>
-      </div>
+  <div class="mt-3" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+    <div class="container pt-3 text-center">
+      <p class="mb-2 font-archi">
+        Copyright Archibrands &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        . All Rights Reserved.
+      </p>
     </div>
+  </div>
+</footer>
   
-    <!-- Centered Copyright Section -->
-    <div class="mt-4" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
-      <div class="container pt-3 text-center">
-        <p class="mb-2 font-archi">
-          Copyright Archibrands &copy;
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          . All Rights Reserved.
-        </p>
-      </div>
-    </div>
-  </footer>
-  
-  <style>
-    /* New Form Control Styling */
-    .new-form-control {
-      width: 250px; /* Adjust width as per design */
-      height: 45px; /* Set consistent height */
-      padding: 10px 15px; /* Padding for better text alignment */
-      border: 1px solid #dcdcdc; /* Subtle border */
-      border-radius: 15px; /* Rounded corners */
-      font-size: 14px; /* Text size */
-      color: #333333; /* Text color */
-      background-color: #f9f9f9; /* Light background */
-      outline: none; /* Remove default outline */
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-  
-    .new-form-control:focus {
-      border-color: #c19c81; /* Border color on focus */
-    }
-  
-    /* Button Styling */
-    .custom-submit-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 45px; /* Match input field height */
-      min-width: 50px; /* Ensures enough width for the icon */
-      padding: 0 15px; /* Horizontal padding */
-      border: none;
-      border-radius: 15px; /* Matches input field corners */
-      background-color: #7a7a7a; /* Default button color */
-      color: #ffffff;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      cursor: pointer;
-    }
-  
-    .custom-submit-btn:hover {
-      background-color: #c19c81; /* Smooth hover effect */
-    }
-  
-    /* Social Media Links */
-    .social-media-links .social-icon {
-      font-size: 24px; /* Adjust size of social icons */
-      color: #7a7a7a; /* Default color */
-      transition: color 0.3s ease;
-    }
-  
-    .social-media-links .social-icon:hover {
-      color: #c19c81; /* Hover color */
-    }
-  
-    /* Parent container fix for dashes */
-    .social-media-links {
-      line-height: 0; /* Prevents unwanted inline spacing */
-    }
-  </style>
-  
-  
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".swiper-container", {
-        effect: "fade",
-        speed: 900,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        loop: true,
-        navigation: false, // Removes arrows
-      });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/tiny-slider.js"></script>
     <script src="js/job-field.js"></script>
     <script src="js/jobs.js"></script>
     <script src="js/cart-counter.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/navbar-carousel.js"></script>
     <script src="js/search-bar.js"></script>
     <!-- <script src="js/background.js"></script> -->
     <script src="js/disable.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script>
-      $(document).ready(function () {
-          const $slider = $('.projects-slider').slick({
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              speed: 0, // Instantaneous slide movement (manual scrolling)
-              arrows: true,
-              dots: false,
-              infinite: true, // Enable infinite scrolling
-              autoplay: false, // Disable autoplay
-              pauseOnHover: false // Avoid interference
-          });
-
-          $('.slick-prev, .slick-next').off('click').on('click', function (e) {
-              e.preventDefault();
-              e.stopPropagation();
-          });
-
-          $slider.on('beforeChange', function (event) {
-              event.stopImmediatePropagation();
-          });
-  
-          let animationFrame; // To track the scrolling animation
-          const slideWidth = $slider.find('.slick-slide').outerWidth(true); // Width of each slide
-  
-          function scroll(direction) {
-              const $track = $slider.find('.slick-track');
-              const currentTransform = $track.css('transform');
-              const matrix = currentTransform.match(/matrix\((.+)\)/);
-              const translateX = matrix ? parseFloat(matrix[1].split(',')[4]) : 0;
-  
-              // Move left or right based on the direction
-              const newTranslateX = direction === 'right' ? translateX - 1 : translateX + 1;
-              $track.css('transform', `translateX(${newTranslateX}px)`);
-  
-              // Handle infinite scrolling
-              const trackWidth = $track.width();
-              const containerWidth = $slider.width();
-  
-              if (Math.abs(translateX) >= trackWidth - containerWidth && direction === 'right') {
-                  $track.css('transform', `translateX(0px)`); // Reset to start
-              } else if (translateX >= 0 && direction === 'left') {
-                  $track.css('transform', `translateX(-${trackWidth - containerWidth}px)`); // Reset to end
-              }
-  
-              animationFrame = requestAnimationFrame(() => scroll(direction));
-          }
-  
-          // Hover handlers for arrows
-          $('.slick-next').hover(
-              function () {
-                  scroll('right'); // Start scrolling right
-              },
-              function () {
-                  cancelAnimationFrame(animationFrame); // Stop scrolling
-              }
-          );
-  
-          $('.slick-prev').hover(
-              function () {
-                  scroll('left'); // Start scrolling left
-              },
-              function () {
-                  cancelAnimationFrame(animationFrame); // Stop scrolling
-              }
-          );
-      });
-  </script>
   </body>
 </html>
