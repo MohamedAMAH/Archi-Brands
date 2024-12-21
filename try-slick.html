@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Speed Slider</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <style>
+        .slider-container {
+            width: 40%;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .circle-slide {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        /* Remove Slick's default spacing */
+        .slick-slide {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .slick-list {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .circle-wrapper {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: filter 0.3s ease;
+        }
+
+        .circle-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .circle-wrapper:hover {
+            filter: brightness(1.2);
+        }
+
+        .slick-prev,
+        .slick-next {
+            width: auto;
+            height: auto;
+            font-size: 24px;
+            color: #7a7a7a;
+            z-index: 1;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+        }
+
+        .slick-prev {
+            left: -40px;
+        }
+
+        .slick-next {
+            right: -40px;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            display: none;
+        }
+
+        .slick-prev i,
+        .slick-next i {
+            color: #7a7a7a;
+        }
+
+        .slick-slide {
+            margin: 0;
+        }
+
+        .circular-slider {
+            margin: 0 -10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="circular-slider">
+            <div class="circle-slide">
+                <div class="circle-wrapper">
+                    <a href="#"><img src="images/20.jpg" alt="Image 1"></a>
+                </div>
+            </div>
+            <div class="circle-slide">
+                <div class="circle-wrapper">
+                    <a href="#"><img src="images/20.jpg" alt="Image 2"></a>
+                </div>
+            </div>
+            <div class="circle-slide">
+                <div class="circle-wrapper">
+                    <a href="#"><img src="images/20.jpg" alt="Image 3"></a>
+                </div>
+            </div>
+            <div class="circle-slide">
+                <div class="circle-wrapper">
+                    <a href="#"><img src="images/20.jpg" alt="Image 4"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            const $slider = $('.circular-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                centerMode: true,
+                centerPadding: '0',
+                cssEase: 'linear',
+                draggable: false,
+                swipe: false,
+                touchMove: false,
+                prevArrow: '<button class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            // Add timeout to scroll half a slide after slider loads
+            setTimeout(() => {
+                const slideWidth = $slider.find('.slick-slide').outerWidth(true);
+                const $track = $slider.find('.slick-track');
+                $track.css('transform', `translateX(-${slideWidth / 2}px)`);
+            }, 2000);
+
+            let animationFrame;
+            let lastTimestamp = 0;
+            const SPEED = 0.15; // Reduced speed for smoother animation at smaller widths
+
+            function scroll(direction, timestamp) {
+                if (!lastTimestamp) lastTimestamp = timestamp;
+                const deltaTime = Math.min(timestamp - lastTimestamp, 16); // Cap delta time at 16ms (~60fps)
+                lastTimestamp = timestamp;
+
+                const $track = $slider.find('.slick-track');
+                const currentTransform = $track.css('transform');
+                const matrix = currentTransform.match(/matrix\((.+)\)/);
+                const translateX = matrix ? parseFloat(matrix[1].split(',')[4]) : 0;
+
+                const pixelsToMove = SPEED * deltaTime;
+                const newTranslateX = direction === 'right' ? 
+                    translateX - pixelsToMove : 
+                    translateX + pixelsToMove;
+
+                $track.css('transform', `translateX(${newTranslateX}px)`);
+
+                const trackWidth = $track.width();
+                const containerWidth = $slider.width();
+
+                if (Math.abs(newTranslateX) >= trackWidth - containerWidth && direction === 'right') {
+                    $track.css('transform', 'translateX(0px)');
+                    lastTimestamp = 0;
+                } else if (newTranslateX >= 0 && direction === 'left') {
+                    $track.css('transform', `translateX(-${trackWidth - containerWidth}px)`);
+                    lastTimestamp = 0;
+                }
+
+                animationFrame = requestAnimationFrame((newTimestamp) => 
+                    scroll(direction, newTimestamp)
+                );
+            }
+
+            $('.slick-next').hover(
+                function() {
+                    lastTimestamp = 0;
+                    animationFrame = requestAnimationFrame((timestamp) => 
+                        scroll('right', timestamp)
+                    );
+                },
+                function() {
+                    cancelAnimationFrame(animationFrame);
+                    lastTimestamp = 0;
+                }
+            );
+
+            $('.slick-prev').hover(
+                function() {
+                    lastTimestamp = 0;
+                    animationFrame = requestAnimationFrame((timestamp) => 
+                        scroll('left', timestamp)
+                    );
+                },
+                function() {
+                    cancelAnimationFrame(animationFrame);
+                    lastTimestamp = 0;
+                }
+            );
+        });
+    </script>
+</body>
+</html>
