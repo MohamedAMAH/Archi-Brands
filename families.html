@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Name - Archi-Brands</title>
+    <link rel="shortcut icon" href="images/ab-try-logo.png" type="image/png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/navbar-carousel.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+    <style>
+        .wider-container {
+            width: 88%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .full-section {
+            background-color: #f8f9fa;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .brands-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .brand-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .brand-logo {
+            width: 180px;
+            height: auto;
+        }
+
+        .website-link {
+            padding: 8px 15px;
+            border: 1px solid #7a7a7a;
+            color: #7a7a7a;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-family: 'Archi';
+            display: inline-block;
+            font-size: 14px;
+        }
+
+        .website-link i {
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        .website-link:hover {
+            background-color: #7a7a7a;
+            color: white;
+        }
+
+        .brand-description {
+            color: #5f5e61;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .circles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .circle-item {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            display: block;
+            text-decoration: none;
+        }
+
+        .circle-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0);
+            transition: background-color 0.3s ease;
+            z-index: 1;
+        }
+
+        .circle-item:hover::after {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .circle-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .circle-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 1;
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .circle-item:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .loading-spinner {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+        }
+
+        .loading-spinner.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="wider-container d-flex align-items-center">
+            <a class="navbar-brand d-flex align-items-center" href="new-home.html">
+                <img src="images/archi-main-logo.png" alt="Logo" style="height: 50px;">
+            </a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link font-archi" href="new-home.html">HOME</a>
+                    </li>
+                    <li class="nav-item separator">
+                        <div class="vertical-separator"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-archi active" href="very-new-products.html">BRANDS</a>
+                    </li>
+                    <li class="nav-item separator">
+                        <div class="vertical-separator"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-archi" href="very-new-projects.html">PROJECTS</a>
+                    </li>
+                    <li class="nav-item separator">
+                        <div class="vertical-separator"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-archi" href="new-events.html">INSIGHTS</a>
+                    </li>
+                    <li class="nav-item separator">
+                        <div class="vertical-separator"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-archi" href="new-careers.html">CAREERS</a>
+                    </li>
+                    <li class="nav-item separator">
+                        <div class="vertical-separator"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="new-cart.html">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <div class="custom-carousel">
+        <div class="carousel-slide active">
+            <img src="images/hero/1.jpg" alt="Slide 1" />
+        </div>
+        <div class="carousel-slide">
+            <img src="images/hero/2.jpg" alt="Slide 2" />
+        </div>
+        <div class="carousel-slide">
+            <img src="images/hero/3.jpg" alt="Slide 4" />
+        </div>
+        <div class="carousel-slide">
+            <img src="images/hero/4.jpg" alt="Slide 4" />
+        </div>
+        <div class="carousel-slide">
+            <img src="images/hero/5.jpg" alt="Slide 3" />
+        </div>
+    </div>
+
+    <!-- Brand Content Section -->
+    <div class="full-section">
+        <div class="brands-container">
+            <!-- Loading Spinner -->
+            <div class="loading-spinner">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <div class="brand-content" style="display: none;">
+                <div class="brand-header">
+                    <img src="images/Brand-Logos/dummy-logo.png" alt="Brand Logo" class="brand-logo">
+                    <a href="#" class="website-link" target="_blank">
+                        Visit Website
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+
+                <div class="brand-description">
+                    Loading brand description...
+                </div>
+
+                <div class="circles-container">
+                    <!-- Circles will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #ffffff; padding: 30px 0 5px;">
+        <div class="container text-center">
+            <div class="subscription-form">
+                <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a; margin-bottom: 15px;">
+                    <i class="fas fa-envelope me-2"></i>
+                    <span style="font-family: 'Archi'; font-weight: 600;">Subscribe to Our Newsletter</span>
+                </h3>
+                <form action="#" class="row g-3 justify-content-center align-items-center">
+                    <div class="col-auto">
+                        <input type="text" class="new-form-control" placeholder="Enter your name" />
+                    </div>
+                    <div class="col-auto">
+                        <input type="email" class="new-form-control" placeholder="Enter your email" />
+                    </div>
+                    <div class="col-auto">
+                        <button class="custom-submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="social-media-links">
+                <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="mt-3" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+            <div class="container pt-3 text-center">
+                <p class="mb-2 font-archi">
+                    Copyright Archibrands &copy;
+                    <script>document.write(new Date().getFullYear());</script>
+                    . All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/navbar-carousel.js"></script>
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Function to handle carousel rotation
+        function rotateCarousel() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const activeSlide = document.querySelector('.carousel-slide.active');
+            const nextSlide = activeSlide.nextElementSibling || slides[0];
+            
+            activeSlide.classList.remove('active');
+            nextSlide.classList.add('active');
+        }
+
+        // Function to load brand data
+        async function loadBrandData() {
+            const loadingSpinner = document.querySelector('.loading-spinner');
+            const brandContent = document.querySelector('.brand-content');
+            
+            loadingSpinner.classList.add('active');
+            brandContent.style.display = 'none';
+
+            try {
+                // Fetch the JSON data
+                const response = await fetch('brands.json');
+                const data = await response.json();
+                
+                // Get brand parameter from URL
+                const brandParam = getUrlParameter('brand');
+                if (!brandParam || !data.brands[brandParam]) {
+                    throw new Error('Brand not found');
+                }
+
+                const brand = data.brands[brandParam];
+
+                // Update page title
+                document.title = `${brand.name} - Archi-Brands`;
+
+                // Update brand logo
+                document.querySelector('.brand-logo').src = brand.logo;
+
+                // Update website link
+                const websiteLink = document.querySelector('.website-link');
+                websiteLink.href = brand.websiteUrl;
+
+                // Update description
+                document.querySelector('.brand-description').textContent = brand.description;
+
+                // Update circles
+                const circlesContainer = document.querySelector('.circles-container');
+                circlesContainer.innerHTML = brand.families.map(family => `
+                    <a href="family.html?brand=${brandParam}&family=${family.id}" class="circle-item">
+                        <img src="${family.fnMain}" alt="${family.name}">
+                        <div class="circle-text">${family.name}</div>
+                    </a>
+                `).join('');
+
+                // Hide loading spinner and show content
+                loadingSpinner.classList.remove('active');
+                brandContent.style.display = 'block';
+
+            } catch (error) {
+                console.error('Error loading brand data:', error);
+                document.querySelector('.brand-description').textContent = 
+                    'Error loading brand data. Please try again later.';
+                loadingSpinner.classList.remove('active');
+                brandContent.style.display = 'block';
+            }
+        }
+
+        // Load brand data when the page loads
+        document.addEventListener('DOMContentLoaded', loadBrandData);
+    </script>
+</body>
+</html>

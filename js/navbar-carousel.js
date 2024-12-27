@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function animate() {
       const currentTime = Date.now();
-      if (currentTime - lastTime >= 3000) {
+      if (currentTime - lastTime >= 5000) {
         showNextSlide();
         lastTime = currentTime;
       }

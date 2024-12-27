@@ -1,0 +1,209 @@
+{
+    "projects": [
+      {
+        "name": "AE7",
+        "category": "corporate",
+        "images": [
+          "images/Project/AE7/0.jpg",
+          "images/Project/AE7/1.jpg",
+          "images/Project/AE7/2.jpg",
+          "images/Project/AE7/3.jpg",
+          "images/Project/AE7/4.jpg",
+          "images/Project/AE7/5.jpg",
+          "images/Project/AE7/6.jpg",
+          "images/Project/AE7/7.jpg",
+          "images/Project/AE7/8.jpg",
+          "images/Project/AE7/9.jpg"
+        ]
+      },
+      {
+        "name": "AlFuttaim",
+        "category": "hospitality",
+        "images": [
+          "images/Project/AlFuttaim/0.jpg",
+          "images/Project/AlFuttaim/1.jpg",
+          "images/Project/AlFuttaim/2.jpg",
+          "images/Project/AlFuttaim/3.jpg",
+          "images/Project/AlFuttaim/4.jpg",
+          "images/Project/AlFuttaim/5.jpg",
+          "images/Project/AlFuttaim/6.jpg",
+          "images/Project/AlFuttaim/7.jpg",
+          "images/Project/AlFuttaim/8.jpg",
+          "images/Project/AlFuttaim/9.jpg",
+          "images/Project/AlFuttaim/10.jpg",
+          "images/Project/AlFuttaim/11.jpg",
+          "images/Project/AlFuttaim/12.jpg",
+          "images/Project/AlFuttaim/13.jpg",
+          "images/Project/AlFuttaim/14.jpg"
+        ]
+      },
+      {
+        "name": "Amazon",
+        "category": "corporate",
+        "images": [
+          "images/Project/Amazon/0.jpg",
+          "images/Project/Amazon/1.jpg",
+          "images/Project/Amazon/2.jpg",
+          "images/Project/Amazon/3.jpg",
+          "images/Project/Amazon/4.jpg",
+          "images/Project/Amazon/5.jpg",
+          "images/Project/Amazon/6.jpg",
+          "images/Project/Amazon/7.jpg",
+          "images/Project/Amazon/8.jpg",
+          "images/Project/Amazon/9.jpg",
+          "images/Project/Amazon/10.jpg"
+        ]
+      },
+      {
+        "name": "Amman Academy School",
+        "category": "education",
+        "images": [
+          "images/Project/Amman Academy School/0.jpg",
+          "images/Project/Amman Academy School/1.jpg",
+          "images/Project/Amman Academy School/2.jpg",
+          "images/Project/Amman Academy School/3.jpg",
+          "images/Project/Amman Academy School/4.jpg",
+          "images/Project/Amman Academy School/5.jpg",
+          "images/Project/Amman Academy School/6.jpg",
+          "images/Project/Amman Academy School/7.jpg"
+        ]
+      },
+      {
+        "name": "Capital",
+        "category": "corporate",
+        "images": [
+          "images/Project/Capital/0.jpg",
+          "images/Project/Capital/1.jpg",
+          "images/Project/Capital/2.jpg",
+          "images/Project/Capital/3.jpg"
+        ]
+      },
+      {
+        "name": "Deloitte",
+        "category": "corporate",
+        "images": [
+          "images/Project/Deloitte/0.jpg",
+          "images/Project/Deloitte/1.jpg",
+          "images/Project/Deloitte/2.jpg",
+          "images/Project/Deloitte/3.jpg",
+          "images/Project/Deloitte/4.jpg",
+          "images/Project/Deloitte/5.jpg",
+          "images/Project/Deloitte/6.jpg",
+          "images/Project/Deloitte/7.jpg",
+          "images/Project/Deloitte/8.jpg",
+          "images/Project/Deloitte/9.jpg",
+          "images/Project/Deloitte/10.jpg",
+          "images/Project/Deloitte/11.jpg",
+          "images/Project/Deloitte/12.jpg"
+        ]
+      },
+      {
+        "name": "Deloitte Qatar",
+        "category": "corporate",
+        "images": [
+          "images/Project/Deloitte Qatar/0.jpg",
+          "images/Project/Deloitte Qatar/1.jpg",
+          "images/Project/Deloitte Qatar/2.jpg",
+          "images/Project/Deloitte Qatar/3.jpg",
+          "images/Project/Deloitte Qatar/4.jpg",
+          "images/Project/Deloitte Qatar/5.jpg",
+          "images/Project/Deloitte Qatar/6.jpg",
+          "images/Project/Deloitte Qatar/7.jpg",
+          "images/Project/Deloitte Qatar/8.jpg",
+          "images/Project/Deloitte Qatar/9.jpg",
+          "images/Project/Deloitte Qatar/10.jpg",
+          "images/Project/Deloitte Qatar/11.jpg",
+          "images/Project/Deloitte Qatar/12.jpg",
+          "images/Project/Deloitte Qatar/13.jpg",
+          "images/Project/Deloitte Qatar/14.jpg",
+          "images/Project/Deloitte Qatar/15.jpg"
+        ]
+      },
+      {
+        "name": "KCG",
+        "category": "healthcare",
+        "images": [
+          "images/Project/KCG/0.jpg",
+          "images/Project/KCG/1.jpg",
+          "images/Project/KCG/2.jpg",
+          "images/Project/KCG/3.jpg",
+          "images/Project/KCG/4.jpg",
+          "images/Project/KCG/5.jpg",
+          "images/Project/KCG/6.jpg",
+          "images/Project/KCG/7.jpg"
+        ]
+      },
+      {
+        "name": "Kredit Capital",
+        "category": "corporate",
+        "images": [
+          "images/Project/Kredit Capital/0.jpg",
+          "images/Project/Kredit Capital/1.jpg",
+          "images/Project/Kredit Capital/2.jpg",
+          "images/Project/Kredit Capital/3.jpg",
+          "images/Project/Kredit Capital/4.jpg",
+          "images/Project/Kredit Capital/5.jpg",
+          "images/Project/Kredit Capital/6.jpg",
+          "images/Project/Kredit Capital/7.jpg",
+          "images/Project/Kredit Capital/8.jpg",
+          "images/Project/Kredit Capital/9.jpg",
+          "images/Project/Kredit Capital/10.jpg",
+          "images/Project/Kredit Capital/11.jpg"
+        ]
+      },
+      {
+        "name": "Menacom",
+        "category": "hospitality",
+        "images": [
+          "images/Project/Menacom/0.jpg",
+          "images/Project/Menacom/1.jpg",
+          "images/Project/Menacom/2.jpg",
+          "images/Project/Menacom/3.jpg"
+        ]
+      },
+      {
+        "name": "MSD",
+        "category": "healthcare",
+        "images": [
+          "images/Project/MSD/0.jpg",
+          "images/Project/MSD/1.jpg",
+          "images/Project/MSD/2.jpg",
+          "images/Project/MSD/3.jpg"
+        ]
+      },
+      {
+        "name": "Skywalk",
+        "category": "hospitality",
+        "images": [
+          "images/Project/Skywalk/0.jpg",
+          "images/Project/Skywalk/1.jpg",
+          "images/Project/Skywalk/2.jpg",
+          "images/Project/Skywalk/3.jpg",
+          "images/Project/Skywalk/4.jpg",
+          "images/Project/Skywalk/5.jpg",
+          "images/Project/Skywalk/6.jpg"
+        ]
+      },
+      {
+        "name": "VXI",
+        "category": "healthcare",
+        "images": [
+          "images/Project/VXI/0.jpg",
+          "images/Project/VXI/1.jpg",
+          "images/Project/VXI/2.jpg",
+          "images/Project/VXI/3.jpg",
+          "images/Project/VXI/4.jpg",
+          "images/Project/VXI/5.jpg",
+          "images/Project/VXI/6.jpg",
+          "images/Project/VXI/7.jpg",
+          "images/Project/VXI/8.jpg",
+          "images/Project/VXI/9.jpg",
+          "images/Project/VXI/10.jpg",
+          "images/Project/VXI/11.jpg",
+          "images/Project/VXI/12.jpg",
+          "images/Project/VXI/13.jpg",
+          "images/Project/VXI/14.jpg"
+        ]
+      }
+    ]
+}

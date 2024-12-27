@@ -49,13 +49,13 @@
           <div class="vertical-separator"></div>
         </li>
         <li class="nav-item">
-          <a class="nav-link font-archi" href="new-products.html">BRANDS</a>
+          <a class="nav-link font-archi" href="very-new-products.html">BRANDS</a>
         </li>
         <li class="nav-item separator">
           <div class="vertical-separator"></div>
         </li>
         <li class="nav-item">
-          <a class="nav-link font-archi" href="new-projects.html">PROJECTS</a>
+          <a class="nav-link font-archi" href="very-new-projects.html">PROJECTS</a>
         </li>
         <li class="nav-item separator">
           <div class="vertical-separator"></div>
@@ -880,12 +880,14 @@
           }
         );
 
-        // Add timeout to scroll half a slide after slider loads
-        setTimeout(() => {
-          const slideWidth = $slider.find(".slick-slide").outerWidth(true);
-          const $track = $slider.find(".slick-track");
-          $track.css("transform", `translateX(-${slideWidth / 2}px)`);
-        }, 3000);
+        // Wait for all images to load before applying the offset
+        $(window).on('load', function() {
+            setTimeout(() => {
+                const slideWidth = $slider.find('.slick-slide').outerWidth(true);
+                const $track = $slider.find('.slick-track');
+                $track.css('transform', `translateX(-${slideWidth / 2}px)`);
+            }, 10);
+        });
       });
     </script>
     <script src="js/navbar-carousel.js"></script>

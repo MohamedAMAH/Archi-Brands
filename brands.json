@@ -1,0 +1,277 @@
+{
+    "brands": {
+      "shawcontract": {
+        "name": "ShawContract",
+        "logo": "images/Brand-Logos/shawcontract.png",
+        "websiteUrl": "https://www.shawcontract.com/en-gb",
+        "description": "Established in 1946, Shaw Contract is a global leader in carpet manufacturing, generating over $6 billion in annual revenue with 22,000 employees worldwide. Headquartered in Dalton, Georgia, USA, Shaw's commercial carpet tiles are stocked and made in the UK. They have branches in London, Paris, Oosterhout, and Dubai, along with a manufacturing base in Scotland.",
+        "projectImages": [
+          "images/Brand-Images/ShawContract/0.jpg",
+          "images/Brand-Images/ShawContract/1.jpg",
+          "images/Brand-Images/ShawContract/2.jpg",
+          "images/Brand-Images/ShawContract/3.jpg",
+          "images/Brand-Images/ShawContract/4.jpg",
+          "images/Brand-Images/ShawContract/5.jpg",
+          "images/Brand-Images/ShawContract/6.jpg",
+          "images/Brand-Images/ShawContract/7.jpg"
+        ],
+        "families": [
+          {
+            "id": "fn1",
+            "name": "Auxiliary",
+            "image": "images/Brand-Images/ShawContract/fn1.jpg"
+          },
+          {
+            "id": "fn2",
+            "name": "Shifting Fields",
+            "image": "images/Brand-Images/ShawContract/fn2.jpg"
+          },
+          {
+            "id": "fn3",
+            "name": "Rapid Select",
+            "image": "images/Brand-Images/ShawContract/fn3.jpg"
+          },
+          {
+            "id": "fn4",
+            "name": "New Path",
+            "image": "images/Brand-Images/ShawContract/fn4.jpg"
+          }
+        ]
+      },
+      "gerflor": {
+        "name": "Gerflor",
+        "logo": "images/Brand-Logos/gerflor.png",
+        "websiteUrl": "https://www.gerflor.com/",
+        "description": "Since 1937 Gerflor Group in Lyon, France creates, manufactures, and markets innovative, decorative and sustainable vinyl flooring solutions and wall finishes for professionals and consumers. With a man power of over 8.000 employees, 24 manufacturing plants, 5 R&D centers and 30 subsidiaries Gerflor provides its customers high end products in more than 120 countries with a turnover of 14 b€ and over 70% of sales in international markets.",
+        "projectImages": [
+          "images/Brand-Images/Gerflor/0.jpg",
+          "images/Brand-Images/Gerflor/1.jpg",
+          "images/Brand-Images/Gerflor/2.jpg",
+          "images/Brand-Images/Gerflor/3.jpg",
+          "images/Brand-Images/Gerflor/4.jpg",
+          "images/Brand-Images/Gerflor/5.jpg",
+          "images/Brand-Images/Gerflor/6.jpg",
+          "images/Brand-Images/Gerflor/7.jpg"
+        ],
+        "families": [
+          {
+            "id": "fn1",
+            "name": "Homogenous Vinyl Rolls",
+            "text": "Class 33, Ever care treatment\nMonolayer homogenous flooring,\nFlooring pressed and calendared\nSize: 20 ml x 2 m\nNCS: 5005-Y50R\nLRV: 24,9",
+            "fnMain": "images/Brand-Images/Gerflor/fn1/main.jpg",
+            "fn0": "images/Brand-Images/Gerflor/fn1/0.jpg",
+            "fn1": "images/Brand-Images/Gerflor/fn1/1.jpg",
+            "fn2": "images/Brand-Images/Gerflor/fn1/2.jpg",
+            "fn3": "images/Brand-Images/Gerflor/fn1/3.jpg",
+            "fn4": "images/Brand-Images/Gerflor/fn1/4.jpg",
+            "fn5": "images/Brand-Images/Gerflor/fn1/5.jpg",
+            "fn6": "images/Brand-Images/Gerflor/fn1/6.jpg",
+            "fn7": "images/Brand-Images/Gerflor/fn1/7.jpg",
+            "fn8": "images/Brand-Images/Gerflor/fn2/8.jpg"
+          },
+          {
+            "id": "fn2",
+            "name": "Luxury Vinyl Tiles \"LVT\"",
+            "text": "Class 33, Protecshield surface treatment\nCrystal wear layer\n2m width printed film\nDuocore 2.0 comfort core\nDuocore 2.0 new reinforced rigid core\nGerflor exclusive clic",
+            "fnMain": "images/Brand-Images/Gerflor/fn2/main.jpg",
+            "fn0": "images/Brand-Images/Gerflor/fn2/0.jpg",
+            "fn1": "images/Brand-Images/Gerflor/fn2/1.jpg",
+            "fn2": "images/Brand-Images/Gerflor/fn2/2.jpg",
+            "fn3": "images/Brand-Images/Gerflor/fn2/3.jpg",
+            "fn4": "images/Brand-Images/Gerflor/fn2/4.jpg",
+            "fn5": "images/Brand-Images/Gerflor/fn2/5.jpg",
+            "fn6": "images/Brand-Images/Gerflor/fn2/6.jpg",
+            "fn7": "images/Brand-Images/Gerflor/fn2/7.jpg",
+            "fn8": "images/Brand-Images/Gerflor/fn2/8.jpg"
+          },
+          {
+            "id": "fn3",
+            "name": "Heterogeneous Vinyl Rolls",
+            "text": "Class 33, Protecsol surface treatment\nTransparent wearlayer Printed design\nFiberglass ONTRACT\nCompact backing\nSize: 25 ml x 2 m\nNCS: 5005-Y80R\nLRV: 22.00",
+            "fnMain": "images/Brand-Images/Gerflor/fn3/main.jpg",
+            "fn0": "images/Brand-Images/Gerflor/fn3/0.jpg",
+            "fn1": "images/Brand-Images/Gerflor/fn3/1.jpg",
+            "fn2": "images/Brand-Images/Gerflor/fn3/2.jpg",
+            "fn3": "images/Brand-Images/Gerflor/fn3/3.jpg",
+            "fn4": "images/Brand-Images/Gerflor/fn3/4.jpg",
+            "fn5": "images/Brand-Images/Gerflor/fn3/5.jpg",
+            "fn6": "images/Brand-Images/Gerflor/fn3/6.jpg",
+            "fn7": "images/Brand-Images/Gerflor/fn3/7.jpg",
+            "fn8": "images/Brand-Images/Gerflor/fn2/7.jpg"
+          },
+          {
+            "id": "fn4",
+            "name": "Linoleum Rolls",
+            "text": "Class 33, Neo care finish\nCalendared linoleum\nJute backing\nSize: 20-31m x 2 m\nNCS: 3060-R\nLRV: 10,6",
+            "fnMain": "images/Brand-Images/Gerflor/fn4/main.jpg",
+            "fn0": "images/Brand-Images/Gerflor/fn4/0.jpg",
+            "fn1": "images/Brand-Images/Gerflor/fn4/1.jpg",
+            "fn2": "images/Brand-Images/Gerflor/fn4/2.jpg",
+            "fn3": "images/Brand-Images/Gerflor/fn4/3.jpg",
+            "fn4": "images/Brand-Images/Gerflor/fn4/4.jpg",
+            "fn5": "images/Brand-Images/Gerflor/fn4/5.jpg",
+            "fn6": "images/Brand-Images/Gerflor/fn4/6.jpg",
+            "fn7": "images/Brand-Images/Gerflor/fn4/7.jpg",
+            "fn8": "images/Brand-Images/Gerflor/fn2/7.jpg"
+
+          },
+          {
+            "id": "fn5",
+            "name": "Conductive Vinyl Rolls",
+            "text": "Class 33, Evercar treatment\nHomogenous layer\nConductive Varnish\nSize: 20 ml x 2 m\nNCS: 3020-G20Y\nLRV: 36,7",
+            "fnMain": "images/Brand-Images/Gerflor/fn5/main.jpg",
+            "fn0": "images/Brand-Images/Gerflor/fn5/0.jpg",
+            "fn1": "images/Brand-Images/Gerflor/fn5/1.jpg",
+            "fn2": "images/Brand-Images/Gerflor/fn5/2.jpg",
+            "fn3": "images/Brand-Images/Gerflor/fn5/3.jpg",
+            "fn4": "images/Brand-Images/Gerflor/fn5/4.jpg",
+            "fn5": "images/Brand-Images/Gerflor/fn5/5.jpg"
+          }
+        ]
+      },
+      "impactacoustic": {
+        "name": "Impact Acoustic",
+        "logo": "images/Brand-Logos/impactacoustic.png",
+        "websiteUrl": "https://impactacoustic.com/en",
+        "description": "In 2019, Sven Erni and Jeffrey Ibañez founded the company in Bodenhof,Luzern, Switzerland with a mission to make a real difference in the architecture and design industry. Impact acoustics products are made of ARCHISONIC® Felt, with Cradle-to-Cradle Certified® acoustic absorber that forms the basis of all products.",
+        "projectImages": [
+          "images/Brand-Images/ImpactAcoustic/0.jpg",
+          "images/Brand-Images/ImpactAcoustic/1.jpg",
+          "images/Brand-Images/ImpactAcoustic/2.jpg",
+          "images/Brand-Images/ImpactAcoustic/3.jpg",
+          "images/Brand-Images/ImpactAcoustic/4.jpg",
+          "images/Brand-Images/ImpactAcoustic/5.jpg"
+        ],
+        "families": [
+          {
+            "id": "fn1",
+            "name": "Ceiling Baffles",
+            "image": "images/yoflor.png"
+          },
+          {
+            "id": "fn2",
+            "name": "Ceiling Panels",
+            "image": "images/yoflor.png"
+          },
+          {
+            "id": "fn3",
+            "name": "Wall Panels",
+            "image": "images/yoflor.png"
+          },
+          {
+            "id": "fn4",
+            "name": "Room Dividers",
+            "image": "images/yoflor.png"
+          },
+          {
+            "id": "fn5",
+            "name": "Lighting",
+            "image": "images/yoflor.png"
+          },
+          {
+            "id": "fn6",
+            "name": "ARCHISONIC® Cotton",
+            "image": "images/yoflor.png"
+          }
+        ]
+      },
+      "steelcase": {
+        "name": "Steelcase",
+        "logo": "images/Brand-Logos/steelcase.png",
+        "websiteUrl": "https://www.steelcase.com/",
+        "description": "Steelcase is a global leader in office furniture, architecture, and technology products, creating innovative spaces that help people work better.",
+        "projectImages": [
+          "images/Brand-Images/Steelcase/0.jpg",
+          "images/Brand-Images/Steelcase/1.jpg",
+          "images/Brand-Images/Steelcase/2.jpg",
+          "images/Brand-Images/Steelcase/3.jpg",
+          "images/Brand-Images/Steelcase/4.jpg",
+          "images/Brand-Images/Steelcase/5.jpg",
+          "images/Brand-Images/Steelcase/6.jpg"
+        ],
+        "families": [
+          {
+            "id": "fn1",
+            "name": "Seating",
+            "image": "images/Brand-Images/Steelcase/fn1.jpg"
+          },
+          {
+            "id": "fn2",
+            "name": "Desks & Tables",
+            "image": "images/Brand-Images/Steelcase/fn2.jpg"
+          },
+          {
+            "id": "fn3",
+            "name": "Storage",
+            "image": "images/Brand-Images/Steelcase/fn3.jpg"
+          },
+          {
+            "id": "fn4",
+            "name": "Accessories",
+            "image": "images/Brand-Images/Steelcase/fn4.jpg"
+          }
+        ]
+      },
+      "apptec": {
+        "name": "Apptec",
+        "logo": "images/Brand-Logos/apptec.png",
+        "websiteUrl": "https://www.apptecsopraelevati.it/en",
+        "description": "The APPTEC was founded in 2013 by giving continuity of the experience gained in one of the leading company in the production of raised floors. The plant is located in Sommariva del Bosco and managed by the C.I.P., using existing facilities and promptly adjusted to be at the forefront, and respond to market needs.",
+        "projectImages": [
+          "images/Brand-Images/Apptec/0.jpg",
+          "images/Brand-Images/Apptec/1.jpg",
+          "images/Brand-Images/Apptec/2.jpg",
+          "images/Brand-Images/Apptec/3.jpg",
+          "images/Brand-Images/Apptec/4.jpg"
+        ],
+        "families": [
+          {
+            "id": "fn1",
+            "name": "Raised Floor",
+            "image": "images/Brand-Images/Apptec/fn1.jpg"
+          }
+        ]
+      },
+      "sasinternational": {
+        "name": "SAS International",
+        "logo": "images/Brand-Logos/sasinternational.png",
+        "websiteUrl": "https://sasintgroup.com/",
+        "description": "SAS International is a leading British manufacturer of quality metal ceilings and bespoke architectural metalwork. Since 1968, SAS International built an enviable reputation for innovation, quality and technical leadership. SAS products have been installed in some of the highest profiles, architecturally significant buildings around the world including but not limited to Dubai, London and KSA.",
+        "projectImages": [
+          "images/Brand-Images/SASInternational/0.jpg",
+          "images/Brand-Images/SASInternational/1.jpg",
+          "images/Brand-Images/SASInternational/2.jpg",
+          "images/Brand-Images/SASInternational/3.jpg",
+          "images/Brand-Images/SASInternational/4.jpg",
+          "images/Brand-Images/SASInternational/5.jpg"
+        ],
+        "families": [
+          {
+            "id": "fn1",
+            "name": "False Metal Ceiling Tiles",
+            "image": "images/Brand-Images/SASInternational/fn1.jpg"
+          },
+          {
+            "id": "fn2",
+            "name": "Customized Metal Ceiling",
+            "image": "images/Brand-Images/SASInternational/fn2.jpg"
+          },
+          {
+            "id": "fn3",
+            "name": "Mesh Ceiling System",
+            "image": "images/Brand-Images/SASInternational/fn3.jpg"
+          },
+          {
+            "id": "fn4",
+            "name": "Wave Metal Baffles",
+            "image": "images/Brand-Images/SASInternational/fn4.jpg"
+          },
+          {
+            "id": "fn5",
+            "name": "Open Cell System",
+            "image": "images/Brand-Images/SASInternational/fn5.jpg"
+          }
+        ]
+      }
+    }
+}

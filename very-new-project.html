@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="Archi-Brands" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link href="css/navbar-carousel.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <link rel="shortcut icon" href="images/ab-try-logo.png" type="image/png" />
+    <title>archi-brands</title>
+    <style>
+      .wider-container {
+        width: 88%;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+      <div class="wider-container d-flex align-items-center">
+        <!-- Logo on the left -->
+        <a class="navbar-brand d-flex align-items-center" href="new-home.html">
+          <img src="images/archi-main-logo.png" alt="Logo" style="height: 50px;">
+        </a>
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="new-home.html">HOME</a>
+            </li>
+            <li class="nav-item separator">
+              <div class="vertical-separator"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="very-new-products.html">BRANDS</a>
+            </li>
+            <li class="nav-item separator">
+              <div class="vertical-separator"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="very-new-projects.html">PROJECTS</a>
+            </li>
+            <li class="nav-item separator">
+              <div class="vertical-separator"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="new-events.html">INSIGHTS</a>
+            </li>
+            <li class="nav-item separator">
+              <div class="vertical-separator"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-archi" href="new-careers.html">CAREERS</a>
+            </li>
+            <li class="nav-item separator">
+              <div class="vertical-separator"></div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="new-cart.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                  <circle cx="9" cy="21" r="1"></circle>
+                  <circle cx="20" cy="21" r="1"></circle>
+                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="custom-carousel">
+      <div class="carousel-slide active">
+        <img src="images/hero/1.jpg" alt="Slide 1" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/2.jpg" alt="Slide 2" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/3.jpg" alt="Slide 4" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/4.jpg" alt="Slide 4" />
+      </div>
+      <div class="carousel-slide">
+        <img src="images/hero/5.jpg" alt="Slide 3" />
+      </div>
+    </div>
+
+    <div class="projects-section" style="padding-top: 3rem; padding-bottom: 4rem;">
+      <div class="projects-container">
+        <h1 class="projects-heading text-center mb-3" style="padding: 0 !important;">Our Projects</h1>
+        <p class="text-center mb-5" style="color: #7a7a7a; font-size: 1rem;">Discover our projects, designed to elevate spaces with quality and creativity, tailored to meet your needs</p>
+        
+        <div class="row g-1" id="projectsGrid">
+          <!-- Projects will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <style>
+    .projects-container {
+      width: 80%;
+      max-width: 1250px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .projects-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      height: 410px;
+      margin: 0;
+    }
+
+    .projects-heading {
+      color: rgb(113, 114, 113);
+      font-family: 'Archi', sans-serif;
+      font-weight: 500;
+    }
+
+    .project-image {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(122, 122, 122, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 0;
+    }
+
+    .project-title {
+      color: white;
+      margin: 0;
+      font-size: 22px;
+      font-family: 'Archi2';
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .project-card {
+        height: 250px;
+      }
+      
+      .project-title {
+        font-size: 1.2rem;
+      }
+    }
+    </style>
+
+    <footer style="background-color: #ffffff; padding: 30px 0 5px;">
+      <div class="container text-center">
+        <div class="subscription-form">
+          <h3 class="d-flex justify-content-center align-items-center font-archi" style="font-size: 18px; color: #7a7a7a; margin-bottom: 15px;">
+            <span class="me-1">
+              <i class="fas fa-envelope me-2"></i>
+            </span>
+            <span style="font-family: 'Archi'; font-weight: 600;">Subscribe to Our Newsletter</span>
+          </h3>
+          <form action="#" class="row g-3 justify-content-center align-items-center">
+            <div class="col-auto">
+              <input type="text" class="new-form-control" placeholder="Enter your name" />
+            </div>
+            <div class="col-auto">
+              <input type="email" class="new-form-control" placeholder="Enter your email" />
+            </div>
+            <div class="col-auto">
+              <button class="custom-submit-btn">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="social-media-links">
+          <a href="https://m.facebook.com/61555671272387" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/archi_brands/" target="_blank" rel="noopener noreferrer" class="social-icon me-3">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/archi-brands/?originalSubdomain=eg" target="_blank" rel="noopener noreferrer" class="social-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-3" style="border-top: 1px solid #e0e0e0; width: 30%; margin: 0 auto;">
+        <div class="container pt-3 text-center">
+          <p class="mb-2 font-archi">
+            Copyright Archibrands &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            . All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      try {
+        // Fetch and parse the projects data
+        const response = await fetch('projects.json');
+        const data = await response.json();
+        
+        // Get category from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryToShow = urlParams.get('category');
+        
+        // Get the projects container
+        const projectsGrid = document.getElementById('projectsGrid');
+        
+        // Filter projects if category is specified
+        const projects = categoryToShow 
+          ? data.projects.filter(project => project.category === categoryToShow)
+          : data.projects;
+        
+        // Generate HTML for each project
+        projects.forEach(project => {
+          const projectHTML = `
+            <div class="col-md-4" data-category="${project.category}">
+              <div class="project-card">
+                <div class="project-image">
+                  <a href="${project.images[0]}" 
+                     data-fancybox="gallery-${project.name.replace(/\s+/g, '-')}">
+                    <img src="${project.images[0]}" alt="${project.name}" class="img-fluid">
+                    <div class="project-overlay">
+                      <h3 class="project-title font-archi">${
+                project.name === "Deloitte Qatar" ? "Deloitte - Qatar" : 
+                project.name === "Amman Academy School" ? "Amman Academy School - Amman" :
+                `${project.name} - Egypt`
+              }</h3>
+                    </div>
+                  </a>
+                  ${project.images.slice(1).map(img => `
+                    <a href="${img}" 
+                       data-fancybox="gallery-${project.name.replace(/\s+/g, '-')}"
+                       class="d-none">
+                    </a>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+          `;
+          projectsGrid.insertAdjacentHTML('beforeend', projectHTML);
+        });
+        
+        // Add hover effect listeners
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach(card => {
+          card.addEventListener('mouseenter', function() {
+            this.querySelector('.project-overlay').style.opacity = '0';
+          });
+          
+          card.addEventListener('mouseleave', function() {
+            this.querySelector('.project-overlay').style.opacity = '1';
+          });
+        });
+        
+      } catch (error) {
+        console.error('Error loading projects:', error);
+      }
+    });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/navbar-carousel.js"></script>
+    <script src="js/disable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind("[data-fancybox]", {
+        Images: {
+          protect: true,
+          zoom: false
+        },
+        Toolbar: {
+          display: {
+            left: [],
+            middle: [],
+            right: ['fullscreen', 'close']
+          }
+        },
+        Thumbs: {
+          showOnStart: false,
+          type: null
+        },
+        contentClick: false,
+        contentDblClick: false,
+        dragToClose: false,
+        Image: { 
+          cursor: "pointer",
+          loading: "lazy"
+        },
+        Carousel: {
+          preload: 0
+        },
+        showLoading: true,
+        l10n: {
+          LOADING: "Loading..."
+        }
+      });
+    </script>
+  </body>
+</html>
