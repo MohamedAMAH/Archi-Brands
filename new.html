@@ -3,184 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circular Image Slider</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css">
+    <title>Archi-Brands</title>
+    <link rel="shortcut icon" href="images/ab-try-logo.png" type="image/png" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/navbar-carousel.css" rel="stylesheet" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: #f5f5f5;
+        .wider-container {
+            width: 88%;
+            margin-right: auto;
+            margin-left: auto;
         }
 
-        .outer-container {
-            position: relative;
+        .full-section {
+            background-color: #f8f9fa;
             width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .projects-container {
             max-width: 1200px;
-            padding: 0 60px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .projects-heading {
+            text-align: center;
+            font-family: 'Archi';
+            margin-bottom: 0.5rem;
+            color: #5f5e61;
+            font-weight: lighter;
+            letter-spacing: 1px;
         }
 
         .slider-container {
+            width: 40%;
+            margin: 50px auto;
             position: relative;
-            width: 100%;
-            max-width: 1200px;
+        }
+
+        .circle-slide {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        /* Remove Slick's default spacing */
+        .slick-slide {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .slick-list {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .circle-wrapper {
+            width: 200px;
+            height: 200px;
             margin: 0 auto;
+            position: relative;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: filter 0.3s ease;
         }
 
-        .navigation-container {
-            position: absolute;
-            top: 0;
-            left: -60px;
-            right: -60px;
-            height: 100%;
-            pointer-events: none;
-        }
-
-        .swiper {
+        .circle-wrapper img {
             width: 100%;
-            padding: 50px 0;
-        }
-
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 100%;
+            object-fit: cover;
             cursor: pointer;
         }
 
-        .swiper-slide img {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            object-fit: cover;
-            /* border: 4px solid #fff; */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .swiper-slide:hover img {
-            filter: brightness(0.8);
-            transform: scale(1.05);
-        }
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #7a7a7a;
+        .circle-wrapper .dark-overlay {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            pointer-events: auto;
-        }
-
-        .swiper-button-prev {
+            top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0);
+            transition: background-color 0.3s ease;
+            z-index: 1;
         }
 
-        .swiper-button-next {
-            right: 0;
+        .circle-wrapper:hover .dark-overlay {
+            background: rgba(255, 255, 255, 0.5);
         }
 
-        .swiper-pagination {
-            position: relative;
-            bottom: -50px !important;
+        .slick-prev,
+        .slick-next {
+            width: auto;
+            height: auto;
+            font-size: 24px;
+            color: #7a7a7a;
+            z-index: 1;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
         }
 
-        .swiper-pagination-bullet {
-            width: 10px;
-            height: 10px;
-            background: #7a7a7a;
-            opacity: 0.5;
+        .slick-prev {
+            left: -40px;
         }
 
-        .swiper-pagination-bullet-active {
-            opacity: 1;
+        .slick-next {
+            right: -40px;
         }
 
-        @media (max-width: 1400px) {
-            .swiper-slide img {
-                width: 300px;
-                height: 300px;
-            }
+        .slick-prev:before,
+        .slick-next:before {
+            display: none;
         }
 
-        @media (max-width: 1200px) {
-            .swiper-slide img {
-                width: 250px;
-                height: 250px;
-            }
+        .slick-prev i,
+        .slick-next i {
+            color: #7a7a7a;
         }
 
-        @media (max-width: 768px) {
-            .outer-container {
-                padding: 0 40px;
-            }
-            .navigation-container {
-                left: -40px;
-                right: -40px;
-            }
+        .slick-slide {
+            margin: 0;
+        }
+
+        .circular-slider {
+            margin: 0 -10px;
         }
     </style>
 </head>
 <body>
-    <div class="outer-container">
-        <div class="navigation-container">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+    <div class="full-section">
+        <div class="projects-container">
+            <h1 class="text-center mb-2 projects-heading">TRANSFORMED WORKSPACES</h1>
+            <p class="text-center mb-5" style="color: #7a7a7a; font-size: 1rem;">Discover our latest creations that seamlessly blend imaginative design with practical purpose</p>
         </div>
+
         <div class="slider-container">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/api/placeholder/400/400" alt="Image 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/api/placeholder/400/400" alt="Image 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/api/placeholder/400/400" alt="Image 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/api/placeholder/400/400" alt="Image 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/api/placeholder/400/400" alt="Image 5">
+        <div class="circular-slider">
+            <div class="circle-slide">
+                <div class="circle-wrapper">
+                    <a href="images/Project/AlFuttaim/0.jpg" data-fancybox="alfuttaim-gallery">
+                        <img src="images/Project/AlFuttaim/0.jpg" alt="AlFuttaim">
+                        <div class="dark-overlay"></div>
+                    </a>
+                    <div style="display: none">
+                        <a href="images/Project/AlFuttaim/1.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/2.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/3.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/4.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/5.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/6.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/7.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/8.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/9.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/10.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/11.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/12.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/13.jpg" data-fancybox="alfuttaim-gallery"></a>
+                        <a href="images/Project/AlFuttaim/14.jpg" data-fancybox="alfuttaim-gallery"></a>
                     </div>
                 </div>
-                
-                <div class="swiper-pagination"></div>
+            </div>
+            <div class="circle-slide">
+                <div class="circle-wrapper">
+                    <a href="images/Project/Amazon/0.jpg" data-fancybox="amazon-gallery">
+                        <img src="images/Project/Amazon/0.jpg" alt="Amazon">
+                        <div class="dark-overlay"></div>
+                    </a>
+                    <div style="display: none">
+                        <a href="images/Project/Amazon/1.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/2.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/3.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/4.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/5.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/6.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/7.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/8.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/9.jpg" data-fancybox="amazon-gallery"></a>
+                        <a href="images/Project/Amazon/10.jpg" data-fancybox="amazon-gallery"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="circle-slide">
+                <div class="circle-wrapper">
+                    <a href="images/Project/MSD/0.jpg" data-fancybox="msd-gallery">
+                        <img src="images/Project/MSD/0.jpg" alt="MSD">
+                        <div class="dark-overlay"></div>
+                    </a>
+                    <div style="display: none">
+                        <a href="images/Project/MSD/1.jpg" data-fancybox="msd-gallery"></a>
+                        <a href="images/Project/MSD/2.jpg" data-fancybox="msd-gallery"></a>
+                        <a href="images/Project/MSD/3.jpg" data-fancybox="msd-gallery"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="circle-slide">
+                <div class="circle-wrapper">
+                    <a href="images/Project/Deloitte/0.jpg" data-fancybox="deloitte-gallery">
+                        <img src="images/Project/Deloitte/0.jpg" alt="Deloitte">
+                        <div class="dark-overlay"></div>
+                    </a>
+                    <div style="display: none">
+                        <a href="images/Project/Deloitte/1.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/2.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/3.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/4.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/5.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/6.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/7.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/8.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/9.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/10.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/11.jpg" data-fancybox="deloitte-gallery"></a>
+                        <a href="images/Project/Deloitte/12.jpg" data-fancybox="deloitte-gallery"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <!-- Scripts section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
     <script>
-        const swiper = new Swiper('.swiper', {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
+        $(document).ready(function(){
+            const $slider = $('.circular-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                centerMode: true,
+                centerPadding: '0',
+                cssEase: 'linear',
+                draggable: false,
+                swipe: false,
+                touchMove: false,
+                prevArrow: '<button class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+                responsive: [
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            // Wait for all images to load before applying the offset
+            $(window).on('load', function() {
+                setTimeout(() => {
+                    const slideWidth = $slider.find('.slick-slide').outerWidth(true);
+                    const $track = $slider.find('.slick-track');
+                    $track.css('transform', `translateX(-${slideWidth / 2}px)`);
+                }, 10);
+            });
+
+            let animationFrame;
+            let lastTimestamp = 0;
+            const SPEED = 0.15;
+
+            function scroll(direction, timestamp) {
+                if (!lastTimestamp) lastTimestamp = timestamp;
+                const deltaTime = Math.min(timestamp - lastTimestamp, 16);
+                lastTimestamp = timestamp;
+
+                const $track = $slider.find('.slick-track');
+                const currentTransform = $track.css('transform');
+                const matrix = currentTransform.match(/matrix\((.+)\)/);
+                const translateX = matrix ? parseFloat(matrix[1].split(',')[4]) : 0;
+
+                const pixelsToMove = SPEED * deltaTime;
+                const newTranslateX = direction === 'right' ? 
+                    translateX - pixelsToMove : 
+                    translateX + pixelsToMove;
+
+                $track.css('transform', `translateX(${newTranslateX}px)`);
+
+                const trackWidth = $track.width();
+                const containerWidth = $slider.width();
+
+                if (Math.abs(newTranslateX) >= trackWidth - containerWidth && direction === 'right') {
+                    $track.css('transform', 'translateX(0px)');
+                    lastTimestamp = 0;
+                } else if (newTranslateX >= 0 && direction === 'left') {
+                    $track.css('transform', `translateX(-${trackWidth - containerWidth}px)`);
+                    lastTimestamp = 0;
                 }
+
+                animationFrame = requestAnimationFrame((newTimestamp) => 
+                    scroll(direction, newTimestamp)
+                );
+            }
+
+            $('.slick-next').hover(
+                function() {
+                    lastTimestamp = 0;
+                    animationFrame = requestAnimationFrame((timestamp) => 
+                        scroll('right', timestamp)
+                    );
+                },
+                function() {
+                    cancelAnimationFrame(animationFrame);
+                    lastTimestamp = 0;
+                }
+            );
+
+            $('.slick-prev').hover(
+                function() {
+                    lastTimestamp = 0;
+                    animationFrame = requestAnimationFrame((timestamp) => 
+                        scroll('left', timestamp)
+                    );
+                },
+                function() {
+                    cancelAnimationFrame(animationFrame);
+                    lastTimestamp = 0;
+                }
+            );
+        });
+
+        Fancybox.bind("[data-fancybox]", {
+            Images: {
+                protect: true,
+                zoom: false
+            },
+            Toolbar: {
+                display: {
+                    left: [],
+                    middle: [],
+                    right: ['fullscreen', 'close']
+                }
+            },
+            Thumbs: {
+                showOnStart: false,
+                type: null
+            },
+            contentClick: false,
+            contentDblClick: false,
+            dragToClose: false,
+            Image: { 
+                cursor: "pointer",
+                loading: "lazy"
+            },
+            Carousel: {
+                preload: 0
+            },
+            showLoading: true,
+            l10n: {
+                LOADING: "Loading..."
             }
         });
     </script>
