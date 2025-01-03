@@ -32,6 +32,7 @@
             margin-top: 20px;
             line-height: 1.6;
             letter-spacing: 1px;
+            width: 85%;
         }
 
         .full-section {
@@ -228,7 +229,7 @@
     <div class="full-section">
         <div class="product-container">
             <h1 class="family-title" id="familyTitle"></h1>
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-lg-6">
                     <div class="main-image-container">
                         <img src="path/to/main-image.jpg" alt="Main Product Image" id="mainImage">
@@ -331,7 +332,7 @@
                 let i = 0;
                 while (true) {
                     const key = `fn${i}`;
-                    if (!family[key]) break;  // Stop when no more images exist
+                    if (!family[key]) break;
                     thumbnailImages.push(family[key]);
                     i++;
                 }
@@ -345,6 +346,41 @@
                 
                 // Set family description
                 document.getElementById('familyDescription').textContent = family.text;
+
+                // Check and add other main images if they exist
+                if (family.otherMainImages && family.otherMainImages.length > 0) {
+                    const productContainer = document.querySelector('.product-container');
+                    
+                    // Create rows of two images each
+                    for (let i = 0; i < family.otherMainImages.length; i += 2) {
+                        const row = document.createElement('div');
+                        row.className = 'row mb-5';
+                        
+                        // Add first image of the pair
+                        const col1 = document.createElement('div');
+                        col1.className = 'col-lg-6';
+                        col1.innerHTML = `
+                            <div class="main-image-container">
+                                <img src="${family.otherMainImages[i]}" alt="Product Main Image">
+                            </div>
+                        `;
+                        row.appendChild(col1);
+                        
+                        // Add second image if it exists
+                        if (i + 1 < family.otherMainImages.length) {
+                            const col2 = document.createElement('div');
+                            col2.className = 'col-lg-6';
+                            col2.innerHTML = `
+                                <div class="main-image-container">
+                                    <img src="${family.otherMainImages[i + 1]}" alt="Product Main Image">
+                                </div>
+                            `;
+                            row.appendChild(col2);
+                        }
+                        
+                        productContainer.appendChild(row);
+                    }
+                }
                 
             } catch (error) {
                 console.error('Error loading family data:', error);

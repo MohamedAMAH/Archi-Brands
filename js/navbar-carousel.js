@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (intervalId) {
       clearInterval(intervalId);
     }
-    intervalId = setInterval(showNextSlide, 3500);
+    intervalId = setInterval(showNextSlide, 6000);
   }
 
   document.addEventListener("visibilitychange", function() {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
       const timePassed = Date.now() - lastTime;
       if (timePassed >= 3000) {
-        const slidesToAdvance = Math.floor(timePassed / 3500);
+        const slidesToAdvance = Math.floor(timePassed / 6000);
         for (let i = 0; i < slidesToAdvance; i++) {
           showNextSlide();
         }
